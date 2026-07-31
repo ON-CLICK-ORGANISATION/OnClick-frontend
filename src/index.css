@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(18% 0.015 275);
+  --color-card: oklch(100% 0 0);
+  --color-mist: oklch(97.2% 0.006 250);
+  --color-border: oklch(91.5% 0.008 255);
+  --color-muted-foreground: oklch(50% 0.02 265);
+
+  --color-primary: oklch(72% 0.13 205);
+  --color-primary-foreground: oklch(18% 0.015 275);
+
+  --color-magenta: oklch(68% 0.2 350);
+  --color-lemon: oklch(90% 0.15 100);
+
+  --color-butter: oklch(93% 0.13 100);
+  --color-butter-foreground: oklch(20% 0.02 275);
+
+  --color-slate-orb: oklch(52% 0.035 258);
+  --color-slate-orb-foreground: oklch(99% 0 0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+.container-page {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.link-arrow {
+  letter-spacing: 0.01em;
+  color: var(--color-foreground);
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  display: inline-flex;
+}
