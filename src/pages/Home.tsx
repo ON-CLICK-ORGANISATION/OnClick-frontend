@@ -4,7 +4,6 @@ import ArrowLink from '../components/ArrowLink'
 import TestimonialCarousel from '../components/TestimonialCarousel'
 import ContactForm from '../components/ContactForm'
 import { LaptopMockup, PhoneMockup } from '../components/DeviceMockups'
-// import MethodSection from '../components/MethodSection'
 import ServicesSection from "../components/ServiceSection.tsx";
 import { heroProject, featuredProjects, expertises } from '../data/content'
 
@@ -31,77 +30,97 @@ export default function Home() {
         <DotSwirl className="w-full" count={40} seed={7} />
       </section>
 
-      {/* Hero showcase orb — "Projet Vedette" */}
-      <section className="relative overflow-hidden pb-24">
+      {/* Hero showcase orb — "Projet Vedette" - GRAND ROND AGRANDI */}
+      <section className="relative overflow-hidden pb-16 sm:pb-24">
         <div className="container-page relative">
-          <div className="relative mx-auto aspect-square w-full max-w-[760px] rounded-full bg-slate-orb text-slate-orb-foreground">
-            <div className="flex h-full flex-col items-center justify-center gap-10 px-6">
-              {/* Device mockups + title/description row */}
+
+          {/* Grand rond - AGRANDI */}
+          <div className="relative mx-auto w-full max-w-[110%] sm:max-w-[95%] md:max-w-[850px] lg:max-w-[1000px] aspect-square rounded-full bg-slate-orb text-slate-orb-foreground overflow-visible md:overflow-hidden">
+
+            <div className="flex h-full flex-col items-center justify-center gap-2 sm:gap-4 md:gap-6 lg:gap-10 px-3 sm:px-4 md:px-6">
+
+              {/* Bloc Mockups + Texte */}
               <a
                 href={heroProject.url}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="group flex w-full max-w-[26rem] flex-col items-center gap-6 sm:max-w-[30rem] sm:flex-row sm:items-center sm:gap-5"
+                className="group flex w-full flex-col items-center gap-1 sm:gap-3 md:gap-4 lg:flex-row lg:items-center lg:gap-5"
               >
-                {/* Laptop + Mobile overlap mockup, allowed to bleed past the circle's left edge */}
-                <div className="relative w-full max-w-[13rem] shrink-0 sm:-ml-14">
+                {/* Mockups */}
+                <div className="relative flex items-center justify-center w-full max-w-[9rem] sm:max-w-[12rem] md:max-w-[18rem] lg:max-w-[28rem] shrink-0 scale-90 sm:scale-95 md:scale-100">
+                  <PhoneMockup
+                    screenshot={heroProject.imageMobile}
+                    alt={`Version mobile du site ${heroProject.name}`}
+                    className="absolute left-[-0.5rem] sm:left-[-0.2rem] md:left-[0.2rem] lg:left-[0.8rem] bottom-0 z-10 w-[2.2rem] sm:w-[3rem] md:w-[5rem] lg:w-[7.5rem] rotate-[-6deg] transition-transform duration-300 group-hover:rotate-[-3deg] group-hover:scale-105"
+                    style={{
+                      transformOrigin: 'bottom center',
+                      boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+                    }}
+                  />
+
                   <LaptopMockup
                     screenshot={heroProject.image!}
                     alt={`Aperçu du site ${heroProject.name}`}
                     className="w-full transition-transform duration-300 group-hover:scale-[1.02]"
                   />
-                  <PhoneMockup
-                    screenshot={heroProject.imageMobile}
-                    alt={`Version mobile du site ${heroProject.name}`}
-                    className="absolute -bottom-6 -left-7 w-[3.2rem] rotate-[-10deg] transition-transform duration-300 group-hover:rotate-[-5deg]"
-                  />
                 </div>
 
-                {/* Title, description, arrow */}
-                <div className="flex items-start gap-3 text-left">
+                {/* Texte */}
+                <div className="flex items-start gap-1 sm:gap-2 md:gap-3 text-center sm:text-left">
                   <div>
-                    <h2 className="font-display text-2xl sm:text-3xl">{heroProject.name}</h2>
-                    <p className="mt-2 max-w-[13rem] text-xs font-semibold leading-relaxed opacity-90">
+                    <h2 className="font-display text-sm sm:text-base md:text-2xl lg:text-3xl">
+                      {heroProject.name}
+                    </h2>
+                    <p className="mt-0.5 sm:mt-1 md:mt-2 max-w-[8rem] sm:max-w-[11rem] md:max-w-[13rem] text-[8px] sm:text-[10px] md:text-xs font-semibold leading-relaxed opacity-90">
                       {heroProject.description}
                     </p>
                   </div>
-                  <ArrowLink className="mt-1 shrink-0" />
+                  <ArrowLink className="mt-0.5 sm:mt-1 shrink-0 hidden sm:inline-flex" />
                 </div>
               </a>
 
-              <p className="text-center font-display text-2xl md:text-3xl">
+              {/* Texte "Des résultats..." */}
+              <p className="text-center font-display text-[13px] sm:text-base md:text-xl lg:text-3xl px-1 sm:px-2">
                 Des résultats qui font la différence.
               </p>
             </div>
           </div>
 
-          <div className="mt-16 grid gap-12 sm:grid-cols-3 sm:gap-6">
-            {featuredProjects.map((project, i) => (
-              <a
-                key={project.name}
-                href={project.url}
-                target="_blank"
-                rel="noreferrer noopener"
-                className={`group flex flex-col items-center text-center ${i === 1 ? 'sm:-mt-10' : ''}`}
-              >
-                <span className="size-40 overflow-hidden rounded-full shadow-lg" style={{ background: project.gradient }}>
-                  {project.image && (
-                    <img
-                      src={project.image}
-                      alt={project.name}
-                      className="size-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                  )}
-                </span>
-                <h3 className="mt-6 font-display text-xl">{project.name}</h3>
-                <p className="mt-2 max-w-[16rem] text-xs font-semibold leading-relaxed text-foreground/80">
-                  {project.description}
-                </p>
-                <span className="link-arrow mt-4">
-                  Voir le projet <ArrowLink />
-                </span>
-              </a>
-            ))}
+          {/* 3 projets en dessous */}
+          <div className="relative z-10 mt-[-3rem] sm:mt-[-4rem] md:mt-[-6rem] lg:mt-[-8rem]">
+            <div className="grid gap-10 sm:gap-12 grid-cols-1 sm:grid-cols-3 sm:gap-6 max-w-4xl mx-auto">
+              {featuredProjects.map((project, i) => (
+                <a
+                  key={project.name}
+                  href={project.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className={`group flex flex-col items-center text-center ${i === 1 ? 'sm:-mt-12' : ''}`}
+                >
+                  <span
+                    className="size-32 sm:size-40 md:size-48 lg:size-52 overflow-hidden rounded-full shadow-lg border-4 border-white transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:rotate-3 cursor-pointer"
+                    style={{ background: project.gradient }}
+                  >
+                    {project.image && (
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="size-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    )}
+                  </span>
+                  <h3 className="mt-3 sm:mt-4 md:mt-6 font-display text-sm sm:text-base md:text-xl text-[#1E293B] group-hover:text-[#EAB308] transition-colors duration-300">
+                    {project.name}
+                  </h3>
+                  <p className="mt-1 sm:mt-2 max-w-[12rem] sm:max-w-[14rem] md:max-w-[16rem] text-[10px] sm:text-[11px] md:text-xs font-semibold leading-relaxed text-[#64748B]">
+                    {project.description}
+                  </p>
+                  <span className="link-arrow mt-2 sm:mt-3 md:mt-4 text-[#2B6CB0] group-hover:text-[#EAB308] transition-colors duration-300">
+                    Voir le projet <ArrowLink />
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -110,9 +129,8 @@ export default function Home() {
       <ServicesSection />
       <TestimonialCarousel />
 
-
       {/* Contact */}
-     <ContactForm />
+      <ContactForm />
     </>
   )
 }

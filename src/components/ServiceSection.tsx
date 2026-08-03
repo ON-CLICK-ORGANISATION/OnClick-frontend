@@ -8,7 +8,7 @@ const services = [
     description:
       'Dans un web saturé, la visibilité ne suffit plus. Nous créons des campagnes ciblées et une stratégie SEO performante pour attirer les bons prospects et générer une croissance mesurable.',
     image: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    link: '/services/marketing',
+    link: '/contact',
     linkText: 'Découvrir le marketing',
     reverse: false,
   },
@@ -17,7 +17,7 @@ const services = [
     description:
       'Nous concevons des sites web performants, évolutifs et pensés pour convertir vos visiteurs en clients.',
     image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    link: '/services/developpement',
+    link: '/contact',
     linkText: 'En savoir plus',
     reverse: true,
   },
@@ -26,7 +26,7 @@ const services = [
     description:
       'Une identité forte inspire confiance. Nous créons une image de marque qui vous distingue et renforce votre crédibilité.',
     image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    link: '/services/creation',
+    link: '/contact',
     linkText: 'Découvrir la création',
     reverse: false,
   },
@@ -35,7 +35,7 @@ const services = [
     description:
       'Une croissance durable repose sur une vision claire. Nous élaborons une stratégie adaptée pour transformer vos objectifs en résultats.',
     image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    link: '/services/strategie',
+    link: '/contact',
     linkText: 'En savoir plus',
     reverse: true,
   },
@@ -62,7 +62,7 @@ export default function ServicesSection() {
           </h2>
         </motion.div>
 
-        {/* Liste verticale de cartes carrées - TOUTES PARFAITEMENT CARRÉES */}
+        {/* Liste verticale de cartes - RESPONSIVE */}
         <div className="flex flex-col gap-6">
           {services.map((service, index) => (
             <motion.div
@@ -74,10 +74,9 @@ export default function ServicesSection() {
               className={`bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col md:flex-row ${
                 service.reverse ? 'md:flex-row-reverse' : ''
               }`}
-              style={{ height: '400px', maxWidth: '100%' }}
             >
-              {/* Partie Image - 50% de la carte carrée */}
-              <div className="w-full md:w-1/2 h-full bg-[#F1F5F9] overflow-hidden flex-shrink-0 relative">
+              {/* Partie Image - Responsive */}
+              <div className="w-full md:w-1/2 h-64 md:h-[400px] lg:h-[400px] bg-[#F1F5F9] overflow-hidden flex-shrink-0 relative">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -104,9 +103,9 @@ export default function ServicesSection() {
                 />
               </div>
 
-              {/* Partie Texte - 50% de la carte carrée */}
-              <div className="w-full md:w-1/2 p-8 sm:p-10 flex flex-col justify-center h-full">
-                <h3 className="text-2xl sm:text-3xl font-bold text-[#0F172A] mb-3 tracking-tight">
+              {/* Partie Texte - Responsive */}
+              <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-10 flex flex-col justify-center">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0F172A] mb-2 md:mb-3 tracking-tight">
                   {service.title}
                 </h3>
                 <p className="text-sm sm:text-base text-[#64748B] leading-relaxed mb-4 flex-1">
