@@ -2,6 +2,7 @@ export interface MiniProject {
   name: string
   url: string
   description: string
+  image?: string
 }
 
 export interface Expertise {
@@ -21,15 +22,23 @@ export interface Testimonial {
   role: string
 }
 
+export interface MethodStep {
+  title: string
+  text: string
+  tags: string[]
+}
+
 export interface Project extends MiniProject {
   gradient: string
 }
 
 // Hero showcase project (large orb on home page)
-export const heroProject: MiniProject = {
+export const heroProject: MiniProject & { imageMobile: string } = {
   name: 'Amalthéa Studio',
   url: 'https://amalthea-studio.com/',
   description: 'Studio de Pilates en ligne qui a augmenté son taux de réservation de +87%.',
+  image: '/images/projects/pilates-laptop.jpg',
+  imageMobile: '/images/projects/pilates-mobile.jpg',
 }
 
 // Small featured projects strip on home page
@@ -39,6 +48,7 @@ export const featuredProjects: Project[] = [
     url: 'https://lesixth.com/',
     description: 'Restaurant qui a augmenté son taux de réservation de +67%',
     gradient: 'linear-gradient(140deg, oklch(0.55 0.08 60), oklch(0.35 0.05 50))',
+    image: '/images/projects/lesixth.jpg',
   },
   {
     name: 'Centre Vision Laser',
@@ -46,12 +56,14 @@ export const featuredProjects: Project[] = [
     description:
       "La refonte du site et l'amélioration du parcours utilisateur a augmenté le nombre de leads via le site de +350%",
     gradient: 'linear-gradient(140deg, oklch(0.3 0.02 260), oklch(0.2 0.02 260))',
+    image: '/images/projects/visionlaser.jpg',
   },
   {
     name: 'Aude Coué Kinésiologue',
     url: 'https://aude-coue.com/',
     description: 'Aude a doublé son nombre de rendez-vous en 4 mois avec notre site internet',
     gradient: 'linear-gradient(140deg, oklch(0.45 0.07 200), oklch(0.28 0.05 210))',
+    image: '/images/projects/audecoue.jpg',
   },
 ]
 
@@ -175,6 +187,30 @@ export const expertises: Expertise[] = [
     title: 'Stratégie',
     text: 'Une croissance durable repose sur une vision claire. Nous élaborons une stratégie adaptée pour transformer vos objectifs en résultats.',
     cta: 'Clarifiez votre stratégie',
+  },
+]
+
+// Home page "Notre méthode" section
+export const methodSteps: MethodStep[] = [
+  {
+    title: 'Campagnes sur-mesure',
+    text: 'Nous concevons et pilotons vos campagnes sur les canaux où se trouve votre cible, avec un seul objectif : vous fournir des prospects prêts à échanger.',
+    tags: ['LinkedIn', 'Meta', 'TikTok'],
+  },
+  {
+    title: 'Pages qui convertissent',
+    text: "Nous créons et optimisons vos supports pour maximiser chaque clic : design, copywriting, preuve sociale. Rien n'est laissé au hasard.",
+    tags: ['Design', 'Copywriting', 'Preuve sociale'],
+  },
+  {
+    title: 'Qualification humaine',
+    text: 'Chaque contact est vérifié par notre équipe avant de vous être transmis. Vous ne recevez que des prospects confirmés et réellement intéressés.',
+    tags: ['Appel', 'Vérification', 'Qualification'],
+  },
+  {
+    title: 'Résultats mesurables',
+    text: 'Dashboard en temps réel, reporting transparent, indicateurs clairs : coût par contact, taux de qualification. Vous gardez la main sur vos données.',
+    tags: ['Dashboard', 'Reporting', 'KPIs'],
   },
 ]
 

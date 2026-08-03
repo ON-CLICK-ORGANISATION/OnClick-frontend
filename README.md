@@ -15,7 +15,7 @@
 ## Pages
 | Route | Contenu |
 |---|---|
-| `/` | Accueil — hero, projet vedette, 3 réalisations, "Vos objectifs, nos expertises", témoignage, formulaire de contact |
+| `/` | Accueil — hero, projet vedette (mockup laptop+mobile), 3 réalisations, "Notre méthode" (4 étapes), "Vos objectifs, nos expertises", témoignage, formulaire de contact |
 | `/services` | Liste des 6 services, section positionnement, témoignage, formulaire |
 | `/realisations` | Grille des 11 réalisations clients, formulaire |
 | `/demarrer-un-projet` | Process en 3 étapes (Échange / Stratégie / Exécution), formulaire |
@@ -27,6 +27,8 @@
 - ✅ Fond animé de points (SVG généré, façon "dot swirl" de l'original)
 - ✅ Palette de couleurs OKLCH fidèle à l'original (primary/magenta/lemon/butter/mist...)
 - ✅ Responsive (mobile / tablette / desktop)
+- ✅ Section "Projet Vedette" avec mockup laptop + mobile (screenshots réels du site Amalthéa Studio) et 3 réalisations illustrées de vraies images (Le Sixth, Centre Vision Laser, Aude Coué Kinésiologue)
+- ✅ Section "Notre méthode" (4 étapes : campagnes, landing pages, qualification humaine, résultats mesurables) avec icônes SVG inline, intégrée sur la page d'accueil
 
 ## Non implémenté / limites
 - ❌ Le formulaire de contact n'envoie pas réellement de mail (aucun backend/CRM fourni) — il affiche juste un message de succès côté client.
