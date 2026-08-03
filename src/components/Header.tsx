@@ -14,7 +14,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur">
       <div className="container-page flex h-20 items-center justify-between">
         <NavLink to="/" className="font-display text-lg tracking-[0.22em] leading-4">
-          ONLY CLIK
+          ONLY CLOZ
         </NavLink>
 
         <nav className="hidden items-center gap-9 md:flex">

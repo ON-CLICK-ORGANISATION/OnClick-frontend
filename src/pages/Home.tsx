@@ -14,7 +14,7 @@ export default function Home() {
       <section className="container-page grid items-center gap-12 py-16 md:grid-cols-2 md:py-24">
         <div>
           <h1 className="font-display text-[clamp(2.5rem,6vw,4.25rem)] leading-[1.05]">
-           <span className="text-[#FDE68A]">Only Clik,</span>
+           <span className="text-[#FDE68A]">Only Cloz,</span>
             un partenaire proche de vous.
           </h1>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-foreground/80">
