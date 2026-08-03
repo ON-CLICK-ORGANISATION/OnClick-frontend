@@ -18,31 +18,6 @@
 | `/realisations` | Grille des 11 réalisations clients, formulaire |
 | `/demarrer-un-projet` | Process en 3 étapes (Échange / Stratégie / Exécution), formulaire |
 
-## Fonctionnalités
-- ✅ Navigation multi-pages (React Router) avec en-tête sticky + menu mobile
-- ✅ Carrousel de témoignages (3 avis, boutons précédent/suivant)
-- ✅ Formulaire de contact (validation basique, message de confirmation à l'envoi — pas de backend branché)
-- ✅ Fond animé de points (SVG généré, façon "dot swirl" de l'original)
-- ✅ Palette de couleurs OKLCH fidèle à l'original (primary/magenta/lemon/butter/mist...)
-- ✅ Responsive (mobile / tablette / desktop)
-- ✅ Section "Projet Vedette" avec mockup laptop + mobile (screenshots réels du site Amalthéa Studio) et 3 réalisations illustrées de vraies images (Le Sixth, Centre Vision Laser, Aude Coué Kinésiologue)
-- ✅ Section "Notre méthode" (4 étapes : campagnes, landing pages, qualification humaine, résultats mesurables) avec icônes SVG inline, intégrée sur la page d'accueil
-
-## Non implémenté / limites
-- ❌ Le formulaire de contact n'envoie pas réellement de mail (aucun backend/CRM fourni) — il affiche juste un message de succès côté client.
-- ❌ Pas de mode sombre (l'original ne l'expose pas non plus dans la navigation).
-- ❌ Pas d'animation d'entrée/scroll avancée (l'original utilise probablement des librairies d'animation propriétaires non répliquées à l'identique).
-
-## Prochaines étapes possibles
-- Brancher le formulaire de contact à un service d'emailing (Resend/SendGrid) via une fonction Cloudflare Pages.
-- Ajouter des tests end-to-end (Playwright) sur la navigation.
-- Optimiser les images/illustrations si des visuels réels remplacent les orbes de couleur.
-
-## Déploiement
-- **Plateforme** : Cloudflare Pages
-- **Build** : `npm run build` → dossier `dist/`
-- **Statut** : en développement local (sandbox), prêt à déployer
-
 ## Développement local
 ```bash
 npm install
