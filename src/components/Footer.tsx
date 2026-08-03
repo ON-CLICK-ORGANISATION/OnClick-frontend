@@ -8,9 +8,7 @@ export default function Footer() {
       <div className="container-page flex flex-col gap-8 py-14 md:flex-row md:items-start md:justify-between">
         <div>
           <p className="font-display text-lg tracking-[0.22em] leading-4">
-            ONLY
-            <br />
-            CLIK
+            <span className="text-[#FDE68A]">ONLY CLIK</span>
           </p>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
             L'agence digitale qui aide les professionnels à exister en ligne et à développer leur activité.
@@ -43,9 +41,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container-page pb-8 text-xs text-muted-foreground">
-        © {year} Only Clik. Tous droits réservés.
-      </div>
+      {/*<div className="container-page pb-8 text-xs text-muted-foreground">*/}
+      {/*  © {year} Only Clik. Tous droits réservés.*/}
+      {/*</div>*/}
     </footer>
   )
 }
