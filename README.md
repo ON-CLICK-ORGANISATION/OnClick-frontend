@@ -1,9 +1,7 @@
-# Only Clik — Site vitrine (copie)
+# Only Clik — Site vitrine
 
 ## Aperçu du projet
 - **Nom** : Only Clik — Agence digitale
-- **Objectif** : Reproduction fidèle du site https://onlycloz-digital-partner.lovable.app en React + Vite + TypeScript + TailwindCSS.
-- **Contenu** : textes, structure, couleurs (palette OKLCH d'origine), polices (Outfit + DM Sans) et données (services, réalisations, témoignages) copiés à l'identique depuis le site de référence.
 
 ## Stack technique
 - React 19 + TypeScript

@@ -4,7 +4,8 @@ import ArrowLink from '../components/ArrowLink'
 import TestimonialCarousel from '../components/TestimonialCarousel'
 import ContactForm from '../components/ContactForm'
 import { LaptopMockup, PhoneMockup } from '../components/DeviceMockups'
-import MethodSection from '../components/MethodSection'
+// import MethodSection from '../components/MethodSection'
+import ServicesSection from "../components/ServiceSection.tsx";
 import { heroProject, featuredProjects, expertises } from '../data/content'
 
 export default function Home() {
@@ -105,29 +106,10 @@ export default function Home() {
         </div>
       </section>
 
-      <MethodSection />
-
-      {/* Expertises */}
-      <section className="bg-mist py-24">
-        <div className="container-page">
-          <h2 className="font-display text-[clamp(2rem,4vw,2.75rem)]">Vos objectifs, nos expertises</h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {expertises.map((item) => (
-              <article key={item.title} className="flex flex-col justify-between bg-card p-8">
-                <div>
-                  <h3 className="font-display text-2xl">{item.title}</h3>
-                  <p className="mt-4 text-xs font-semibold leading-relaxed text-foreground/80">{item.text}</p>
-                </div>
-                <Link to="/demarrer-un-projet" className="link-arrow group mt-8 justify-between">
-                  {item.cta} <ArrowLink />
-                </Link>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      {/*<MethodSection />*/}
+      <ServicesSection />
       <TestimonialCarousel />
+
 
       {/* Contact */}
       <section className="container-page py-24" id="contact">
