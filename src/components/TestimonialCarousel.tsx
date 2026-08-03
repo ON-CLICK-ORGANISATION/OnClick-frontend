@@ -7,7 +7,7 @@ const testimonials = [
     id: 1,
     name: 'Sophie Martin',
     position: 'CEO',
-    text: 'OnlyCloz a transformé notre présence en ligne. En seulement 3 mois, notre trafic a augmenté de 150% et nos conversions ont doublé. Une équipe à l\'écoute et des résultats concrets.',
+    text: 'OnlyClik a transformé notre présence en ligne. En seulement 3 mois, notre trafic a augmenté de 150% et nos conversions ont doublé. Une équipe à l\'écoute et des résultats concrets.',
     rating: 5,
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
   },
