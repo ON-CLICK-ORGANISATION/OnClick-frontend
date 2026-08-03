@@ -1,95 +1,209 @@
 import { useState } from 'react'
-import type { FormEvent } from 'react'
-
-const inputClass =
-  'w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-primary'
-
-const labelClass = 'mb-1.5 block text-xs font-bold uppercase tracking-widest text-muted-foreground'
+import { motion } from 'framer-motion'
+import { Send, CheckCircle2 } from 'lucide-react'
 
 export default function ContactForm() {
-  const [sent, setSent] = useState(false)
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    message: '',
+    rgpd: false,
+  })
+  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setSent(true)
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value,
+    }))
   }
 
-  if (sent) {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+      setSubmitted(true)
+    }, 1500)
+  }
+
+  if (submitted) {
     return (
-      <div className="mt-10 max-w-3xl rounded-xl border border-border bg-mist px-6 py-8">
-        <p className="font-display text-xl">Merci pour votre message !</p>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Nous revenons vers vous sous 24 heures avec des premières pistes concrètes.
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="bg-white rounded-3xl p-12 text-center border border-[#E2E8F0] shadow-sm max-w-5xl mx-auto"
+      >
+        <div className="w-16 h-16 bg-[#FFE957]/30 rounded-full flex items-center justify-center mx-auto mb-4">
+          <CheckCircle2 size={32} className="text-[#0F172A]" />
+        </div>
+        <h3 className="text-2xl font-semibold text-[#1E293B] mb-2">Message envoyé !</h3>
+        <p className="text-[#64748B] text-sm mb-6">
+          Merci pour votre message. Nous vous répondrons dans les plus brefs délais.
         </p>
-      </div>
+        <button
+          onClick={() => setSubmitted(false)}
+          className="inline-flex items-center gap-2 text-sm font-medium text-[#00B4D8] hover:text-[#0096C7] transition-colors"
+        >
+          Envoyer un autre message
+          <span className="group-hover:translate-x-1 transition-transform">→</span>
+        </button>
+      </motion.div>
     )
   }
 
   return (
-    <div className="mt-10 max-w-3xl">
-      <form className="grid gap-4" onSubmit={handleSubmit} noValidate>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <label htmlFor="name" className={labelClass}>
-              Nom
-            </label>
-            <input id="name" name="name" className={inputClass} placeholder="Votre nom" required />
-          </div>
-          <div>
-            <label htmlFor="email" className={labelClass}>
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              className={inputClass}
-              placeholder="vous@entreprise.com"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="company" className={labelClass}>
-              Entreprise
-            </label>
-            <input id="company" name="company" className={inputClass} placeholder="Nom de votre structure" />
-          </div>
-          <div>
-            <label htmlFor="budget" className={labelClass}>
-              Budget estimé
-            </label>
-            <select id="budget" name="budget" className={inputClass} defaultValue="">
-              <option value="" disabled>
-                Sélectionner
-              </option>
-              <option>Moins de 3 000 €</option>
-              <option>3 000 € – 8 000 €</option>
-              <option>8 000 € – 20 000 €</option>
-              <option>Plus de 20 000 €</option>
-            </select>
-          </div>
-        </div>
+    <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <div className="bg-white rounded-3xl shadow-sm border border-[#E2E8F0] p-8 md:p-12">
+        <div className="grid lg:grid-cols-2 gap-12">
 
-        <div>
-          <label htmlFor="message" className={labelClass}>
-            Votre projet
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows={5}
-            className={inputClass}
-            placeholder="Parlez-nous de vos objectifs…"
-          />
-        </div>
+          {/* Colonne gauche - Texte */}
+          <div>
+            {/* Titre à deux couleurs */}
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#1E293B] leading-tight mb-4">
+              Construisons ensemble{' '}
+              <span className="text-[#FDE68A] font-medium">votre réussite</span>.
+            </h2>
 
-        <button
-          type="submit"
-          className="justify-self-start rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
-        >
-          Envoyer ma demande
-        </button>
-      </form>
+            <p className="text-[#64748B] text-base leading-relaxed mb-8">
+              Vous avez un projet en tête ? Contactez-nous dès aujourd'hui pour en discuter.
+            </p>
+
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-[#FFE957]/30 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-3 h-3 text-[#0F172A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span className="text-[#1E293B] text-sm font-medium">Réponse sous 24h garantie</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-[#FFE957]/30 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-3 h-3 text-[#0F172A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span className="text-[#1E293B] text-sm font-medium">Audit gratuit offert</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-[#FFE957]/30 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-3 h-3 text-[#0F172A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span className="text-[#1E293B] text-sm font-medium">Interlocuteur dédié</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Colonne droite - Formulaire */}
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Row 1: Prénom & Nom */}
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                  placeholder="Prénom"
+                  className="w-full bg-[#F1F5F9] border border-[#E2E8F0] focus:border-[#00B4D8] focus:ring-2 focus:ring-[#00B4D8]/20 rounded-xl px-4 py-3 text-[#1E293B] text-sm placeholder-[#64748B] outline-none transition-all duration-300"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                  placeholder="Nom"
+                  className="w-full bg-[#F1F5F9] border border-[#E2E8F0] focus:border-[#00B4D8] focus:ring-2 focus:ring-[#00B4D8]/20 rounded-xl px-4 py-3 text-[#1E293B] text-sm placeholder-[#64748B] outline-none transition-all duration-300"
+                />
+              </div>
+            </div>
+
+            {/* Row 2: Email & Entreprise */}
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="Email professionnel"
+                  className="w-full bg-[#F1F5F9] border border-[#E2E8F0] focus:border-[#00B4D8] focus:ring-2 focus:ring-[#00B4D8]/20 rounded-xl px-4 py-3 text-[#1E293B] text-sm placeholder-[#64748B] outline-none transition-all duration-300"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  placeholder="Entreprise"
+                  className="w-full bg-[#F1F5F9] border border-[#E2E8F0] focus:border-[#00B4D8] focus:ring-2 focus:ring-[#00B4D8]/20 rounded-xl px-4 py-3 text-[#1E293B] text-sm placeholder-[#64748B] outline-none transition-all duration-300"
+                />
+              </div>
+            </div>
+
+            {/* Message */}
+            <div>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={4}
+                placeholder="Décrivez votre projet..."
+                className="w-full bg-[#F1F5F9] border border-[#E2E8F0] focus:border-[#00B4D8] focus:ring-2 focus:ring-[#00B4D8]/20 rounded-xl px-4 py-3 text-[#1E293B] text-sm placeholder-[#64748B] outline-none transition-all duration-300 resize-none"
+              />
+            </div>
+
+            {/* RGPD */}
+            <div className="flex items-start gap-3">
+              <input
+                type="checkbox"
+                name="rgpd"
+                id="rgpd"
+                checked={formData.rgpd}
+                onChange={handleChange}
+                required
+                className="mt-0.5 w-4 h-4 accent-[#00B4D8] cursor-pointer rounded border-[#E2E8F0]"
+              />
+              <label htmlFor="rgpd" className="text-xs text-[#64748B] leading-relaxed cursor-pointer">
+                J'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande.
+              </label>
+            </div>
+
+            {/* Bouton Envoyer */}
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full inline-flex items-center justify-center gap-2 font-semibold text-sm py-4 px-8 rounded-full bg-[#FFE957] text-[#0F172A] shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+            >
+              {loading ? (
+                <>
+                  <span className="w-4 h-4 border-2 border-[#0F172A]/30 border-t-[#0F172A] rounded-full animate-spin" />
+                  Envoi en cours...
+                </>
+              ) : (
+                <>
+                  Envoyer
+                  <Send size={16} className="ml-1" />
+                </>
+              )}
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   )
 }

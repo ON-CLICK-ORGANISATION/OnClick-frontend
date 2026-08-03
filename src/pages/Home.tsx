@@ -112,16 +112,7 @@ export default function Home() {
 
 
       {/* Contact */}
-      <section className="container-page py-24" id="contact">
-        <h2 className="max-w-2xl font-display text-[clamp(2rem,4.5vw,3.25rem)] leading-tight">
-          Construisons ensemble votre réussite.
-        </h2>
-        <p className="mt-4 max-w-xl text-sm text-muted-foreground">
-          Parlez-nous de votre activité et de vos objectifs. Nous vous répondons sous 24 heures avec des premières
-          pistes concrètes.
-        </p>
-        <ContactForm />
-      </section>
+     <ContactForm />
     </>
   )
 }

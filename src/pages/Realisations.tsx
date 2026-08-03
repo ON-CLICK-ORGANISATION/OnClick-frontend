@@ -17,21 +17,51 @@ export default function Realisations() {
       </section>
 
       <section className="container-page pb-16">
-        <div className="grid gap-14 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, i) => (
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-14 max-w-6xl mx-auto">
+          {projects.map((project) => (
             <a
               key={project.name}
               href={project.url}
               target="_blank"
               rel="noreferrer noopener"
-              className={`group flex flex-col items-center text-center ${
-                i % 3 === 1 ? 'lg:mt-14' : ''
-              }`}
+              className="group flex flex-col items-center text-center w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)] flex-shrink-0"
             >
-              <span
-                className="size-48 rounded-full transition-transform duration-300 group-hover:scale-105"
+              {/* Cercle avec image */}
+              <div
+                className="size-48 rounded-full overflow-hidden transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
                 style={{ background: project.gradient }}
-              />
+              >
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent) {
+                        parent.style.background = project.gradient;
+                        parent.style.display = 'flex';
+                        parent.style.alignItems = 'center';
+                        parent.style.justifyContent = 'center';
+                        parent.innerHTML = `
+                          <span class="text-4xl font-bold text-white opacity-60">
+                            ${project.name.charAt(0)}
+                          </span>
+                        `;
+                      }
+                    }}
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-4xl font-bold text-white opacity-60">
+                      {project.name.charAt(0)}
+                    </span>
+                  </div>
+                )}
+              </div>
+
               <h2 className="mt-6 font-display text-xl">{project.name}</h2>
               <p className="mt-2 max-w-[18rem] text-xs font-semibold leading-relaxed text-foreground/80">
                 {project.description}
@@ -44,12 +74,7 @@ export default function Realisations() {
         </div>
       </section>
 
-      <section className="container-page py-24" id="contact">
-        <h2 className="max-w-2xl font-display text-[clamp(2rem,4.5vw,3.25rem)] leading-tight">
-          Construisons ensemble votre réussite.
-        </h2>
-        <ContactForm />
-      </section>
+      <ContactForm />
     </>
   )
 }

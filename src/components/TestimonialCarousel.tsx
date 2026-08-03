@@ -51,10 +51,10 @@ export default function TestimonialCarousel() {
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <section className="py-20 sm:py-28 lg:py-32 bg-[#F7FAFC]">
+    <section className="py-12 sm:py-16 lg:py-20 bg-[#F7FAFC]">
       <div className="container-fluid px-4 sm:px-6 lg:px-12 max-w-5xl mx-auto">
 
-        {/* Titre de section sans ScrollReveal */}
+        {/* Titre de section */}
         <div className="text-center mb-12">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#4A5568] mb-3">
             TÉMOIGNAGES
@@ -64,8 +64,8 @@ export default function TestimonialCarousel() {
           </h2>
         </div>
 
-        {/* Slider */}
-        <div className="bg-white rounded-3xl p-8 sm:p-12 lg:p-16 shadow-sm">
+        {/* Slider - Sans fond blanc, bordure ou ombre */}
+        <div className="p-8 sm:p-12 lg:p-16">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
 
             {/* Colonne gauche - Photo de profil */}
