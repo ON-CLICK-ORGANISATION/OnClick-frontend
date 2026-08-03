@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 export default function Footer() {
-  const year = new Date().getFullYear()
+  // const year = new Date().getFullYear()
 
   return (
     <footer className="mt-24 border-t border-border bg-mist">

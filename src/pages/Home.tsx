@@ -5,7 +5,7 @@ import TestimonialCarousel from '../components/TestimonialCarousel'
 import ContactForm from '../components/ContactForm'
 import { LaptopMockup, PhoneMockup } from '../components/DeviceMockups'
 import ServicesSection from "../components/ServiceSection.tsx";
-import { heroProject, featuredProjects, expertises } from '../data/content'
+import { heroProject, featuredProjects } from '../data/content'
 
 export default function Home() {
   return (
@@ -48,15 +48,12 @@ export default function Home() {
                 className="group flex w-full flex-col items-center gap-1 sm:gap-3 md:gap-4 lg:flex-row lg:items-center lg:gap-5"
               >
                 {/* Mockups */}
-                <div className="relative flex items-center justify-center w-full max-w-[9rem] sm:max-w-[12rem] md:max-w-[18rem] lg:max-w-[28rem] shrink-0 scale-90 sm:scale-95 md:scale-100">
+                <div
+                    className="relative flex items-center justify-center w-full max-w-[9rem] sm:max-w-[12rem] md:max-w-[18rem] lg:max-w-[28rem] shrink-0 scale-90 sm:scale-95 md:scale-100">
                   <PhoneMockup
-                    screenshot={heroProject.imageMobile}
-                    alt={`Version mobile du site ${heroProject.name}`}
-                    className="absolute left-[-0.5rem] sm:left-[-0.2rem] md:left-[0.2rem] lg:left-[0.8rem] bottom-0 z-10 w-[2.2rem] sm:w-[3rem] md:w-[5rem] lg:w-[7.5rem] rotate-[-6deg] transition-transform duration-300 group-hover:rotate-[-3deg] group-hover:scale-105"
-                    style={{
-                      transformOrigin: 'bottom center',
-                      boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
-                    }}
+                      screenshot={heroProject.imageMobile}
+                      alt={`Version mobile du site ${heroProject.name}`}
+                      className="absolute left-[-0.5rem] sm:left-[-0.2rem] md:left-[0.2rem] lg:left-[0.8rem] bottom-0 z-10 w-[2.2rem] sm:w-[3rem] md:w-[5rem] lg:w-[7.5rem] rotate-[-6deg] transition-transform duration-300 group-hover:rotate-[-3deg] group-hover:scale-105"
                   />
 
                   <LaptopMockup
