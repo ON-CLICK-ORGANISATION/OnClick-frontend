@@ -43,7 +43,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 sm:py-28 bg-[#F7FAFC]">
+    <section className="py-10 sm:py-14 bg-[#F7FAFC]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Titre de section */}
@@ -52,7 +52,7 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-10"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#4A5568] mb-3">
             CE QUE NOUS FAISONS
@@ -108,7 +108,7 @@ export default function ServicesSection() {
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0F172A] mb-2 md:mb-3 tracking-tight">
                   {service.title}
                 </h3>
-                <p className="text-sm sm:text-base text-[#64748B] leading-relaxed mb-4 flex-1">
+                <p className="text-base sm:text-lg text-[#64748B] leading-relaxed mb-4 flex-1">
                   {service.description}
                 </p>
                 <Link

@@ -51,11 +51,11 @@ export default function TestimonialCarousel() {
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-[#F7FAFC]">
+    <section className="py-8 sm:py-12 lg:py-14 bg-[#F7FAFC]">
       <div className="container-fluid px-4 sm:px-6 lg:px-12 max-w-5xl mx-auto">
 
         {/* Titre de section */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-10">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#4A5568] mb-3">
             TÉMOIGNAGES
           </p>
@@ -65,7 +65,7 @@ export default function TestimonialCarousel() {
         </div>
 
         {/* Slider - Sans fond blanc, bordure ou ombre */}
-        <div className="p-8 sm:p-12 lg:p-16">
+        <div className="p-4 sm:p-8 lg:p-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
 
             {/* Colonne gauche - Photo de profil */}
@@ -121,7 +121,7 @@ export default function TestimonialCarousel() {
               </div>
 
               {/* Texte du témoignage */}
-              <p className="text-base sm:text-lg lg:text-xl text-[#2D3748] leading-relaxed mb-6">
+              <p className="text-base sm:text-lg lg:text-xl text-[#2D3748] leading-relaxed mb-6 font-medium">
                 "{currentTestimonial.text}"
               </p>
 
@@ -140,7 +140,7 @@ export default function TestimonialCarousel() {
           </div>
 
           {/* Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-12 pt-8 border-t border-[#E2E8F0]">
+          <div className="flex items-center justify-center gap-4 mt-8 pt-6 border-t border-[#E2E8F0]">
             {/* Bouton précédent */}
             <button
               onClick={prevSlide}

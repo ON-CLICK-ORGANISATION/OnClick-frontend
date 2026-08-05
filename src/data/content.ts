@@ -37,8 +37,8 @@ export const heroProject: MiniProject & { imageMobile: string } = {
   name: 'Amalthéa Studio',
   url: 'https://amalthea-studio.com/',
   description: 'Studio de Pilates en ligne qui a augmenté son taux de réservation de +87%.',
-  image: '/images/projects/pilates-laptop.jpg',
-  imageMobile: '/images/projects/pilates-mobile.jpg',
+  image: '/images/projects/stud.png',
+  imageMobile: '/images/projects/mobile.png',
 }
 
 // Small featured projects strip on home page
@@ -48,7 +48,7 @@ export const featuredProjects: Project[] = [
     url: 'https://lesixth.com/',
     description: 'Restaurant qui a augmenté son taux de réservation de +67%',
     gradient: 'linear-gradient(140deg, oklch(0.55 0.08 60), oklch(0.35 0.05 50))',
-    image: '/images/projects/lesixth.jpg',
+    image: '/images/projects/lexis.png',
   },
   {
     name: 'Centre Vision Laser',
@@ -56,14 +56,14 @@ export const featuredProjects: Project[] = [
     description:
       "La refonte du site et l'amélioration du parcours utilisateur a augmenté le nombre de leads via le site de +350%",
     gradient: 'linear-gradient(140deg, oklch(0.3 0.02 260), oklch(0.2 0.02 260))',
-    image: '/images/projects/visionlaser.jpg',
+    image: '/images/projects/vision.png',
   },
   {
     name: 'Aude Coué Kinésiologue',
     url: 'https://aude-coue.com/',
     description: 'Aude a doublé son nombre de rendez-vous en 4 mois avec notre site internet',
     gradient: 'linear-gradient(140deg, oklch(0.45 0.07 200), oklch(0.28 0.05 210))',
-    image: '/images/projects/audecoue.jpg',
+    image: '/images/realisation/aude.png',
   },
 ]
 
@@ -85,70 +85,70 @@ export const projects: Project[] = [
     url: 'https://hotel-la-colongette.com/',
     description: 'Augmentation du taux de réservation de +130% avec le nouveau site',
     gradient: 'linear-gradient(140deg, oklch(0.45 0.07 200), oklch(0.26 0.05 210))',
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', // Image hôtel
+    image: '/images/realisation/colongete.jpg', // Image hôtel
   },
   {
     name: 'Espace Oasium',
     url: 'https://espace-oasium.com/',
     description: 'Ce site de réservation de bureaux a atteint un taux de remplissage de 87%',
     gradient: 'linear-gradient(140deg, oklch(0.5 0.09 340), oklch(0.3 0.06 330))',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', // Image bureau/espace de travail
+    image: '/images/realisation/oasim.png', // Image bureau/espace de travail
   },
   {
     name: 'Bénédicte Nécaille',
     url: 'https://www.lemiroiretlaplume.fr/',
     description: 'Biographe qui est passée de 1 à 6 biographies par an',
     gradient: 'linear-gradient(140deg, oklch(0.52 0.06 140), oklch(0.3 0.04 150))',
-    image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', // Image écriture/plume
+    image: '/images/realisation/mirroir.png', // Image écriture/plume
   },
   {
     name: 'Faune Project',
     url: 'https://fauneproject.com/',
     description: "Une refonte qui a permis une augmentation du trafic organique de +74%",
     gradient: 'linear-gradient(140deg, oklch(0.4 0.03 260), oklch(0.22 0.02 260))',
-    image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', // Image design/créatif
+    image: '/images/realisation/faune.png', // Image design/créatif
   },
   {
     name: 'Amalthéa Pilates',
     url: 'https://amalthea-studio.com/',
     description: 'Studio de Pilates en ligne qui a augmenté son taux de réservation de +87%.',
     gradient: 'linear-gradient(140deg, oklch(0.6 0.1 90), oklch(0.35 0.06 80))',
-    image: 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', // Image pilates/fitness
+    image: '/images/projects/stud.png', // Image pilates/fitness
   },
   {
     name: 'Jyretourneimmédiatement',
     url: 'https://www.jyretourneimmediatement.com/',
     description: 'Compagnie de théâtre qui a vu son taux de visite augmenter de +520%',
     gradient: 'linear-gradient(140deg, oklch(0.55 0.08 60), oklch(0.32 0.05 50))',
-    image: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', // Image théâtre/scène
+    image: '/images/realisation/jyr.png', // Image théâtre/scène
   },
   {
     name: 'Hôtel Royal Palace',
     url: 'https://hotel-royal-palace.com/',
     description: 'Hôtel devenu numéro 1 sur Google dans sa région',
     gradient: 'linear-gradient(140deg, oklch(0.45 0.07 200), oklch(0.26 0.05 210))',
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', // Image hôtel de luxe
+    image: '/images/realisation/royal.png', // Image hôtel de luxe
   },
   {
     name: 'Vision Laser',
     url: 'https://visionlaser.eu/',
     description: "La refonte du site et l'amélioration du parcours utilisateur a augmenté le nombre de leads via le site de +350%",
     gradient: 'linear-gradient(140deg, oklch(0.5 0.09 340), oklch(0.3 0.06 330))',
-    image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', // Image laser/médical
+    image: '/images/projects/vision.png', // Image laser/médical
   },
   {
     name: 'Le Chemin de mon Histoire',
     url: 'https://lechemindemonhistoire.fr/',
     description: "Laurent a doublé son chiffre d'affaires avec son site internet",
     gradient: 'linear-gradient(140deg, oklch(0.52 0.06 140), oklch(0.3 0.04 150))',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', // Image histoire/voyage
+    image: '/images/realisation/chemin.png', // Image histoire/voyage
   },
   {
     name: 'Aude Coué',
     url: 'https://aude-coue.com/',
     description: 'Aude a augmenté son taux de rendez-vous de +100% en 4 mois',
     gradient: 'linear-gradient(140deg, oklch(0.4 0.03 260), oklch(0.22 0.02 260))',
-    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', // Image kinésiologie/santé
+    image: '/images/realisation/aude.png', // Image kinésiologie/santé
   },
 ]
 

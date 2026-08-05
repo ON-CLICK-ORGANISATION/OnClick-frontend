@@ -9,7 +9,7 @@ export default function Realisations() {
         <h1 className="max-w-3xl font-display text-[clamp(2.3rem,5.5vw,3.75rem)] leading-[1.05]">
           Des stratégies qui produisent des résultats
         </h1>
-        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-foreground/80">
+        <p className="mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-foreground/80">
           Chaque projet est pensé pour atteindre un objectif concret : attirer plus de clients, développer votre
           visibilité et accélérer votre croissance. Découvrez quelques-unes des entreprises que nous avons
           accompagnées et les résultats obtenus grâce à une stratégie digitale performante.
@@ -63,7 +63,7 @@ export default function Realisations() {
               </div>
 
               <h2 className="mt-6 font-display text-xl">{project.name}</h2>
-              <p className="mt-2 max-w-[18rem] text-xs font-semibold leading-relaxed text-foreground/80">
+              <p className="mt-2 max-w-[18rem] text-sm sm:text-base font-semibold leading-relaxed text-foreground/80">
                 {project.description}
               </p>
               <span className="link-arrow mt-4">
