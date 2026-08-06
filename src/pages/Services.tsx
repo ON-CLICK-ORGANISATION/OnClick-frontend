@@ -134,7 +134,7 @@ export default function Services() {
             </section>
 
             {/* Section "Des services pensés pour accélérer votre croissance" */}
-            <section className="bg-white py-12 md:py-16 pb-8">
+            <section className="bg-white py-2 md:py-4 pb-8">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
                     {/* Titre principal aligné à gauche - 2 lignes distinctes */}

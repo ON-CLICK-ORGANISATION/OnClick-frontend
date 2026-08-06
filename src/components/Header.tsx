@@ -13,8 +13,18 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur">
       <div className="container-page flex h-20 items-center justify-between">
-        <NavLink to="/" className="font-display text-lg tracking-[0.22em] leading-4">
-          ONLY CLIK
+        {/*<NavLink to="/" className="font-display text-lg tracking-[0.22em] leading-4">*/}
+        {/*  ONLY CLIK*/}
+        {/*</NavLink>*/}
+        <NavLink to="/" className="flex items-center gap-2">
+          <img
+              src="/images/img.png"
+              alt="Only Clik"
+              className="hidden md:block h-14 w-15 object-contain"
+          />
+          <span className="font-display text-lg tracking-[0.22em] leading-4">
+    ONLY CLIK
+  </span>
         </NavLink>
 
         <nav className="hidden items-center gap-9 md:flex">

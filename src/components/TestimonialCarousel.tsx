@@ -51,7 +51,7 @@ export default function TestimonialCarousel() {
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <section className="py-8 sm:py-12 lg:py-14 bg-[#F7FAFC]">
+    <section className="py-4 sm:py-6 lg:py-8 bg-[#F7FAFC]">
       <div className="container-fluid px-4 sm:px-6 lg:px-12 max-w-5xl mx-auto">
 
         {/* Titre de section */}

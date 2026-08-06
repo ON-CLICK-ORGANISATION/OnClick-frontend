@@ -1,52 +1,147 @@
 import { Link } from 'react-router-dom'
+import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react'
+
+const footerLinks = {
+  pages: [
+    { label: 'Accueil', path: '/' },
+    { label: 'Services', path: '/services' },
+    { label: 'Réalisations', path: '/realisations' },
+    { label: 'Démarrer un projet', path: '/demarrer-un-projet' },
+  ],
+  legal: [
+    'Mentions légales',
+    'Politique de confidentialité',
+    'CGV',
+    'RGPD',
+  ],
+}
 
 export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="mt-10 border-t border-neutral-800 bg-neutral-900 text-neutral-100">
-      <div className="container-page flex flex-col gap-8 py-12 md:flex-row md:items-start md:justify-between">
-        {/* Colonne 1 : Branding & Description */}
-        <div>
-          <p className="font-display text-lg tracking-[0.22em] leading-4 font-bold">
-            <span className="text-[#FDE68A]">ONLY CLIK</span>
-          </p>
-          <p className="mt-4 max-w-xs text-sm text-neutral-400">
-            L'agence digitale qui aide les professionnels à exister en ligne et à développer leur activité.
-          </p>
-        </div>
+    <footer
+      className="relative overflow-hidden text-white mt-10"
+      style={{ background: 'linear-gradient(180deg, #0a0a0f 0%, #1E402C 100%)' }}
+    >
+      {/* Diagonal texture */}
+      <div
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style={{
+          backgroundImage:
+            'repeating-linear-gradient(-45deg, rgba(255,255,255,0.6) 0, rgba(255,255,255,0.6) 1px, transparent 1px, transparent 16px)',
+        }}
+      />
 
-        {/* Colonnes de liens */}
-        <div className="flex gap-14">
-          <div className="flex flex-col gap-3 text-sm">
-            <span className="text-xs font-bold uppercase tracking-widest text-neutral-400">Navigation</span>
-            <Link className="text-neutral-300 transition-colors hover:text-white hover:underline" to="/">
-              Accueil
+      {/* Top accent */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-px"
+        style={{ background: 'linear-gradient(90deg, transparent, #FDE68A, transparent)' }}
+      />
+
+      {/* Ambient glow */}
+      <div
+        className="absolute -top-20 left-1/4 w-96 h-96 rounded-full blur-[120px] pointer-events-none"
+        style={{ background: 'rgba(253, 230, 138, 0.06)' }}
+      />
+
+      <div className="relative container-page pt-16 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+          {/* Brand block */}
+          <div>
+            <Link to="/" className="flex items-center gap-2.5 mb-5 w-fit group">
+              <img
+                  src="/images/img.png"
+                  alt="Only Clik"
+                  className="h-14 w-15 object-contain"
+              />
+              <span className="font-display text-xl font-bold tracking-[0.22em]">
+                <span style={{ color: '#FDE68A' }}>ONLY CLIK</span>
+              </span>
             </Link>
-            <Link className="text-neutral-300 transition-colors hover:text-white hover:underline" to="/services">
-              Services
-            </Link>
-            <Link className="text-neutral-300 transition-colors hover:text-white hover:underline" to="/realisations">
-              Réalisations
-            </Link>
-            <Link className="text-neutral-300 transition-colors hover:text-white hover:underline" to="/demarrer-un-projet">
-              Démarrer un projet
-            </Link>
+
+            <p className="text-sm leading-relaxed mb-6 text-white/55 max-w-xs">
+              L'agence digitale qui aide les professionnels à exister en ligne et à développer leur activité.
+            </p>
           </div>
 
-          <div className="flex flex-col gap-3 text-sm">
-            <span className="text-xs font-bold uppercase tracking-widest text-neutral-400">Contact</span>
-            <a href="mailto:contact@onlyclik.com" className="text-neutral-300 transition-colors hover:text-white hover:underline">
-              contact@onlyclik.com
-            </a>
+          {/* Navigation */}
+          <div>
+            <h3 className="text-2xs font-bold uppercase tracking-widest mb-5 text-white/70">
+              Navigation
+            </h3>
+            <ul className="space-y-3">
+              {footerLinks.pages.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="text-sm flex items-center gap-2 group transition-colors duration-200 text-white/55 hover:text-[#FDE68A]"
+                  >
+                    <span
+                      className="h-px transition-all duration-300 group-hover:w-5"
+                      style={{ width: '12px', background: 'rgba(253, 230, 138, 0.7)' }}
+                    />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-2xs font-bold uppercase tracking-widest mb-5 text-white/70">
+              Contact
+            </h3>
+            <ul className="space-y-3.5">
+              {[
+                { icon: Mail, text: 'contact@onlyclik.com' },
+                { icon: Phone, text: '+33 1 23 45 67 89' },
+                { icon: MapPin, text: 'Paris, France' },
+              ].map(({ icon: Icon, text }, i) => (
+                <li key={i} className="flex items-center gap-3 text-sm text-white/55">
+                  <div
+                    className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                    style={{ background: 'rgba(253, 230, 138, 0.14)', border: '1px solid rgba(253, 230, 138, 0.25)' }}
+                  >
+                    <Icon size={13} style={{ color: '#FDE68A' }} />
+                  </div>
+                  {text}
+                </li>
+              ))}
+            </ul>
+
+            <Link
+              to="/contact?form=1"
+              className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium group transition-colors duration-200"
+              style={{ color: '#FDE68A' }}
+              onMouseEnter={e => e.currentTarget.style.color = '#FFFFFF'}
+              onMouseLeave={e => e.currentTarget.style.color = '#FDE68A'}
+            >
+              Nous contacter
+              <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </Link>
           </div>
         </div>
-      </div>
 
-      {/* Barre de Copyright bas de page */}
-      <div className="border-t border-neutral-800/80">
-        <div className="container-page py-6 text-xs text-neutral-400">
-          © {year} Only Clik. Tous droits réservés.
+        {/* Bottom bar */}
+        <div className="pt-8" style={{ borderTop: '1px solid rgba(255,255,255,0.10)' }}>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-white/40">
+              © {year} ONLY CLIK. Tous droits réservés.
+            </p>
+            <div className="flex items-center gap-5">
+              {footerLinks.legal.map((l, i) => (
+                <span
+                  key={i}
+                  className="text-2xs cursor-pointer transition-colors duration-200 text-white/40 hover:text-white/75"
+                >
+                  {l}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </footer>
