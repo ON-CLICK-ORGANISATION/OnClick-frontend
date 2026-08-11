@@ -8,7 +8,7 @@ const services = [
     description:
       'Dans un web saturé, la visibilité ne suffit plus. Nous créons des campagnes ciblées et une stratégie SEO performante pour attirer les bons prospects et générer une croissance mesurable.',
     image: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    link: '/contact',
+    link: '/demarrer-un-projet',
     linkText: 'Découvrir le marketing',
     reverse: false,
   },
@@ -17,7 +17,7 @@ const services = [
     description:
       'Nous concevons des sites web performants, évolutifs et pensés pour convertir vos visiteurs en clients.',
     image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    link: '/contact',
+    link: '/demarrer-un-projet',
     linkText: 'En savoir plus',
     reverse: true,
   },
@@ -26,7 +26,7 @@ const services = [
     description:
       'Une identité forte inspire confiance. Nous créons une image de marque qui vous distingue et renforce votre crédibilité.',
     image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    link: '/contact',
+    link: '/demarrer-un-projet',
     linkText: 'Découvrir la création',
     reverse: false,
   },
@@ -35,7 +35,7 @@ const services = [
     description:
       'Une croissance durable repose sur une vision claire. Nous élaborons une stratégie adaptée pour transformer vos objectifs en résultats.',
     image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    link: '/contact',
+    link: '/demarrer-un-projet',
     linkText: 'En savoir plus',
     reverse: true,
   },

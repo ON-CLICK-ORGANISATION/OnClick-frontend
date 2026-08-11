@@ -35,7 +35,7 @@ export default function Realisations() {
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="w-full h-full object-cover"
+                    className={project.fit === 'contain' ? 'w-full h-full object-contain p-6' : 'w-full h-full object-cover'}
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';

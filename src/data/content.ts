@@ -30,6 +30,8 @@ export interface MethodStep {
 
 export interface Project extends MiniProject {
   gradient: string
+  /** 'contain' shows the whole image without cropping (dézoomé) — used for logos/wide shots. Defaults to 'cover'. */
+  fit?: 'cover' | 'contain'
 }
 
 // Hero showcase project (large orb on home page)
@@ -48,7 +50,7 @@ export const featuredProjects: Project[] = [
     url: 'https://lesixth.com/',
     description: 'Restaurant qui a augmenté son taux de réservation de +67%',
     gradient: 'linear-gradient(140deg, oklch(0.55 0.08 60), oklch(0.35 0.05 50))',
-    image: '/images/projects/lexis.png',
+    image: '/images/projects/lesixth-new.jpg',
   },
   {
     name: 'Centre Vision Laser',
@@ -63,7 +65,7 @@ export const featuredProjects: Project[] = [
     url: 'https://aude-coue.com/',
     description: 'Aude a doublé son nombre de rendez-vous en 4 mois avec notre site internet',
     gradient: 'linear-gradient(140deg, oklch(0.45 0.07 200), oklch(0.28 0.05 210))',
-    image: '/images/realisation/aude.png',
+    image: '/images/projects/aude-coue-manip.jpg',
   },
 ]
 
@@ -78,7 +80,7 @@ export const projects: Project[] = [
     url: 'https://www.horizon-nouveau.fr/',
     description: "Une stratégie SEO efficace qui a permis à ce coach d'atteindre la première place sur Google.",
     gradient: 'linear-gradient(140deg, oklch(0.55 0.08 60), oklch(0.32 0.05 50))',
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', // Image coach/business
+    image: '/images/realisation/horizon-nouveau.jpg',
   },
   {
     name: 'Hôtel la Colongette',
@@ -92,7 +94,7 @@ export const projects: Project[] = [
     url: 'https://espace-oasium.com/',
     description: 'Ce site de réservation de bureaux a atteint un taux de remplissage de 87%',
     gradient: 'linear-gradient(140deg, oklch(0.5 0.09 340), oklch(0.3 0.06 330))',
-    image: '/images/realisation/oasim.png', // Image bureau/espace de travail
+    image: '/images/realisation/oasim-new.jpg',
   },
   {
     name: 'Bénédicte Nécaille',
@@ -100,6 +102,7 @@ export const projects: Project[] = [
     description: 'Biographe qui est passée de 1 à 6 biographies par an',
     gradient: 'linear-gradient(140deg, oklch(0.52 0.06 140), oklch(0.3 0.04 150))',
     image: '/images/realisation/mirroir.png', // Image écriture/plume
+    fit: 'contain',
   },
   {
     name: 'Faune Project',
@@ -114,6 +117,7 @@ export const projects: Project[] = [
     description: 'Studio de Pilates en ligne qui a augmenté son taux de réservation de +87%.',
     gradient: 'linear-gradient(140deg, oklch(0.6 0.1 90), oklch(0.35 0.06 80))',
     image: '/images/projects/stud.png', // Image pilates/fitness
+    fit: 'contain',
   },
   {
     name: 'Jyretourneimmédiatement',
@@ -127,7 +131,7 @@ export const projects: Project[] = [
     url: 'https://hotel-royal-palace.com/',
     description: 'Hôtel devenu numéro 1 sur Google dans sa région',
     gradient: 'linear-gradient(140deg, oklch(0.45 0.07 200), oklch(0.26 0.05 210))',
-    image: '/images/realisation/royal.png', // Image hôtel de luxe
+    image: '/images/realisation/royal-new.jpg',
   },
   {
     name: 'Vision Laser',
@@ -142,13 +146,14 @@ export const projects: Project[] = [
     description: "Laurent a doublé son chiffre d'affaires avec son site internet",
     gradient: 'linear-gradient(140deg, oklch(0.52 0.06 140), oklch(0.3 0.04 150))',
     image: '/images/realisation/chemin.png', // Image histoire/voyage
+    fit: 'contain',
   },
   {
     name: 'Aude Coué',
     url: 'https://aude-coue.com/',
     description: 'Aude a augmenté son taux de rendez-vous de +100% en 4 mois',
     gradient: 'linear-gradient(140deg, oklch(0.4 0.03 260), oklch(0.22 0.02 260))',
-    image: '/images/realisation/aude.png', // Image kinésiologie/santé
+    image: '/images/projects/aude-coue-manip.jpg',
   },
 ]
 

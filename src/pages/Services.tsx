@@ -10,7 +10,7 @@ const servicesData = [
         description:
             'Conception de sites performants, sécurisés et évolutifs, pensés pour offrir une expérience optimale et convertir vos visiteurs en clients.',
         image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-        link: '/contact',
+        link: '/demarrer-un-projet',
         ctaText: 'En savoir plus',
     },
     {
@@ -18,7 +18,7 @@ const servicesData = [
         description:
             'Campagnes Google Ads, réseaux sociaux, publicité programmatique et stratégies d\'acquisition conçues pour atteindre vos objectifs de croissance.',
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-        link: '/contact',
+        link: '/demarrer-un-projet',
         ctaText: 'En savoir plus',
     },
     {
@@ -26,7 +26,7 @@ const servicesData = [
         description:
             'Mise en place d\'outils de mesure et de tableaux de bord pour suivre précisément les performances de vos campagnes et leur impact sur votre chiffre d\'affaires.',
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-        link: '/contact',
+        link: '/demarrer-un-projet',
         ctaText: 'En savoir plus',
     },
     {
@@ -34,7 +34,7 @@ const servicesData = [
         description:
             'Définissez votre positionnement, affirmez votre différence et construisez une image cohérente sur l\'ensemble de vos points de contact.',
         image: 'https://images.unsplash.com/photo-1432889821006-3e44d3ad5e13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-        link: '/contact',
+        link: '/demarrer-un-projet',
         ctaText: 'En savoir plus',
     },
     {
@@ -42,7 +42,7 @@ const servicesData = [
         description:
             'Optimisation de votre visibilité sur Google, les moteurs de recherche alimentés par l\'IA et les nouveaux outils de recherche conversationnelle.',
         image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-        link: '/contact',
+        link: '/demarrer-un-projet',
         ctaText: 'En savoir plus',
     },
     {
@@ -50,7 +50,7 @@ const servicesData = [
         description:
             'Élaboration d\'une feuille de route claire : choix des canaux, répartition du budget et plan d\'action aligné sur vos objectifs commerciaux.',
         image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-        link: '/contact',
+        link: '/demarrer-un-projet',
         ctaText: 'En savoir plus',
     },
 ]
@@ -154,7 +154,7 @@ export default function Services() {
                             difficile de savoir où investir pour obtenir de vrais résultats.
                         </p>
                         <p className="text-[#64748B] text-base leading-relaxed">
-                            OnlyCloz vous accompagne avec une stratégie claire et des solutions digitales
+                            Only Clik vous accompagne avec une stratégie claire et des solutions digitales
                             conçues pour attirer plus de prospects, renforcer votre visibilité et accélérer
                             votre croissance. De la réflexion à la mise en œuvre, nous vous apportons
                             l'expertise et les outils nécessaires pour faire de votre présence en ligne

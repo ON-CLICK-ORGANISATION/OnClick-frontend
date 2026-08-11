@@ -18,7 +18,7 @@ export default function Header() {
         {/*</NavLink>*/}
         <NavLink to="/" className="flex items-center gap-2">
           <img
-              src="/images/img.png"
+              src="/images/logo-mark.svg"
               alt="Only Clik"
               className="hidden md:block h-14 w-15 object-contain"
           />

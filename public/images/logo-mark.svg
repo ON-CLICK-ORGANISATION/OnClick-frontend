@@ -1,0 +1,30 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ocRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B4D8"/>
+      <stop offset="100%" stop-color="#0096C7"/>
+    </linearGradient>
+    <linearGradient id="ocArrow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="58" fill="#0F172A"/>
+  <circle cx="60" cy="60" r="58" fill="none" stroke="url(#ocRing)" stroke-width="2.5" opacity="0.6"/>
+
+  <!-- Growth arrow path -->
+  <path d="M28 74 L46 56 L60 68 L86 38" fill="none" stroke="url(#ocRing)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Arrowhead -->
+  <path d="M70 36 L88 36 L88 54" fill="none" stroke="url(#ocRing)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Click cursor accent at the peak -->
+  <g transform="translate(86 38)">
+    <path d="M0 0 L0 16 L4 12.5 L7 19 L10.5 17.3 L7.3 11 L13 10.5 Z" fill="#FDE68A" stroke="#0F172A" stroke-width="1"/>
+  </g>
+
+  <!-- Click ripple dots -->
+  <circle cx="27" cy="76" r="3.2" fill="#FDE68A"/>
+</svg>

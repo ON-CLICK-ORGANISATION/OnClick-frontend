@@ -36,7 +36,7 @@ export default function Home() {
         <div className="container-page relative">
           {/* Grand rond - REDUIT */}
           <div
-              className="relative mx-auto w-full max-w-[90%] sm:max-w-[80%] md:max-w-[650px] lg:max-w-[750px] aspect-square rounded-full bg-slate-orb text-slate-orb-foreground overflow-visible md:overflow-hidden">
+              className="relative mx-auto w-full max-w-[94%] sm:max-w-[88%] md:max-w-[760px] lg:max-w-[880px] aspect-square rounded-full bg-slate-orb text-slate-orb-foreground overflow-visible md:overflow-hidden">
             <div
                 className="flex h-full flex-col items-center justify-center gap-2 sm:gap-4 md:gap-6 lg:gap-10 px-3 sm:px-4 md:px-6">
               {/* Bloc Mockups + Texte */}
@@ -48,7 +48,7 @@ export default function Home() {
               >
                 {/* Mockups */}
                 <div
-                    className="relative flex items-center justify-center w-full max-w-[9rem] sm:max-w-[12rem] md:max-w-[18rem] lg:max-w-[28rem] shrink-0 scale-90 sm:scale-95 md:scale-100">
+                    className="relative flex items-center justify-center w-full max-w-[10rem] sm:max-w-[14rem] md:max-w-[21rem] lg:max-w-[32rem] shrink-0 scale-90 sm:scale-95 md:scale-100">
                   <PhoneMockup
                       screenshot={heroProject.imageMobile}
                       alt={`Version mobile du site ${heroProject.name}`}
