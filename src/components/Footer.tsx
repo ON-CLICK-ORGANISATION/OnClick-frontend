@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <footer
       className="relative overflow-hidden text-white mt-10"
-      style={{ background: 'linear-gradient(180deg, #0a0a0f 0%, #1E402C 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #0a0f14 0%, #0d3a44 100%)' }}
     >
       {/* Diagonal texture */}
       <div
@@ -33,16 +33,10 @@ export default function Footer() {
         }}
       />
 
-      {/* Top accent */}
-      <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-px"
-        style={{ background: 'linear-gradient(90deg, transparent, #FDE68A, transparent)' }}
-      />
-
       {/* Ambient glow */}
       <div
         className="absolute -top-20 left-1/4 w-96 h-96 rounded-full blur-[120px] pointer-events-none"
-        style={{ background: 'rgba(253, 230, 138, 0.06)' }}
+        style={{ background: 'rgba(0, 180, 216, 0.10)' }}
       />
 
       <div className="relative container-page pt-16 pb-8">
@@ -52,12 +46,12 @@ export default function Footer() {
           <div>
             <Link to="/" className="flex items-center gap-2.5 mb-5 w-fit group">
               <img
-                  src="/images/img.png"
+                  src="/images/logo-mark.svg"
                   alt="Only Clik"
                   className="h-14 w-15 object-contain"
               />
               <span className="font-display text-xl font-bold tracking-[0.22em]">
-                <span style={{ color: '#FDE68A' }}>ONLY CLIK</span>
+                <span style={{ color: '#00D4F5' }}>ONLY CLIK</span>
               </span>
             </Link>
 
@@ -76,11 +70,11 @@ export default function Footer() {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-sm flex items-center gap-2 group transition-colors duration-200 text-white/55 hover:text-[#FDE68A]"
+                    className="text-sm flex items-center gap-2 group transition-colors duration-200 text-white/55 hover:text-[#00D4F5]"
                   >
                     <span
                       className="h-px transition-all duration-300 group-hover:w-5"
-                      style={{ width: '12px', background: 'rgba(253, 230, 138, 0.7)' }}
+                      style={{ width: '12px', background: 'rgba(0, 212, 245, 0.7)' }}
                     />
                     {link.label}
                   </Link>
@@ -103,9 +97,9 @@ export default function Footer() {
                 <li key={i} className="flex items-center gap-3 text-sm text-white/55">
                   <div
                     className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'rgba(253, 230, 138, 0.14)', border: '1px solid rgba(253, 230, 138, 0.25)' }}
+                    style={{ background: 'rgba(0, 212, 245, 0.14)', border: '1px solid rgba(0, 212, 245, 0.30)' }}
                   >
-                    <Icon size={13} style={{ color: '#FDE68A' }} />
+                    <Icon size={13} style={{ color: '#00D4F5' }} />
                   </div>
                   {text}
                 </li>
@@ -113,11 +107,11 @@ export default function Footer() {
             </ul>
 
             <Link
-              to="/contact?form=1"
+              to="/demarrer-un-projet"
               className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium group transition-colors duration-200"
-              style={{ color: '#FDE68A' }}
+              style={{ color: '#00D4F5' }}
               onMouseEnter={e => e.currentTarget.style.color = '#FFFFFF'}
-              onMouseLeave={e => e.currentTarget.style.color = '#FDE68A'}
+              onMouseLeave={e => e.currentTarget.style.color = '#00D4F5'}
             >
               Nous contacter
               <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

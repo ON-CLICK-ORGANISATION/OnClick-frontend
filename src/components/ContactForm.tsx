@@ -38,7 +38,7 @@ export default function ContactForm() {
         animate={{ opacity: 1, scale: 1 }}
         className="bg-white rounded-3xl p-12 text-center border border-[#E2E8F0] shadow-sm max-w-5xl mx-auto"
       >
-        <div className="w-16 h-16 bg-[#FFE957]/30 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="w-18 h-18 bg-[#FFE957]/30 rounded-full flex items-center justify-center mx-auto mb-4">
           <CheckCircle2 size={32} className="text-[#0F172A]" />
         </div>
         <h3 className="text-2xl font-semibold text-[#1E293B] mb-2">Message envoyé !</h3>
