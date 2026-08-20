@@ -270,3 +270,110 @@ export const processSteps = [
     text: 'Design, développement, campagnes et suivi.',
   },
 ]
+
+// Page "Stratégie de marque" — processus en 4 étapes
+export const brandProcessSteps: { number: string; title: string; text: string }[] = [
+  {
+    number: '01',
+    title: 'Découvrir',
+    text: 'Nous définissons vos objectifs, votre cible et vos besoins. Nous analysons également votre marché, vos supports actuels et vos concurrents.',
+  },
+  {
+    number: '02',
+    title: 'Définir',
+    text: "Nous construisons votre positionnement, vos messages et les bases de votre identité de marque afin d'avoir une direction claire.",
+  },
+  {
+    number: '03',
+    title: 'Créer',
+    text: 'Nous développons votre identité visuelle et ses différents éléments, puis nous les adaptons à vos supports pour vérifier leur cohérence et leur efficacité.',
+  },
+  {
+    number: '04',
+    title: 'Déployer',
+    text: "Nous vous remettons l'ensemble des éléments nécessaires à votre communication : identité, charte graphique et supports. Nous vous accompagnons ensuite dans leur mise en place.",
+  },
+]
+
+// Page "Création de site web" — processus en 4 étapes
+export const webProcessSteps: { number: string; title: string; text: string }[] = [
+  {
+    number: '01',
+    title: 'Analyse',
+    text: "On commence par comprendre votre activité, vos clients et vos concurrents. Cet audit nous permet de définir l'arborescence du site, les priorités de contenu et les critères de réussite du projet.",
+  },
+  {
+    number: '02',
+    title: 'Design',
+    text: 'On traduit la stratégie en maquettes, composants et gabarits responsive. Des prototypes interactifs vous permettent de valider les choix importants avant que la moindre ligne de code ne soit écrite.',
+  },
+  {
+    number: '03',
+    title: 'Développement',
+    text: "On construit sur une base technique solide, avec l'accessibilité, la performance et le référencement intégrés dès le départ, pas ajoutés à la dernière minute.",
+  },
+  {
+    number: '04',
+    title: 'Lancement',
+    text: "Tests complets, redirections, formation à la prise en main et remise des accès. Et parce qu'un site ne s'arrête pas au lancement, on identifie dès la mise en ligne les premières pistes d'amélioration.",
+  },
+]
+
+export interface BrandTab {
+  id: string
+  label: string
+  title: string
+  text: string
+}
+
+// Page "Stratégie de marque" — menu cliquable (Partie 3)
+export const brandTabs: BrandTab[] = [
+  {
+    id: 'logo',
+    label: 'Création de logo',
+    title: 'Création de logo',
+    text: "Votre logo est l'élément qui permet d'identifier immédiatement votre marque. Nous créons des logos uniques, professionnels et facilement reconnaissables, pensés pour fonctionner sur tous vos supports : site web, réseaux sociaux, documents ou supports imprimés. L'objectif : un logo qui vous ressemble et qui reste cohérent avec l'évolution de votre entreprise.",
+  },
+  {
+    id: 'identite',
+    label: 'Identité visuelle',
+    title: 'Identité visuelle',
+    text: "Le logo est le point de départ. L'identité visuelle définit tout l'univers de votre marque : couleurs, typographies, images et éléments graphiques. Nous créons un ensemble cohérent et reconnaissable, adapté à tous vos supports : site web, réseaux sociaux, communication et supports imprimés.",
+  },
+  {
+    id: 'strategie',
+    label: 'Stratégie de marque',
+    title: 'Stratégie de marque',
+    text: 'Avant de créer une identité, il faut savoir ce que votre marque représente. Nous définissons votre positionnement, votre cible et votre message pour vous démarquer clairement de vos concurrents. Cette stratégie devient la base de votre identité, de votre site web et de votre communication.',
+  },
+  {
+    id: 'etude',
+    label: 'Étude de marque',
+    title: 'Étude de marque',
+    text: "Une bonne stratégie repose sur des données, pas sur des suppositions. Nous analysons votre marché, votre cible et vos concurrents pour identifier les opportunités et définir le meilleur positionnement pour votre marque. L'objectif : prendre les bonnes décisions et construire une marque qui a une vraie place sur son marché.",
+  },
+  {
+    id: 'graphique',
+    label: 'Création graphique',
+    title: 'Création graphique',
+    text: 'Nous donnons vie à votre identité visuelle sur tous vos supports : réseaux sociaux, publicités, présentations, supports imprimés ou commerciaux. Chaque création est pensée pour être cohérente avec votre marque et répondre à un objectif précis : vendre, informer ou valoriser votre image.',
+  },
+  {
+    id: 'naming',
+    label: 'Naming',
+    title: 'Naming',
+    text: 'Le nom est souvent le premier élément que vos clients retiennent de votre marque. Nous créons des noms uniques, mémorables et cohérents avec votre positionnement et votre marché. Nous vérifions également leur disponibilité afin de vous permettre de choisir un nom solide et durable.',
+  },
+  {
+    id: 'rebranding',
+    label: 'Rebranding',
+    title: 'Rebranding',
+    text: 'Votre entreprise évolue, votre image doit parfois évoluer avec elle. Nous modernisons votre marque tout en conservant les éléments qui font déjà sa force. Objectif : faire évoluer votre identité, votre positionnement et votre communication sans perdre la reconnaissance acquise auprès de vos clients.',
+  },
+  {
+    id: 'charte',
+    label: 'Charte graphique',
+    title: 'Charte graphique',
+    text: "Nous définissons les règles d'utilisation de votre marque : logo, couleurs, typographies, éléments graphiques et ton de communication. La charte permet à toute personne qui travaille sur votre communication de respecter votre identité et de garantir une image cohérente sur tous vos supports.",
+  },
+]

@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import {motion} from 'framer-motion'
-import {ArrowRight} from 'lucide-react'
+import {ArrowRight, Target} from 'lucide-react'
 import TestimonialCarousel from '../components/TestimonialCarousel'
 import ContactForm from '../components/ContactForm'
 
@@ -10,7 +10,7 @@ const servicesData = [
         description:
             'Conception de sites performants, sécurisés et évolutifs, pensés pour offrir une expérience optimale et convertir vos visiteurs en clients.',
         image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-        link: '/demarrer-un-projet',
+        link: '/creation-site-web',
         ctaText: 'En savoir plus',
     },
     {
@@ -33,8 +33,8 @@ const servicesData = [
         title: 'Stratégie de marque',
         description:
             'Définissez votre positionnement, affirmez votre différence et construisez une image cohérente sur l\'ensemble de vos points de contact.',
-        image: 'https://images.unsplash.com/photo-1432889821006-3e44d3ad5e13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-        link: '/demarrer-un-projet',
+        image: null,
+        link: '/strategie-de-marque',
         ctaText: 'En savoir plus',
     },
     {
@@ -86,27 +86,36 @@ export default function Services() {
                             >
                                 {/* Image circulaire */}
                                 <div className="w-24 h-24 rounded-full overflow-hidden mb-6 flex-shrink-0 bg-[#F1F5F9]">
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="w-full h-full object-cover"
-                                        onError={(e) => {
-                                            const target = e.target as HTMLImageElement;
-                                            target.style.display = 'none';
-                                            const parent = target.parentElement;
-                                            if (parent) {
-                                                parent.style.background = 'linear-gradient(135deg, #EAB30820, #CA8A0420)';
-                                                parent.style.display = 'flex';
-                                                parent.style.alignItems = 'center';
-                                                parent.style.justifyContent = 'center';
-                                                parent.innerHTML = `
+                                    {service.image ? (
+                                        <img
+                                            src={service.image}
+                                            alt={service.title}
+                                            className="w-full h-full object-cover"
+                                            onError={(e) => {
+                                                const target = e.target as HTMLImageElement;
+                                                target.style.display = 'none';
+                                                const parent = target.parentElement;
+                                                if (parent) {
+                                                    parent.style.background = 'linear-gradient(135deg, #EAB30820, #CA8A0420)';
+                                                    parent.style.display = 'flex';
+                                                    parent.style.alignItems = 'center';
+                                                    parent.style.justifyContent = 'center';
+                                                    parent.innerHTML = `
                           <span class="text-3xl font-bold text-[#EAB308] opacity-40">
                             ${service.title.charAt(0)}
                           </span>
                         `;
-                                            }
-                                        }}
-                                    />
+                                                }
+                                            }}
+                                        />
+                                    ) : (
+                                        <div
+                                            className="flex h-full w-full items-center justify-center"
+                                            style={{ background: 'linear-gradient(135deg, #00B4D8, #0096C7)' }}
+                                        >
+                                            <Target className="size-9 text-white" strokeWidth={1.75} />
+                                        </div>
+                                    )}
                                 </div>
 
                                 {/* Titre - Style semi-bold avec couleur élégante */}
@@ -165,7 +174,7 @@ export default function Services() {
                     {/* Bouton CTA centré */}
                     <div className="flex justify-center">
                         <Link
-                            to="/contact"
+                            to="/demarrer-un-projet"
                             className="inline-flex items-center gap-2 bg-[#FFE957] text-[#0F172A] font-semibold text-sm py-3.5 px-8 rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 group"
                         >
                             Démarrer un projet
