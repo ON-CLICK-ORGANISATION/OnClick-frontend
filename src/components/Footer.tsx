@@ -5,6 +5,8 @@ const footerLinks = {
   pages: [
     { label: 'Accueil', path: '/' },
     { label: 'Services', path: '/services' },
+    { label: 'Stratégie de marque', path: '/strategie-de-marque' },
+    { label: 'Création de site web', path: '/creation-site-web' },
     { label: 'Réalisations', path: '/realisations' },
     { label: 'Démarrer un projet', path: '/demarrer-un-projet' },
   ],
