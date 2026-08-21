@@ -377,3 +377,230 @@ export const brandTabs: BrandTab[] = [
     text: "Nous définissons les règles d'utilisation de votre marque : logo, couleurs, typographies, éléments graphiques et ton de communication. La charte permet à toute personne qui travaille sur votre communication de respecter votre identité et de garantir une image cohérente sur tous vos supports.",
   },
 ]
+
+// ---------------------------------------------------------------------------
+// Page "Service UI/UX"
+// ---------------------------------------------------------------------------
+
+export interface ServiceTab {
+  id: string
+  label: string
+  title: string
+  text: string
+}
+
+export const uiuxTabs: ServiceTab[] = [
+  {
+    id: 'ux-research',
+    label: 'UX Research',
+    title: 'UX Research',
+    text: "Nous analysons les besoins et les comportements de vos utilisateurs pour comprendre ce qui fonctionne et ce qui les bloque. Ces informations nous permettent d'améliorer la navigation, le contenu et l'expérience globale de votre site ou application.",
+  },
+  {
+    id: 'ux-audit',
+    label: 'UX Audit',
+    title: 'UX Audit',
+    text: "Nous analysons votre site ou votre application pour identifier les problèmes de navigation, de compréhension et d'utilisation. Nous vous proposons ensuite des recommandations prioritaires pour améliorer l'expérience utilisateur, les conversions et la satisfaction de vos clients.",
+  },
+  {
+    id: 'interaction-design',
+    label: 'Interaction Design',
+    title: 'Interaction Design',
+    text: 'Nous concevons des interactions simples et intuitives pour rendre chaque action plus claire et naturelle. Boutons, animations, transitions et retours visuels sont pensés pour guider l\'utilisateur tout au long de son parcours.',
+  },
+  {
+    id: 'ui-design',
+    label: 'UI Design',
+    title: 'UI Design',
+    text: 'Nous créons des interfaces modernes, claires et cohérentes avec votre identité visuelle. Mise en page, couleurs, typographies et composants sont pensés pour faciliter la navigation et rendre chaque action intuitive.',
+  },
+  {
+    id: 'design-systems',
+    label: 'Design Systems',
+    title: 'Design Systems',
+    text: 'Nous créons un système de design cohérent avec des composants et des règles réutilisables. Cela permet de gagner du temps, de garantir une interface cohérente et de faire évoluer facilement votre site ou application.',
+  },
+  {
+    id: 'maquettes',
+    label: 'Maquettes & Prototypes',
+    title: 'Maquettes & Prototypes',
+    text: 'Nous créons des maquettes et prototypes pour tester la structure et la navigation avant le développement. Cela permet de valider les parcours utilisateurs et de corriger les problèmes en amont, avant de passer à la réalisation.',
+  },
+  {
+    id: 'applications-mobiles',
+    label: 'Applications Mobiles',
+    title: 'Applications Mobiles',
+    text: 'Nous concevons des applications mobiles simples, rapides et intuitives, adaptées aux usages sur smartphone. Navigation, boutons et interactions sont pensés pour faciliter chaque action, même en utilisation à une main.',
+  },
+  {
+    id: 'saas',
+    label: 'Design de produits SaaS',
+    title: 'Design de produits SaaS',
+    text: "Nous concevons des interfaces SaaS simples et intuitives, même lorsque les fonctionnalités sont complexes. Nous travaillons les parcours, tableaux de bord, onboarding et fonctionnalités clés pour faciliter la prise en main, l'utilisation et la fidélisation des utilisateurs.",
+  },
+]
+
+export const uiuxProcessSteps: { number: string; title: string; text: string }[] = [
+  {
+    number: '01',
+    title: 'Découvrir',
+    text: 'Nous définissons vos objectifs et analysons les besoins, les données et les utilisateurs pour établir une direction claire.',
+  },
+  {
+    number: '02',
+    title: 'Concevoir',
+    text: "Nous créons les parcours, maquettes et interfaces en pensant à chaque étape de l'expérience utilisateur.",
+  },
+  {
+    number: '03',
+    title: 'Tester & valider',
+    text: 'Nous testons les designs auprès des utilisateurs et ajustons les éléments qui peuvent créer des difficultés.',
+  },
+  {
+    number: '04',
+    title: 'Livrer',
+    text: "Nous préparons les fichiers, maquettes et éléments nécessaires au développement, avec un accompagnement jusqu'à la mise en ligne.",
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Page "SEO, AEO & GEO"
+// ---------------------------------------------------------------------------
+
+export interface ServiceCard {
+  id: string
+  title: string
+  text: string
+}
+
+export const seoCards: ServiceCard[] = [
+  {
+    id: 'seo-technique',
+    title: 'SEO technique',
+    text: 'Optimisation de la structure, de la vitesse et de l\'indexation de votre site pour améliorer ses performances sur Google.',
+  },
+  {
+    id: 'seo-local',
+    title: 'SEO local',
+    text: 'Amélioration de votre visibilité sur Google et Google Maps pour attirer davantage de clients dans votre zone.',
+  },
+  {
+    id: 'seo-ecommerce',
+    title: 'SEO e-commerce',
+    text: 'Optimisation de votre boutique en ligne pour mieux positionner vos produits et attirer des clients qualifiés.',
+  },
+  {
+    id: 'audit-seo',
+    title: 'Audit SEO & feuille de route',
+    text: 'Analyse complète de votre site et de votre référencement pour identifier les problèmes, les opportunités et les actions prioritaires.',
+  },
+  {
+    id: 'geo-aeo',
+    title: 'SEO & visibilité IA (GEO / AEO)',
+    text: "Optimisation de votre contenu pour améliorer votre visibilité sur Google et dans les réponses générées par les moteurs d'IA.",
+  },
+  {
+    id: 'netlinking',
+    title: 'Autorité & netlinking',
+    text: 'Développement de votre notoriété en ligne grâce aux backlinks, partenariats et contenus externes de qualité.',
+  },
+  {
+    id: 'strategie-contenu',
+    title: 'Stratégie de contenu SEO',
+    text: 'Création d\'une stratégie de contenus basée sur les recherches, les besoins de vos clients et les opportunités de votre marché.',
+  },
+  {
+    id: 'seo-entreprise',
+    title: 'SEO pour grandes entreprises',
+    text: 'Mise en place d\'une stratégie SEO adaptée aux sites complexes et aux entreprises ayant de nombreux contenus, produits ou marchés.',
+  },
+]
+
+export const seoProcessSteps: { number: string; title: string; text: string }[] = [
+  {
+    number: '01',
+    title: 'Stabiliser & lancer',
+    text: 'Nous corrigeons les principaux problèmes techniques et lançons les premières optimisations SEO.',
+  },
+  {
+    number: '02',
+    title: 'Construire les bases',
+    text: 'Nous optimisons la structure du site, les liens internes et les données structurées, tout en développant les premiers contenus.',
+  },
+  {
+    number: '03',
+    title: 'Accélérer',
+    text: 'Nous renforçons la production de contenus, optimisons les pages existantes et développons la notoriété du site.',
+  },
+  {
+    number: '04',
+    title: 'Développer',
+    text: 'Nous renforçons ce qui fonctionne le mieux et définissons les prochaines priorités à partir des résultats obtenus.',
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Page "Stratégie digitale"
+// ---------------------------------------------------------------------------
+
+export const digitalTabs: ServiceTab[] = [
+  {
+    id: 'seo-geo',
+    label: 'SEO / GEO & visibilité',
+    title: 'SEO / GEO & visibilité naturelle',
+    text: 'Le SEO ne sert pas uniquement à générer du trafic. Il permet aussi de comprendre ce que recherchent vos clients et ce qui influence leurs décisions. Nous utilisons le SEO et le GEO pour améliorer votre visibilité, renforcer vos contenus et mieux orienter votre stratégie marketing.',
+  },
+  {
+    id: 'pub-en-ligne',
+    label: 'Publicité en ligne',
+    title: 'Publicité en ligne',
+    text: 'Nous créons et gérons vos campagnes publicitaires sur Google, les réseaux sociaux et les autres plateformes adaptées à votre activité. Nous testons les messages, visuels et audiences pour identifier ce qui fonctionne le mieux et concentrer le budget sur les campagnes les plus performantes.',
+  },
+  {
+    id: 'content-marketing',
+    label: 'Content marketing',
+    title: 'Content marketing & stratégie éditoriale',
+    text: "Nous créons des contenus utiles et adaptés à votre cible : articles, réseaux sociaux, vidéos, newsletters ou supports commerciaux. L'objectif : développer votre visibilité, démontrer votre expertise et créer des contenus que vos clients ont réellement envie de consulter.",
+  },
+  {
+    id: 'conseil-audit',
+    label: 'Conseil & audit',
+    title: 'Conseil & audit marketing',
+    text: "Nous analysons votre marque, votre site, vos campagnes et vos canaux d'acquisition pour identifier ce qui fonctionne et ce qui doit être amélioré. Vous repartez avec des priorités claires, des recommandations concrètes et une feuille de route adaptée à votre budget.",
+  },
+  {
+    id: 'branding',
+    label: 'Branding',
+    title: 'Branding',
+    text: 'Nous construisons une identité claire et reconnaissable pour votre marque, avec un positionnement, un message et une identité visuelle cohérents. L\'objectif : renforcer votre image, améliorer la reconnaissance de votre marque et assurer une communication cohérente sur tous vos supports.',
+  },
+  {
+    id: 'web-design',
+    label: 'Web Design',
+    title: 'Web Design',
+    text: 'Nous créons des sites web pensés pour transformer vos visiteurs en clients. Design, expérience utilisateur, contenu et conversion sont travaillés ensemble pour créer un site cohérent avec votre marque et vos objectifs marketing.',
+  },
+]
+
+export const digitalProcessSteps: { number: string; title: string; text: string }[] = [
+  {
+    number: '01',
+    title: 'Analyser',
+    text: 'Nous étudions votre marché, vos clients, vos concurrents et vos performances pour identifier les meilleures opportunités.',
+  },
+  {
+    number: '02',
+    title: 'Définir la stratégie',
+    text: 'Nous construisons un plan adapté à vos objectifs : positionnement, canaux, budget et parcours client.',
+  },
+  {
+    number: '03',
+    title: 'Déployer',
+    text: 'Nous mettons en place les actions sur les différents canaux avec une communication cohérente et coordonnée.',
+  },
+  {
+    number: '04',
+    title: 'Mesurer & optimiser',
+    text: 'Nous suivons les résultats et ajustons les actions et le budget pour améliorer les performances au fil du temps.',
+  },
+]

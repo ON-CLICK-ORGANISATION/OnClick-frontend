@@ -1,24 +1,18 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  PenTool,
-  Palette,
-  Target,
-  SearchCheck,
-  Image as ImageIcon,
-  Type,
-  RefreshCw,
-  BookOpen,
-} from 'lucide-react'
-import { brandTabs } from '../data/content'
+import type { LucideIcon } from 'lucide-react'
+import type { ServiceTab } from '../data/content'
 
-const icons = [PenTool, Palette, Target, SearchCheck, ImageIcon, Type, RefreshCw, BookOpen]
+interface ServiceTabsPanelProps {
+  tabs: ServiceTab[]
+  icons: LucideIcon[]
+}
 
-export default function BrandServicesTabs() {
-  const [activeId, setActiveId] = useState(brandTabs[0].id)
-  const active = brandTabs.find((tab) => tab.id === activeId) ?? brandTabs[0]
-  const activeIndex = brandTabs.findIndex((tab) => tab.id === activeId)
-  const ActiveIcon = icons[activeIndex] ?? PenTool
+export default function ServiceTabsPanel({ tabs, icons }: ServiceTabsPanelProps) {
+  const [activeId, setActiveId] = useState(tabs[0].id)
+  const active = tabs.find((tab) => tab.id === activeId) ?? tabs[0]
+  const activeIndex = tabs.findIndex((tab) => tab.id === activeId)
+  const ActiveIcon = icons[activeIndex] ?? icons[0]
 
   return (
     <section className="bg-white pt-2 pb-2 sm:pt-3 sm:pb-3">
@@ -75,7 +69,7 @@ export default function BrandServicesTabs() {
 
           <div className="border-t border-white/10 bg-black/10 px-4 py-4 sm:px-6">
             <div className="flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              {brandTabs.map((tab, index) => (
+              {tabs.map((tab, index) => (
                 <button
                   key={tab.id}
                   type="button"
