@@ -51,7 +51,7 @@ export default function Footer() {
           <div>
             <Link to="/" className="flex items-center gap-2.5 mb-5 w-fit group">
               <img
-                  src="/images/logo-mark.svg"
+                  src="/images/logo-mark.png"
                   alt="Only Clik"
                   className="h-14 w-15 object-contain"
               />
