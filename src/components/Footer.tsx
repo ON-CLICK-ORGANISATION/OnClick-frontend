@@ -7,6 +7,9 @@ const footerLinks = {
     { label: 'Services', path: '/services' },
     { label: 'Stratégie de marque', path: '/strategie-de-marque' },
     { label: 'Création de site web', path: '/creation-site-web' },
+    { label: 'Service UI/UX', path: '/service-ui-ux' },
+    { label: 'SEO, AEO & GEO', path: '/seo-aeo-geo' },
+    { label: 'Stratégie digitale', path: '/strategie-digitale' },
     { label: 'Réalisations', path: '/realisations' },
     { label: 'Démarrer un projet', path: '/demarrer-un-projet' },
   ],
@@ -48,7 +51,7 @@ export default function Footer() {
           <div>
             <Link to="/" className="flex items-center gap-2.5 mb-5 w-fit group">
               <img
-                  src="/images/logo-mark.svg"
+                  src="/images/logo-mark.png"
                   alt="Only Clik"
                   className="h-14 w-15 object-contain"
               />

@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import {motion} from 'framer-motion'
-import {ArrowRight, Target} from 'lucide-react'
+import {ArrowRight, Target, LayoutTemplate} from 'lucide-react'
 import TestimonialCarousel from '../components/TestimonialCarousel'
 import ContactForm from '../components/ContactForm'
 
@@ -22,11 +22,12 @@ const servicesData = [
         ctaText: 'En savoir plus',
     },
     {
-        title: 'Data & Analytics',
+        title: 'Service UI/UX',
         description:
-            'Mise en place d\'outils de mesure et de tableaux de bord pour suivre précisément les performances de vos campagnes et leur impact sur votre chiffre d\'affaires.',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-        link: '/demarrer-un-projet',
+            'Conception d\'interfaces simples, intuitives et agréables à utiliser, pensées pour faciliter chaque parcours sur tous les écrans.',
+        image: null,
+        icon: LayoutTemplate,
+        link: '/service-ui-ux',
         ctaText: 'En savoir plus',
     },
     {
@@ -34,6 +35,7 @@ const servicesData = [
         description:
             'Définissez votre positionnement, affirmez votre différence et construisez une image cohérente sur l\'ensemble de vos points de contact.',
         image: null,
+        icon: Target,
         link: '/strategie-de-marque',
         ctaText: 'En savoir plus',
     },
@@ -42,7 +44,7 @@ const servicesData = [
         description:
             'Optimisation de votre visibilité sur Google, les moteurs de recherche alimentés par l\'IA et les nouveaux outils de recherche conversationnelle.',
         image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-        link: '/demarrer-un-projet',
+        link: '/seo-aeo-geo',
         ctaText: 'En savoir plus',
     },
     {
@@ -50,7 +52,7 @@ const servicesData = [
         description:
             'Élaboration d\'une feuille de route claire : choix des canaux, répartition du budget et plan d\'action aligné sur vos objectifs commerciaux.',
         image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-        link: '/demarrer-un-projet',
+        link: '/strategie-digitale',
         ctaText: 'En savoir plus',
     },
 ]
@@ -113,7 +115,10 @@ export default function Services() {
                                             className="flex h-full w-full items-center justify-center"
                                             style={{ background: 'linear-gradient(135deg, #00B4D8, #0096C7)' }}
                                         >
-                                            <Target className="size-9 text-white" strokeWidth={1.75} />
+                                            {(() => {
+                                                const FallbackIcon = service.icon ?? Target
+                                                return <FallbackIcon className="size-9 text-white" strokeWidth={1.75} />
+                                            })()}
                                         </div>
                                     )}
                                 </div>

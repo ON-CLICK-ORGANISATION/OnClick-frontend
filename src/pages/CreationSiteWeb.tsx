@@ -35,13 +35,17 @@ export default function CreationSiteWeb() {
             </Link>
           </div>
 
-          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div className="flex items-end justify-center gap-4 sm:gap-6">
             <PhoneMockup
               screenshot={heroProject.imageMobile}
               alt={`Version mobile du site ${heroProject.name}`}
-              className="absolute -left-2 bottom-0 z-10 w-20 sm:w-24 md:w-28 rotate-[-6deg]"
+              className="w-24 sm:w-28 md:w-32 shrink-0 mb-2"
             />
-            <LaptopMockup screenshot={heroProject.image!} alt={`Aperçu du site ${heroProject.name}`} className="w-full" />
+            <LaptopMockup
+              screenshot={heroProject.image!}
+              alt={`Aperçu du site ${heroProject.name}`}
+              className="w-full max-w-md lg:max-w-lg"
+            />
           </div>
         </div>
       </section>
