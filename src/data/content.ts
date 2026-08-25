@@ -516,6 +516,57 @@ export const seoCards: ServiceCard[] = [
   },
 ]
 
+export const seoTabs: ServiceTab[] = [
+  {
+    id: 'seo-technique',
+    label: 'SEO technique',
+    title: 'SEO technique',
+    text: 'Optimisation de la structure, de la vitesse et de l\'indexation de votre site pour améliorer ses performances sur Google.',
+  },
+  {
+    id: 'seo-local',
+    label: 'SEO local',
+    title: 'SEO local',
+    text: 'Amélioration de votre visibilité sur Google et Google Maps pour attirer davantage de clients dans votre zone.',
+  },
+  {
+    id: 'seo-ecommerce',
+    label: 'SEO e-commerce',
+    title: 'SEO e-commerce',
+    text: 'Optimisation de votre boutique en ligne pour mieux positionner vos produits et attirer des clients qualifiés.',
+  },
+  {
+    id: 'audit-seo',
+    label: 'Audit SEO',
+    title: 'Audit SEO & feuille de route',
+    text: 'Analyse complète de votre site et de votre référencement pour identifier les problèmes, les opportunités et les actions prioritaires.',
+  },
+  {
+    id: 'geo-aeo',
+    label: 'GEO / AEO',
+    title: 'SEO & visibilité IA (GEO / AEO)',
+    text: "Optimisation de votre contenu pour améliorer votre visibilité sur Google et dans les réponses générées par les moteurs d'IA.",
+  },
+  {
+    id: 'netlinking',
+    label: 'Netlinking',
+    title: 'Autorité & netlinking',
+    text: 'Développement de votre notoriété en ligne grâce aux backlinks, partenariats et contenus externes de qualité.',
+  },
+  {
+    id: 'strategie-contenu',
+    label: 'Contenu SEO',
+    title: 'Stratégie de contenu SEO',
+    text: 'Création d\'une stratégie de contenus basée sur les recherches, les besoins de vos clients et les opportunités de votre marché.',
+  },
+  {
+    id: 'seo-entreprise',
+    label: 'Grandes entreprises',
+    title: 'SEO pour grandes entreprises',
+    text: 'Mise en place d\'une stratégie SEO adaptée aux sites complexes et aux entreprises ayant de nombreux contenus, produits ou marchés.',
+  },
+]
+
 export const seoProcessSteps: { number: string; title: string; text: string }[] = [
   {
     number: '01',

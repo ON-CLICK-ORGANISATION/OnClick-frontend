@@ -10,42 +10,46 @@ export default function CreationSiteWeb() {
   return (
     <>
       {/* Hero — reprend le style du mockup laptop/mobile de l'accueil (photo Amalthéa) */}
-      <section className="bg-slate-orb text-slate-orb-foreground overflow-hidden">
-        <div className="container-page grid items-center gap-12 py-16 sm:py-20 md:py-24 lg:grid-cols-2">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Création de site web</p>
-            <h1 className="mt-4 font-display text-[clamp(2rem,4.5vw,3rem)] leading-[1.1]">
-              Création de site web sur mesure
-            </h1>
-            <p className="mt-6 max-w-lg text-sm sm:text-base leading-relaxed opacity-80">
-              Votre site web est souvent le premier endroit où un client potentiel se fait une opinion sur vous,
-              sans que vous soyez là pour vous présenter. En quelques secondes, il doit comprendre ce que vous
-              faites, pourquoi vous êtes la bonne option, et avoir envie d'aller plus loin.
-            </p>
-            <p className="mt-4 max-w-lg text-sm sm:text-base leading-relaxed opacity-80">
-              Chez Only Clik, on ne crée pas des sites pour faire joli. On crée des sites qui travaillent pour
-              vous : visibles sur Google, clairs pour vos visiteurs, et conçus pour transformer un inconnu en
-              client.
-            </p>
-            <Link
-              to="/demarrer-un-projet"
-              className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
-            >
-              Démarrer un projet
-            </Link>
-          </div>
+      <section className="pt-6 sm:pt-8">
+        <div className="mx-auto max-w-[1440px] px-2 sm:px-4">
+          <div className="overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-slate-orb text-slate-orb-foreground">
+            <div className="grid items-center gap-12 px-6 py-14 sm:px-10 sm:py-16 md:py-20 lg:grid-cols-2">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Création de site web</p>
+                <h1 className="mt-4 font-display text-[clamp(2rem,4.5vw,3rem)] leading-[1.1]">
+                  Création de site web sur mesure
+                </h1>
+                <p className="mt-6 max-w-lg text-sm sm:text-base leading-relaxed opacity-80">
+                  Votre site web est souvent le premier endroit où un client potentiel se fait une opinion sur
+                  vous, sans que vous soyez là pour vous présenter. En quelques secondes, il doit comprendre ce
+                  que vous faites, pourquoi vous êtes la bonne option, et avoir envie d'aller plus loin.
+                </p>
+                <p className="mt-4 max-w-lg text-sm sm:text-base leading-relaxed opacity-80">
+                  Chez Only Clik, on ne crée pas des sites pour faire joli. On crée des sites qui travaillent pour
+                  vous : visibles sur Google, clairs pour vos visiteurs, et conçus pour transformer un inconnu en
+                  client.
+                </p>
+                <Link
+                  to="/demarrer-un-projet"
+                  className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
+                >
+                  Démarrer un projet
+                </Link>
+              </div>
 
-          <div className="flex items-end justify-center gap-4 sm:gap-6">
-            <PhoneMockup
-              screenshot={heroProject.imageMobile}
-              alt={`Version mobile du site ${heroProject.name}`}
-              className="w-24 sm:w-28 md:w-32 shrink-0 mb-2"
-            />
-            <LaptopMockup
-              screenshot={heroProject.image!}
-              alt={`Aperçu du site ${heroProject.name}`}
-              className="w-full max-w-md lg:max-w-lg"
-            />
+              <div className="flex items-end justify-center gap-4 sm:gap-6">
+                <PhoneMockup
+                  screenshot={heroProject.imageMobile}
+                  alt={`Version mobile du site ${heroProject.name}`}
+                  className="w-24 sm:w-28 md:w-32 shrink-0 mb-2"
+                />
+                <LaptopMockup
+                  screenshot={heroProject.image!}
+                  alt={`Aperçu du site ${heroProject.name}`}
+                  className="w-full max-w-md lg:max-w-lg"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
