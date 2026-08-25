@@ -16,7 +16,7 @@ export default function ServiceTabsPanel({ tabs, icons }: ServiceTabsPanelProps)
 
   return (
     <section className="bg-white pt-2 pb-2 sm:pt-3 sm:pb-3">
-      <div className="container-page">
+      <div className="mx-auto max-w-[1440px] px-2 sm:px-4">
         <div className="overflow-hidden rounded-[2rem] bg-slate-orb text-slate-orb-foreground shadow-2xl">
           <div className="grid min-h-[440px] items-center lg:grid-cols-[0.72fr_1.28fr]">
             <div className="p-8 sm:p-12 lg:p-14">

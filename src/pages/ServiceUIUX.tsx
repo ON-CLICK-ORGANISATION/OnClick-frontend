@@ -30,31 +30,35 @@ export default function ServiceUIUX() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-slate-orb text-slate-orb-foreground">
-        <div className="container-page grid items-center gap-10 py-16 sm:py-20 md:grid-cols-2 md:py-24">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Agence UI/UX Design</p>
-            <h1 className="mt-4 font-display text-[clamp(2rem,5vw,3.25rem)] leading-[1.08]">
-              Des interfaces simples, intuitives et agréables à utiliser
-            </h1>
-            <p className="mt-6 max-w-md text-sm sm:text-base leading-relaxed opacity-80">
-              Nous concevons des interfaces simples, intuitives et agréables à utiliser.
-            </p>
-            <p className="mt-4 max-w-md text-sm sm:text-base leading-relaxed opacity-80">
-              Nous travaillons l'expérience utilisateur, la navigation et le design pour rendre chaque parcours
-              plus clair et faciliter l'action, sur tous les écrans.
-            </p>
-            <Link
-              to="/demarrer-un-projet"
-              className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
-            >
-              Démarrer un projet
-            </Link>
-          </div>
-          <div className="hidden aspect-square w-full items-center justify-center rounded-full md:flex" style={{ background: 'radial-gradient(circle at 35% 30%, oklch(0.72 0.13 205 / 25%), transparent 65%)' }}>
-            <div className="relative flex size-4/5 items-center justify-center rounded-full border border-white/10">
-              <div className="flex size-3/5 items-center justify-center rounded-full border border-primary/25 bg-white/[0.04]">
-                <LayoutTemplate className="size-16 text-primary" strokeWidth={1.1} />
+      <section className="pt-6 sm:pt-8">
+        <div className="mx-auto max-w-[1440px] px-2 sm:px-4">
+          <div className="overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-slate-orb text-slate-orb-foreground">
+            <div className="grid items-center gap-10 px-6 py-14 sm:px-10 sm:py-16 md:grid-cols-2 md:py-20">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Agence UI/UX Design</p>
+                <h1 className="mt-4 font-display text-[clamp(2rem,5vw,3.25rem)] leading-[1.08]">
+                  Des interfaces simples, intuitives et agréables à utiliser
+                </h1>
+                <p className="mt-6 max-w-md text-sm sm:text-base leading-relaxed opacity-80">
+                  Nous concevons des interfaces simples, intuitives et agréables à utiliser.
+                </p>
+                <p className="mt-4 max-w-md text-sm sm:text-base leading-relaxed opacity-80">
+                  Nous travaillons l'expérience utilisateur, la navigation et le design pour rendre chaque
+                  parcours plus clair et faciliter l'action, sur tous les écrans.
+                </p>
+                <Link
+                  to="/demarrer-un-projet"
+                  className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
+                >
+                  Démarrer un projet
+                </Link>
+              </div>
+              <div className="hidden aspect-square w-full items-center justify-center rounded-full md:flex" style={{ background: 'radial-gradient(circle at 35% 30%, oklch(0.72 0.13 205 / 25%), transparent 65%)' }}>
+                <div className="relative flex size-4/5 items-center justify-center rounded-full border border-white/10">
+                  <div className="flex size-3/5 items-center justify-center rounded-full border border-primary/25 bg-white/[0.04]">
+                    <LayoutTemplate className="size-16 text-primary" strokeWidth={1.1} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

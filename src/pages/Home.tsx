@@ -77,26 +77,30 @@ export default function Home() {
                   <ArrowLink className="mt-0.5 sm:mt-1 shrink-0 hidden sm:inline-flex scale-125 sm:scale-150" />
                 </div>
               </a>
-              {/* Texte "Des résultats..." - REDESCENDU ENCORE DE 2cm */}
-              <p className="text-center font-display text-[22px] sm:text-[28px] md:text-[36px] lg:text-[44px] px-1 sm:px-2 mt-16 sm:mt-18 md:mt-20 lg:mt-24">
+              {/* Texte "Des résultats..." - écart réduit */}
+              <p className="text-center font-display text-[22px] sm:text-[28px] md:text-[36px] lg:text-[44px] px-1 sm:px-2 mt-4 sm:mt-6 md:mt-8 lg:mt-10">
                 Des résultats qui font la différence.
               </p>
             </div>
           </div>
 
-          {/* 3 projets en dessous */}
-          <div className="relative -mt-28 sm:-mt-32 md:-mt-36 lg:-mt-40">
-            <div className="grid gap-10 sm:gap-12 grid-cols-1 sm:grid-cols-3 sm:gap-x-14 sm:gap-y-6 max-w-5xl mx-auto">
+          {/* 3 projets en dessous - écart réduit */}
+          <div className="relative -mt-40 sm:-mt-44 md:-mt-48 lg:-mt-52">
+            <div className="grid gap-10 sm:gap-12 grid-cols-1 sm:grid-cols-3 sm:gap-x-24 sm:gap-y-6 max-w-6xl mx-auto">
               {featuredProjects.map((project, i) => (
                 <a
                   key={project.name}
                   href={project.url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className={`group flex flex-col items-center text-center ${i === 1 ? 'sm:-mt-16 md:-mt-20 lg:-mt-24' : ''}`}
+                  className={`group flex flex-col items-center text-center ${
+                    i === 1 
+                      ? 'sm:-mt-24 md:-mt-28 lg:-mt-32' 
+                      : 'sm:-mt-[3px] md:-mt-[4px] lg:-mt-[5px]'
+                  }`}
                 >
                   <span
-                    className="size-56 sm:size-64 md:size-72 lg:size-80 overflow-hidden rounded-full shadow-lg border-4 border-white transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:rotate-3 cursor-pointer"
+                    className="size-56 sm:size-66 md:size-76 lg:size-96 overflow-hidden rounded-full shadow-lg border-4 border-white transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:rotate-3 cursor-pointer"
                     style={{ background: project.gradient }}
                   >
                     {project.image && (
@@ -107,13 +111,16 @@ export default function Home() {
                       />
                     )}
                   </span>
-                  <h3 className="mt-3 sm:mt-4 md:mt-6 font-display text-sm sm:text-base md:text-xl text-[#1E293B] group-hover:text-[#EAB308] transition-colors duration-300">
+                  {/* NOM DU PROJET - AGRANDI */}
+                  <h3 className="mt-3 sm:mt-4 md:mt-6 font-display text-base sm:text-lg md:text-2xl text-[#1E293B] group-hover:text-[#EAB308] transition-colors duration-300">
                     {project.name}
                   </h3>
-                  <p className="mt-1 sm:mt-2 max-w-[12rem] sm:max-w-[14rem] md:max-w-[16rem] text-[11px] sm:text-sm md:text-base font-semibold leading-relaxed text-[#64748B]">
+                  {/* DESCRIPTION - AGRANDIE */}
+                  <p className="mt-1 sm:mt-2 max-w-[12rem] sm:max-w-[14rem] md:max-w-[16rem] text-[13px] sm:text-base md:text-lg font-semibold leading-relaxed text-[#64748B]">
                     {project.description}
                   </p>
-                  <span className="link-arrow mt-2 sm:mt-3 md:mt-4 text-[#2B6CB0] group-hover:text-[#EAB308] transition-colors duration-300">
+                  {/* VOIR LE PROJET - AGRANDI */}
+                  <span className="link-arrow mt-2 sm:mt-3 md:mt-4 text-[#2B6CB0] group-hover:text-[#EAB308] transition-colors duration-300 text-sm sm:text-base">
                     Voir le projet <ArrowLink />
                   </span>
                 </a>
