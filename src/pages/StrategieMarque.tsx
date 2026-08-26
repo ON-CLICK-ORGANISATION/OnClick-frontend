@@ -62,7 +62,7 @@ export default function StrategieMarque() {
 
       {/* Services liés */}
       <section className="py-16">
-        <div className="container-page">
+        <div className="mx-auto max-w-[1440px] px-2 sm:px-4">
           <div
             className="flex flex-col gap-6 rounded-3xl px-6 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-10"
             style={{ background: 'linear-gradient(120deg, oklch(0.45 0.07 200), oklch(0.28 0.05 210))' }}

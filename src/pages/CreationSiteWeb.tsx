@@ -11,24 +11,25 @@ export default function CreationSiteWeb() {
     <>
       {/* Hero — reprend le style du mockup laptop/mobile de l'accueil (photo Amalthéa) */}
       <section className="pt-6 sm:pt-8">
+        {/* Largeur remise à 1440px (les côtés sont parfaits) */}
         <div className="mx-auto max-w-[1440px] px-2 sm:px-4">
-          <div className="overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-slate-orb text-slate-orb-foreground">
-            <div className="grid items-center gap-12 px-6 py-14 sm:px-10 sm:py-16 md:py-20 lg:grid-cols-2">
+          <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] text-white">
+            {/* Fond photo floutée/assombrie */}
+            <div
+              className="absolute inset-0 bg-cover bg-center scale-110 blur-[2px]"
+              style={{ backgroundImage: `url(${heroProject.image})` }}
+            />
+            <div className="absolute inset-0 bg-black/55" />
+
+            {/* Agrandissement en hauteur : py-14 -> py-20, sm:py-16 -> sm:py-28, md:py-20 -> md:py-36 */}
+            <div className="relative grid items-center gap-8 px-6 py-20 sm:px-10 sm:py-28 md:py-36 lg:grid-cols-[1fr_auto_1fr] lg:gap-8">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Création de site web</p>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary" style={{ transform: 'translateY(-1.4cm)' }}>Création de site web</p>
                 <h1 className="mt-4 font-display text-[clamp(2rem,4.5vw,3rem)] leading-[1.1]">
-                  Création de site web sur mesure
+                  Création de site web
+                  <br />
+                  sur mesure
                 </h1>
-                <p className="mt-6 max-w-lg text-sm sm:text-base leading-relaxed opacity-80">
-                  Votre site web est souvent le premier endroit où un client potentiel se fait une opinion sur
-                  vous, sans que vous soyez là pour vous présenter. En quelques secondes, il doit comprendre ce
-                  que vous faites, pourquoi vous êtes la bonne option, et avoir envie d'aller plus loin.
-                </p>
-                <p className="mt-4 max-w-lg text-sm sm:text-base leading-relaxed opacity-80">
-                  Chez Only Clik, on ne crée pas des sites pour faire joli. On crée des sites qui travaillent pour
-                  vous : visibles sur Google, clairs pour vos visiteurs, et conçus pour transformer un inconnu en
-                  client.
-                </p>
                 <Link
                   to="/demarrer-un-projet"
                   className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
@@ -37,17 +38,32 @@ export default function CreationSiteWeb() {
                 </Link>
               </div>
 
-              <div className="flex items-end justify-center gap-4 sm:gap-6">
+              <div className="flex items-end justify-center gap-2 sm:gap-3 lg:px-2">
                 <PhoneMockup
                   screenshot={heroProject.imageMobile}
                   alt={`Version mobile du site ${heroProject.name}`}
-                  className="w-24 sm:w-28 md:w-32 shrink-0 mb-2"
+                  className="w-14 sm:w-16 md:w-20 shrink-0 mb-2"
                 />
                 <LaptopMockup
                   screenshot={heroProject.image!}
                   alt={`Aperçu du site ${heroProject.name}`}
-                  className="w-full max-w-md lg:max-w-lg"
+                  className="w-full max-w-[11rem] sm:max-w-[14rem] md:max-w-xs lg:max-w-sm"
                 />
+              </div>
+
+              <div className="flex flex-col gap-4">
+                {/* Paragraphe du haut remonté de 3cm au total */}
+                <p className="text-[11px] sm:text-xs leading-relaxed text-white/85" style={{ transform: 'translateY(-3cm)' }}>
+                  Votre site web est souvent le premier endroit où un client potentiel se fait une opinion sur
+                  vous, sans que vous soyez là pour vous présenter. En quelques secondes, il doit comprendre ce
+                  que vous faites, pourquoi vous êtes la bonne option, et avoir envie d'aller plus loin.
+                </p>
+                {/* Paragraphe du bas descendu de 2.5cm */}
+                <p className="text-[11px] sm:text-xs leading-relaxed text-white/85" style={{ transform: 'translateY(1.7cm)' }}>
+                  Chez Only Clik, on ne crée pas des sites pour faire joli. On crée des sites qui travaillent pour
+                  vous : visibles sur Google, clairs pour vos visiteurs, et conçus pour transformer un inconnu en
+                  client.
+                </p>
               </div>
             </div>
           </div>
