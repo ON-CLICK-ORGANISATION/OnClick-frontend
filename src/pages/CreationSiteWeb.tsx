@@ -53,13 +53,13 @@ export default function CreationSiteWeb() {
 
               <div className="flex flex-col gap-4">
                 {/* Paragraphe du haut remonté de 3cm au total */}
-                <p className="text-[11px] sm:text-xs leading-relaxed text-white/85" style={{ transform: 'translateY(-3cm)' }}>
+                <p className="text-[11px] sm:text-xs leading-relaxed text-white/85" style={{ transform: 'translateY(-2.6cm)' }}>
                   Votre site web est souvent le premier endroit où un client potentiel se fait une opinion sur
                   vous, sans que vous soyez là pour vous présenter. En quelques secondes, il doit comprendre ce
                   que vous faites, pourquoi vous êtes la bonne option, et avoir envie d'aller plus loin.
                 </p>
                 {/* Paragraphe du bas descendu de 2.5cm */}
-                <p className="text-[11px] sm:text-xs leading-relaxed text-white/85" style={{ transform: 'translateY(1.7cm)' }}>
+                <p className="text-[11px] sm:text-xs leading-relaxed text-white/85" style={{ transform: 'translateY(1.5cm)' }}>
                   Chez Only Clik, on ne crée pas des sites pour faire joli. On crée des sites qui travaillent pour
                   vous : visibles sur Google, clairs pour vos visiteurs, et conçus pour transformer un inconnu en
                   client.

@@ -1,22 +1,10 @@
 import { Link } from 'react-router-dom'
-import {
-  Search,
-  Settings,
-  MapPin,
-  ShoppingCart,
-  ClipboardList,
-  Sparkles,
-  Link2,
-  PenLine,
-  Building2,
-} from 'lucide-react'
+import { Search } from 'lucide-react'
 import ServiceTabsPanel from '../components/ServiceTabsPanel'
 import ProcessTimeline from '../components/ProcessTimeline'
 import TestimonialCarousel from '../components/TestimonialCarousel'
 import ContactForm from '../components/ContactForm'
 import { seoTabs, seoProcessSteps } from '../data/content'
-
-const icons = [Settings, MapPin, ShoppingCart, ClipboardList, Sparkles, Link2, PenLine, Building2]
 
 export default function SeoAeoGeo() {
   return (
@@ -24,38 +12,74 @@ export default function SeoAeoGeo() {
       {/* Hero */}
       <section className="pt-6 sm:pt-8">
         <div className="mx-auto max-w-[1440px] px-2 sm:px-4">
-          <div className="overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-slate-orb text-slate-orb-foreground">
-            <div className="grid items-center gap-10 px-6 py-14 sm:px-10 sm:py-16 md:grid-cols-2 md:py-20">
+          <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] text-white">
+            {/* Image de fond non floutée */}
+            <div className="absolute inset-0 overflow-hidden rounded-[2rem] sm:rounded-[2.5rem]">
+              <img
+                src="/images/projects/seo-aeo-geo-bg.png"
+                alt=""
+                className="h-full w-full object-cover"
+                style={{ objectPosition: 'calc(50% - 1cm) 50%' }}
+              />
+              {/* Overlay très léger à 5% */}
+              <div className="absolute inset-0 bg-black/5" />
+            </div>
+
+            <div className="relative grid items-center gap-8 px-6 py-20 sm:px-10 sm:py-28 md:py-36 lg:grid-cols-2 lg:gap-8">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Agence SEO & GEO</p>
-                <h1 className="mt-4 font-display text-[clamp(2rem,5vw,3.25rem)] leading-[1.08]">
-                  Améliorez votre visibilité sur Google et sur l'IA
+                {/* Titre bleu - modifie translateY pour le monter/descendre */}
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary" style={{ transform: 'translateY(-1.8cm)' }}>
+                  Agence SEO & GEO
+                </p>
+                <h1 className="mt-4 font-display text-[clamp(2rem,4.5vw,3rem)] leading-[1.1]" style={{ transform: 'translateY(-1.4cm)' }}>
+                  Améliorez votre visibilité
+                  <br />
+                  sur Google et
+                  <br />
+                   sur l'IA
                 </h1>
-                <p className="mt-6 max-w-md text-sm sm:text-base leading-relaxed opacity-80">
-                  Chaque marché a ses propres enjeux. Nous analysons votre site, vos contenus, vos concurrents et
-                  les recherches de vos clients pour identifier les meilleures opportunités.
-                </p>
-                <p className="mt-4 max-w-md text-sm sm:text-base leading-relaxed opacity-80">
-                  Nous construisons ensuite une stratégie SEO & GEO adaptée à votre activité pour améliorer votre
-                  visibilité sur Google et dans les moteurs de recherche basés sur l'IA, avec des actions
-                  concrètes et durables.
-                </p>
                 <Link
                   to="/demarrer-un-projet"
                   className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
+                  style={{ transform: 'translateY(-1cm)' }}
                 >
                   Démarrer un projet
                 </Link>
               </div>
-              <div
-                className="hidden aspect-square w-full items-center justify-center rounded-full md:flex"
-                style={{ background: 'radial-gradient(circle at 35% 30%, oklch(0.72 0.13 205 / 25%), transparent 65%)' }}
-              >
-                <div className="relative flex size-4/5 items-center justify-center rounded-full border border-white/10">
-                  <div className="flex size-3/5 items-center justify-center rounded-full border border-primary/25 bg-white/[0.04]">
-                    <Search className="size-16 text-primary" strokeWidth={1.1} />
-                  </div>
+
+              {/* Textes à droite - 2 blocs uniquement */}
+              <div className="relative hidden lg:block h-full">
+                {/* Bloc 1 - haut */}
+                <div 
+                  className="absolute top-[2%] right-[5%] w-[60%] bg-transparent rounded-xl p-5 border border-white/0" 
+                  style={{ transform: 'translateY(-3.3cm) translateX(0.8cm)' }}
+                >
+                  <p className="text-[12px] leading-relaxed text-white/95">
+                    Chaque marché a ses propres enjeux. Nous analysons votre site, vos contenus, vos concurrents et les recherches de vos clients pour identifier les meilleures opportunités.
+                  </p>
                 </div>
+                
+                {/* Bloc 2 - milieu */}
+                <div 
+                  className="absolute top-[42%] right-[5%] w-[60%] bg-transparent rounded-xl p-5 border border-white/0" 
+                  style={{ transform: 'translateY(+3cm) translateX(0.8cm)' }}
+                >
+                  <p className="text-[12px] leading-relaxed text-white/95">
+                    <strong> 
+                      Nous construisons ensuite une stratégie SEO & GEO adaptée à votre activité pour améliorer votre visibilité sur Google et dans les moteurs de recherche basés sur l'IA, avec des actions concrètes et durables. 
+                    </strong>
+                  </p>
+                </div>
+              </div>
+
+              {/* Version mobile/tablette : textes en colonne normale (2 paragraphes uniquement) */}
+              <div className="flex flex-col gap-4 lg:hidden">
+                <p className="text-sm sm:text-base leading-relaxed text-white/85">
+                  Chaque marché a ses propres enjeux. Nous analysons votre site, vos contenus, vos concurrents et les recherches de vos clients pour identifier les meilleures opportunités.
+                </p>
+                <p className="text-sm sm:text-base leading-relaxed text-white/85">
+                  Nous construisons ensuite une stratégie SEO & GEO adaptée à votre activité pour améliorer votre visibilité sur Google et dans les moteurs de recherche basés sur l'IA, avec des actions concrètes et durables.
+                </p>
               </div>
             </div>
           </div>
@@ -77,7 +101,7 @@ export default function SeoAeoGeo() {
       </section>
 
       {/* Menu cliquable des services SEO */}
-      <ServiceTabsPanel tabs={seoTabs} icons={icons} />
+      <ServiceTabsPanel tabs={seoTabs} icons={[Search]} />
 
       {/* Services liés */}
       <section className="py-16">
