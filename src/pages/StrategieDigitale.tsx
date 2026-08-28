@@ -101,7 +101,7 @@ export default function StrategieDigitale() {
       </section>
 
       {/* Menu cliquable des services marketing */}
-      <ServiceTabsPanel tabs={digitalTabs} icons={icons} />
+      <ServiceTabsPanel tabs={digitalTabs} icons={icons} imagePrefix="strategiedigitale" />
 
       {/* Services liés */}
       <section className="py-16">

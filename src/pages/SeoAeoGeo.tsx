@@ -101,7 +101,7 @@ export default function SeoAeoGeo() {
       </section>
 
       {/* Menu cliquable des services SEO */}
-      <ServiceTabsPanel tabs={seoTabs} icons={[Search]} />
+      <ServiceTabsPanel tabs={seoTabs} icons={[Search]} imagePrefix="aeoseogeo" />
 
       {/* Services liés */}
       <section className="py-16">

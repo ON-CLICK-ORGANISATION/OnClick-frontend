@@ -118,7 +118,7 @@ export default function ServiceUIUX() {
       </section>
 
       {/* Menu cliquable des services UI/UX */}
-      <ServiceTabsPanel tabs={uiuxTabs} icons={icons} />
+      <ServiceTabsPanel tabs={uiuxTabs} icons={icons} imagePrefix="uiux" />
 
       {/* Services liés */}
       <section className="py-16">
