@@ -14,38 +14,72 @@ export default function StrategieDigitale() {
       {/* Hero */}
       <section className="pt-6 sm:pt-8">
         <div className="mx-auto max-w-[1440px] px-2 sm:px-4">
-          <div className="overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-slate-orb text-slate-orb-foreground">
-            <div className="grid items-center gap-10 px-6 py-14 sm:px-10 sm:py-16 md:grid-cols-2 md:py-20">
+          <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] text-white">
+            {/* Image de fond non floutée */}
+            <div className="absolute inset-0 overflow-hidden rounded-[2rem] sm:rounded-[2.5rem]">
+              <img
+                src="/images/projects/strategie-digitale-bg.png"
+                alt=""
+                className="h-full w-full object-cover"
+                style={{ objectPosition: 'calc(50% +0cm) 50%' }}
+              />
+              {/* Overlay très léger à 5% */}
+              <div className="absolute inset-0 bg-black/5" />
+            </div>
+
+            <div className="relative grid items-center gap-8 px-6 py-20 sm:px-10 sm:py-28 md:py-36 lg:grid-cols-2 lg:gap-8">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Stratégie digitale</p>
-                <h1 className="mt-4 font-display text-[clamp(2rem,5vw,3.25rem)] leading-[1.08]">
-                  Une agence marketing basée sur la stratégie
+                {/* Titre bleu - modifie translateY pour le monter/descendre */}
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary" style={{ transform: 'translateY(-1.8cm)' }}>
+                  Stratégie digitale
+                </p>
+                <h1 className="mt-4 font-display text-[clamp(2rem,4.5vw,3rem)] leading-[1.1]" style={{ transform: 'translateY(-1.4cm)' }}>
+                  Une agence marketing basée
+                  <br />
+                  sur la stratégie
                 </h1>
-                <p className="mt-6 max-w-md text-sm sm:text-base leading-relaxed opacity-80">
-                  Nous analysons votre marché, vos clients, vos concurrents et vos performances pour identifier
-                  les meilleures opportunités.
-                </p>
-                <p className="mt-4 max-w-md text-sm sm:text-base leading-relaxed opacity-80">
-                  Nous construisons ensuite un plan marketing sur mesure, avec des actions adaptées à chaque
-                  canal et à vos objectifs. Chaque campagne répond à un objectif précis : attirer, convertir et
-                  fidéliser vos clients.
-                </p>
                 <Link
                   to="/demarrer-un-projet"
                   className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
+                  style={{ transform: 'translateY(-1cm)' }}
                 >
                   Démarrer un projet
                 </Link>
               </div>
-              <div
-                className="hidden aspect-square w-full items-center justify-center rounded-full md:flex"
-                style={{ background: 'radial-gradient(circle at 35% 30%, oklch(0.72 0.13 205 / 25%), transparent 65%)' }}
-              >
-                <div className="relative flex size-4/5 items-center justify-center rounded-full border border-white/10">
-                  <div className="flex size-3/5 items-center justify-center rounded-full border border-primary/25 bg-white/[0.04]">
-                    <Megaphone className="size-16 text-primary" strokeWidth={1.1} />
-                  </div>
+
+              {/* Textes à droite - 2 blocs uniquement */}
+              <div className="relative hidden lg:block h-full">
+                {/* Bloc 1 - haut */}
+                <div 
+                  className="absolute top-[2%] right-[5%] w-[60%] bg-transparent rounded-xl p-5 border border-white/0" 
+                  style={{ transform: 'translateY(-2.2cm) translateX(0.8cm)' }}
+                >
+                  <p className="text-[12px] leading-relaxed text-white/95">
+                    Nous analysons votre marché, vos clients, vos concurrents et vos performances pour identifier les meilleures opportunités.
+                  </p>
                 </div>
+                
+                {/* Bloc 2 - milieu */}
+                <div 
+                  className="absolute top-[42%] right-[5%] w-[60%] bg-transparent rounded-xl p-5 border border-white/0" 
+                  style={{ transform: 'translateY(+3.2cm) translateX(0.8cm)' }}
+                >
+                  <p className="text-[12px] leading-relaxed text-white/95">
+                    <strong> 
+                      Nous construisons ensuite un plan marketing sur mesure, avec des actions adaptées à chaque canal et à vos objectifs. Chaque campagne répond à un objectif précis : attirer, convertir et fidéliser vos clients. 
+                    </strong>
+                  </p>
+                </div>
+              </div>
+
+              {/* Version mobile/tablette : textes en colonne normale (2 paragraphes uniquement) */}
+              <div className="flex flex-col gap-4 lg:hidden">
+                <p className="text-sm sm:text-base leading-relaxed text-white/85">
+                  Nous analysons votre marché, vos clients, vos concurrents et vos performances pour identifier les meilleures opportunités.
+                </p>
+                <p className="text-sm sm:text-base leading-relaxed text-white/85">
+                  Nous construisons ensuite un plan marketing sur mesure, avec des actions adaptées à chaque canal et à vos objectifs. Chaque campagne répond à un objectif précis : attirer, convertir et fidéliser vos clients.
+                </p>
               </div>
             </div>
           </div>
@@ -67,11 +101,11 @@ export default function StrategieDigitale() {
       </section>
 
       {/* Menu cliquable des services marketing */}
-      <ServiceTabsPanel tabs={digitalTabs} icons={icons} />
+      <ServiceTabsPanel tabs={digitalTabs} icons={icons} imagePrefix="strategiedigitale" />
 
       {/* Services liés */}
       <section className="py-16">
-        <div className="container-page">
+        <div className="mx-auto max-w-[1440px] px-2 sm:px-4">
           <div
             className="flex flex-col gap-6 rounded-3xl px-6 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-10"
             style={{ background: 'linear-gradient(120deg, oklch(0.45 0.07 200), oklch(0.28 0.05 210))' }}
