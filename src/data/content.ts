@@ -70,10 +70,6 @@ export const featuredProjects: Project[] = [
 ]
 
 // Full projects list (Réalisations page)
-// src/data/content.ts
-
-// src/data/content.ts
-
 export const projects: Project[] = [
   {
     name: 'Horizon Nouveau',
@@ -87,7 +83,7 @@ export const projects: Project[] = [
     url: 'https://hotel-la-colongette.com/',
     description: 'Augmentation du taux de réservation de +130% avec le nouveau site',
     gradient: 'linear-gradient(140deg, oklch(0.45 0.07 200), oklch(0.26 0.05 210))',
-    image: '/images/realisation/colongete.jpg', // Image hôtel
+    image: '/images/realisation/colongete.jpg',
   },
   {
     name: 'Espace Oasium',
@@ -101,7 +97,7 @@ export const projects: Project[] = [
     url: 'https://www.lemiroiretlaplume.fr/',
     description: 'Biographe qui est passée de 1 à 6 biographies par an',
     gradient: 'linear-gradient(140deg, oklch(0.52 0.06 140), oklch(0.3 0.04 150))',
-    image: '/images/realisation/mirroir.png', // Image écriture/plume
+    image: '/images/realisation/mirroir.png',
     fit: 'contain',
   },
   {
@@ -109,14 +105,14 @@ export const projects: Project[] = [
     url: 'https://fauneproject.com/',
     description: "Une refonte qui a permis une augmentation du trafic organique de +74%",
     gradient: 'linear-gradient(140deg, oklch(0.4 0.03 260), oklch(0.22 0.02 260))',
-    image: '/images/realisation/faune.png', // Image design/créatif
+    image: '/images/realisation/faune.png',
   },
   {
     name: 'Amalthéa Pilates',
     url: 'https://amalthea-studio.com/',
     description: 'Studio de Pilates en ligne qui a augmenté son taux de réservation de +87%.',
     gradient: 'linear-gradient(140deg, oklch(0.6 0.1 90), oklch(0.35 0.06 80))',
-    image: '/images/projects/stud.png', // Image pilates/fitness
+    image: '/images/projects/stud.png',
     fit: 'contain',
   },
   {
@@ -124,7 +120,7 @@ export const projects: Project[] = [
     url: 'https://www.jyretourneimmediatement.com/',
     description: 'Compagnie de théâtre qui a vu son taux de visite augmenter de +520%',
     gradient: 'linear-gradient(140deg, oklch(0.55 0.08 60), oklch(0.32 0.05 50))',
-    image: '/images/realisation/jyr.png', // Image théâtre/scène
+    image: '/images/realisation/jyr.png',
   },
   {
     name: 'Hôtel Royal Palace',
@@ -138,14 +134,14 @@ export const projects: Project[] = [
     url: 'https://visionlaser.eu/',
     description: "La refonte du site et l'amélioration du parcours utilisateur a augmenté le nombre de leads via le site de +350%",
     gradient: 'linear-gradient(140deg, oklch(0.5 0.09 340), oklch(0.3 0.06 330))',
-    image: '/images/projects/vision.png', // Image laser/médical
+    image: '/images/projects/vision.png',
   },
   {
     name: 'Le Chemin de mon Histoire',
     url: 'https://lechemindemonhistoire.fr/',
     description: "Laurent a doublé son chiffre d'affaires avec son site internet",
     gradient: 'linear-gradient(140deg, oklch(0.52 0.06 140), oklch(0.3 0.04 150))',
-    image: '/images/realisation/chemin.png', // Image histoire/voyage
+    image: '/images/realisation/chemin.png',
     fit: 'contain',
   },
   {
@@ -326,7 +322,7 @@ export interface BrandTab {
   text: string
 }
 
-// Page "Stratégie de marque" — menu cliquable (Partie 3)
+// Page "Stratégie de marque" — menu cliquable
 export const brandTabs: BrandTab[] = [
   {
     id: 'logo',
@@ -653,5 +649,126 @@ export const digitalProcessSteps: { number: string; title: string; text: string 
     number: '04',
     title: 'Mesurer & optimiser',
     text: 'Nous suivons les résultats et ajustons les actions et le budget pour améliorer les performances au fil du temps.',
+  },
+]
+
+// ============================================================================
+// === PUBLICITÉ DIGITALE ===
+// ============================================================================
+
+export const adsTabs: ServiceTab[] = [
+  {
+    id: 'google-ads',
+    label: 'Google Ads',
+    title: 'Google Ads',
+    text: 'Nous créons et optimisons vos campagnes Google Ads pour vous positionner au bon moment, lorsque vos clients recherchent vos produits ou services.',
+  },
+  {
+    id: 'social-ads',
+    label: 'Réseaux sociaux',
+    title: 'Publicité sur les réseaux sociaux',
+    text: 'Nous diffusons vos publicités sur Facebook, Instagram, LinkedIn ou les plateformes adaptées à votre cible pour développer votre visibilité et générer des prospects.',
+  },
+  {
+    id: 'programmatic',
+    label: 'Programmatique',
+    title: 'Publicité programmatique',
+    text: 'Nous diffusons vos campagnes sur un large réseau de sites et de plateformes en ciblant précisément les audiences qui correspondent à votre activité.',
+  },
+  {
+    id: 'lead-gen',
+    label: 'Génération de leads',
+    title: 'Génération de leads',
+    text: "Nous mettons en place des campagnes pensées pour générer des prospects qualifiés et les accompagner jusqu'à la prise de contact ou au rendez-vous.",
+  },
+  {
+    id: 'retargeting',
+    label: 'Retargeting',
+    title: 'Retargeting',
+    text: "Nous relançons les visiteurs qui ont déjà découvert votre entreprise afin de rester présent au bon moment et d'augmenter les chances de conversion.",
+  },
+  {
+    id: 'ad-creative',
+    label: 'Création publicitaire',
+    title: 'Création publicitaire',
+    text: "Nous concevons les visuels, messages et formats nécessaires à vos campagnes pour capter l'attention et encourager l'action.",
+  },
+]
+
+export const adsProcessSteps: { number: string; title: string; text: string }[] = [
+  {
+    number: '01',
+    title: 'Analyser',
+    text: 'Nous étudions votre marché, votre cible, vos concurrents et vos objectifs pour identifier les meilleures opportunités.',
+  },
+  {
+    number: '02',
+    title: 'Préparer',
+    text: 'Nous définissons les audiences, les canaux, les messages, les formats et le budget adaptés à votre stratégie.',
+  },
+  {
+    number: '03',
+    title: 'Lancer',
+    text: 'Nous déployons les campagnes et suivons leurs performances dès les premiers résultats.',
+  },
+  {
+    number: '04',
+    title: 'Optimiser',
+    text: 'Nous analysons les résultats et ajustons les campagnes, les audiences et les budgets pour améliorer continuellement les performances.',
+  },
+]
+
+// ============================================================================
+// === CRÉATION DE SITE WEB (Développement Web) ===
+// ============================================================================
+
+export const webTabs: ServiceTab[] = [
+  {
+    id: 'creation-sur-mesure',
+    label: 'Création sur mesure',
+    title: 'Création de site web sur mesure',
+    text: 'Nous créons des sites web uniques, pensés autour de votre marque, de votre cible et de vos objectifs. Design, structure, contenus et fonctionnalités sont adaptés à vos besoins, avec la solution technique la plus adaptée à votre projet.',
+  },
+  {
+    id: 'refonte',
+    label: 'Refonte de site',
+    title: 'Refonte de site web',
+    text: 'Nous modernisons votre site tout en conservant ce qui fonctionne déjà : contenus, référencement et parcours utilisateurs. Nous améliorons le design, la structure et les performances pour obtenir un site plus moderne, efficace et adapté à vos objectifs.',
+  },
+  {
+    id: 'responsive',
+    label: 'Web Responsive',
+    title: 'Web Design Responsive',
+    text: 'Nous concevons des sites parfaitement adaptés à tous les écrans : ordinateur, tablette et smartphone. Chaque page s\'adapte automatiquement à la taille de l\'écran, tout en conservant une navigation claire, une bonne lisibilité et une expérience agréable. L\'objectif : un site moderne, performant et efficace, quel que soit le support utilisé.',
+  },
+  {
+    id: 'accessible',
+    label: 'Web Accessible',
+    title: 'Web Design Accessible',
+    text: 'Nous concevons des sites accessibles au plus grand nombre, en prenant en compte la lisibilité, les contrastes, la navigation et la facilité d\'utilisation. L\'accessibilité est intégrée dès la conception pour offrir une expérience claire et agréable à tous les utilisateurs, quel que soit leur niveau ou leur mode de navigation.',
+  },
+  {
+    id: 'ecommerce',
+    label: 'E-commerce',
+    title: 'E-commerce',
+    text: 'Nous créons des boutiques en ligne pensées pour faciliter chaque étape du parcours d\'achat : découverte des produits, fiches produits, panier et paiement. Nous travaillons le design, la navigation, les performances et la conversion pour offrir une expérience simple et rassurante, tout en restant fidèle à votre marque.',
+  },
+  {
+    id: 'b2b',
+    label: 'Sites B2B',
+    title: 'Création de sites web B2B',
+    text: 'Nous créons des sites B2B qui présentent clairement vos offres et facilitent la prise de décision de vos prospects. Nous structurons les contenus, les preuves et les parcours pour permettre à chaque visiteur de trouver rapidement les informations dont il a besoin et de passer à l\'action.',
+  },
+  {
+    id: 'grandes-entreprises',
+    label: 'Grandes entreprises',
+    title: 'Sites web pour grandes entreprises',
+    text: 'Pour les entreprises plus importantes, nous adaptons le site aux enjeux de contenu, d\'accessibilité, d\'intégration et de cohérence entre les équipes. Nous construisons des plateformes robustes, évolutives et pensées pour répondre aux exigences des grandes organisations.',
+  },
+  {
+    id: 'ux-design',
+    label: 'Web orienté UX',
+    title: 'Web Design orienté UX',
+    text: 'Nous concevons votre site en partant des besoins et du comportement de vos utilisateurs. Navigation, structure, parcours et interactions sont pensés avant le design pour rendre le site simple, intuitif et agréable à utiliser.',
   },
 ]

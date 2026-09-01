@@ -9,6 +9,7 @@ import CreationSiteWeb from './pages/CreationSiteWeb'
 import ServiceUIUX from './pages/ServiceUIUX'
 import SeoAeoGeo from './pages/SeoAeoGeo'
 import StrategieDigitale from './pages/StrategieDigitale'
+import PubliciteDigitale from './pages/PubliciteDigitale'
 import ScrollToTop from './components/ScrollToTop'
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/service-ui-ux" element={<ServiceUIUX />} />
         <Route path="/seo-aeo-geo" element={<SeoAeoGeo />} />
         <Route path="/strategie-digitale" element={<StrategieDigitale />} />
+        <Route path="/publicite-digitale" element={<PubliciteDigitale />} /> {/* <-- AJOUTÉ */}
       </Routes>
     </Layout>
   )
