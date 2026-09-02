@@ -68,7 +68,7 @@ export default function CreationSiteWeb() {
                 
                 <div 
                   className="absolute top-[42%] right-[5%] w-[60%] bg-transparent rounded-xl p-5 border border-white/0" 
-                  style={{ transform: 'translateY(+3.3cm) translateX(1cm)' }}
+                  style={{ transform: 'translateY(+3.2cm) translateX(1cm)' }}
                 >
                   <p className="text-[12px] leading-relaxed text-white/95">
                     <strong> 

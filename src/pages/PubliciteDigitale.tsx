@@ -47,7 +47,7 @@ export default function PubliciteDigitale() {
               <div className="relative hidden lg:block h-full">
                 <div 
                   className="absolute top-[2%] right-[5%] w-[60%] bg-transparent rounded-xl p-5 border border-white/0" 
-                  style={{ transform: 'translateY(-3.2cm) translateX(0.8cm)' }}
+                  style={{ transform: 'translateY(-3cm) translateX(0.9cm)' }}
                 >
                   <p className="text-[12px] leading-relaxed text-white/95">
                     Nous créons et gérons vos campagnes publicitaires sur Google, les réseaux sociaux et les plateformes digitales adaptées à votre activité.
@@ -56,7 +56,7 @@ export default function PubliciteDigitale() {
                 
                 <div 
                   className="absolute top-[42%] right-[5%] w-[60%] bg-transparent rounded-xl p-5 border border-white/0" 
-                  style={{ transform: 'translateY(+2.8cm) translateX(0.8cm)' }}
+                  style={{ transform: 'translateY(+2.8cm) translateX(0.9cm)' }}
                 >
                   <p className="text-[12px] leading-relaxed text-white/95">
                     <strong> 
