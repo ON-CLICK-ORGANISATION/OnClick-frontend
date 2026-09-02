@@ -13,12 +13,12 @@ const servicesData = [
         link: '/creation-site-web',
         ctaText: 'En savoir plus',
     },
-    {
+        {
         title: 'Publicité digitale',
         description:
             'Campagnes Google Ads, réseaux sociaux, publicité programmatique et stratégies d\'acquisition conçues pour atteindre vos objectifs de croissance.',
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-        link: '/demarrer-un-projet',
+        link: '/publicite-digitale',
         ctaText: 'En savoir plus',
     },
     {

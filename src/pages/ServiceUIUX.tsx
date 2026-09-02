@@ -51,7 +51,7 @@ export default function ServiceUIUX() {
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary" style={{ transform: 'translateY(-1.8cm)' }}>
                   Agence UI/UX Design
                 </p>
-                <h1 className="mt-4 font-display text-[clamp(2rem,4.5vw,3rem)] leading-[1.1]" style={{ transform: 'translateY(-1.3cm)' }}>
+                <h1 className="mt-4 font-display text-[clamp(2rem,4.5vw,3rem)] leading-[1.1]" style={{ transform: 'translateY(-1.2cm)' }}>
                   Des interfaces simples, intuitives et
                   <br />
                   agréables à utiliser
@@ -69,8 +69,8 @@ export default function ServiceUIUX() {
               <div className="relative hidden lg:block h-full">
                 {/* Bloc 1 - haut */}
                 <div 
-                  className="absolute top-[2%] right-[5%] w-[60%] bg-black/25 backdrop-blur-md rounded-xl p-5 border border-white/10" 
-                  style={{ transform: 'translateY(-3.3cm) translateX(0.8cm)' }}
+                  className="absolute top-[2%] right-[5%] w-[60%] bg-black/30 backdrop-blur-md rounded-xl p-5 border border-white/10" 
+                  style={{ transform: 'translateY(-3.2cm) translateX(0.8cm)' }}
                 >
                   <p className="text-[12px] leading-relaxed text-white/95">
                     Nous concevons des interfaces simples, intuitives et agréables à utiliser.
@@ -79,7 +79,7 @@ export default function ServiceUIUX() {
                 
                 {/* Bloc 2 - milieu */}
                 <div 
-                  className="absolute top-[42%] right-[5%] w-[60%] bg-black/25 backdrop-blur-md rounded-xl p-5 border border-white/10" 
+                  className="absolute top-[42%] right-[5%] w-[60%] bg-black/30 backdrop-blur-md rounded-xl p-5 border border-white/10" 
                   style={{ transform: 'translateY(+3.4cm) translateX(0.8cm)' }}
                 >
                   <p className="text-[12px] leading-relaxed text-white/95">
