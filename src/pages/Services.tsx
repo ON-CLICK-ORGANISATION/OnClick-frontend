@@ -117,8 +117,8 @@ export default function Services() {
                                 {/* Bouton CTA */}
                                 <Link
                                     to={service.link}
-                                    className="inline-flex items-center gap-2 bg-[#00B4D8] hover:bg-[#0096C7] text-white font-medium text-sm px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg group"
-                                >
+                                    className="inline-flex items-center gap-2 bg-[#0EA5C9] hover:bg-[#0891B2] text-white font-medium text-sm px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg group"
+                                    >
                                     {service.ctaText}
                                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform"/>
                                 </Link>
