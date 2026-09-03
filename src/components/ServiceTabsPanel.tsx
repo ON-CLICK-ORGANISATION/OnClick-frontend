@@ -73,9 +73,9 @@ export default function ServiceTabsPanel({ tabs, icons, imagePrefix = 'aeoseogeo
           </AnimatePresence>
 
           {/* Contenu principal */}
-          <div className="relative grid min-h-[580px] items-center px-8 py-12 sm:px-12 sm:py-16 lg:px-16 lg:py-20">
-            {/* translateY pour monter tout le bloc gauche */}
-            <div className="max-w-2xl" style={{ transform: 'translateY(-2cm)' }}>
+          <div className="relative grid min-h-[420px] items-center px-6 py-12 sm:min-h-[480px] sm:px-12 sm:py-16 lg:min-h-[580px] lg:px-16 lg:py-20">
+            {/* translateY pour monter le bloc gauche : uniquement à partir de lg, pour ne pas décaler le contenu sur mobile/tablette */}
+            <div className="max-w-2xl lg:-translate-y-[2cm]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={active.id + '-icon'}

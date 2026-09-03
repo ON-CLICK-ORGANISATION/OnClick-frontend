@@ -100,7 +100,7 @@ export default function Home() {
                   }`}
                 >
                   <span
-                    className="size-56 sm:size-66 md:size-76 lg:size-96 overflow-hidden rounded-full shadow-lg border-4 border-white transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:rotate-3 cursor-pointer"
+                    className="size-56 sm:size-[16.5rem] md:size-[19rem] lg:size-96 overflow-hidden rounded-full shadow-lg border-4 border-white transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:rotate-3 cursor-pointer"
                     style={{ background: project.gradient }}
                   >
                     {project.image && (

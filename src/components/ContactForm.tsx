@@ -36,7 +36,7 @@ export default function ContactForm() {
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-white rounded-3xl p-12 text-center border border-[#E2E8F0] shadow-sm max-w-5xl mx-auto"
+        className="bg-white rounded-3xl p-6 sm:p-12 text-center border border-[#E2E8F0] shadow-sm max-w-5xl mx-auto"
       >
         <div className="w-18 h-18 bg-[#FFE957]/30 rounded-full flex items-center justify-center mx-auto mb-4">
           <CheckCircle2 size={32} className="text-[#0F172A]" />
@@ -58,8 +58,8 @@ export default function ContactForm() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6">
-      <div className="bg-white rounded-3xl shadow-sm border border-[#E2E8F0] p-8 md:p-12">
-        <div className="grid lg:grid-cols-2 gap-12">
+      <div className="bg-white rounded-3xl shadow-sm border border-[#E2E8F0] p-6 sm:p-8 md:p-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
 
           {/* Colonne gauche - Texte */}
           <div>
@@ -104,7 +104,7 @@ export default function ContactForm() {
           {/* Colonne droite - Formulaire */}
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* Row 1: Prénom & Nom */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <input
                   type="text"
@@ -130,7 +130,7 @@ export default function ContactForm() {
             </div>
 
             {/* Row 2: Email & Entreprise */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <input
                   type="email"

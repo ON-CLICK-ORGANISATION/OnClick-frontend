@@ -44,8 +44,8 @@ export default function Footer() {
         style={{ background: 'rgba(0, 180, 216, 0.10)' }}
       />
 
-      <div className="relative container-page pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <div className="relative container-page pt-12 sm:pt-16 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 mb-10 sm:mb-12">
 
           {/* Brand block */}
           <div>
@@ -130,11 +130,11 @@ export default function Footer() {
             <p className="text-xs text-white/40">
               © {year} ONLY CLIK. Tous droits réservés.
             </p>
-            <div className="flex items-center gap-5">
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-5">
               {footerLinks.legal.map((l, i) => (
                 <span
                   key={i}
-                  className="text-2xs cursor-pointer transition-colors duration-200 text-white/40 hover:text-white/75"
+                  className="text-2xs cursor-pointer whitespace-nowrap transition-colors duration-200 text-white/40 hover:text-white/75"
                 >
                   {l}
                 </span>
