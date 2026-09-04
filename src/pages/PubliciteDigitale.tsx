@@ -105,22 +105,40 @@ export default function PubliciteDigitale() {
             <h3 className="font-display text-xl text-white sm:text-2xl">
               Services <span className="italic opacity-90">liés</span>
             </h3>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-nowrap gap-1.5 overflow-x-auto pb-2">
+              <Link
+                to="/creation-site-web"
+                className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
+              >
+                Création de site web
+              </Link>
+              <Link
+                to="/strategie-de-marque"
+                className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
+              >
+                Stratégie de marque
+              </Link>
+              <Link
+                to="/service-ui-ux"
+                className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
+              >
+                Service UI/UX
+              </Link>
               <Link
                 to="/seo-aeo-geo"
-                className="rounded-full border border-white/25 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
               >
                 SEO, AEO & GEO
               </Link>
               <Link
                 to="/strategie-digitale"
-                className="rounded-full border border-white/25 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
               >
                 Stratégie digitale
               </Link>
               <Link
                 to="/services"
-                className="rounded-full bg-white px-4 py-2.5 text-xs sm:text-sm font-semibold text-[#1E293B] transition-opacity hover:opacity-85"
+                className="rounded-full bg-white px-3 py-2 text-[10px] sm:text-xs font-semibold text-[#1E293B] transition-opacity hover:opacity-85 whitespace-nowrap"
               >
                 Toutes nos prestations
               </Link>

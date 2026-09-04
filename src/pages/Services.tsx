@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import {motion} from 'framer-motion'
-import {ArrowRight, Target, LayoutTemplate} from 'lucide-react'
+import {ArrowRight} from 'lucide-react'
 import TestimonialCarousel from '../components/TestimonialCarousel'
 import ContactForm from '../components/ContactForm'
 
@@ -9,15 +9,15 @@ const servicesData = [
         title: 'Création de sites web',
         description:
             'Conception de sites performants, sécurisés et évolutifs, pensés pour offrir une expérience optimale et convertir vos visiteurs en clients.',
-        image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+        image: '/images/services/creation-site-web.png',
         link: '/creation-site-web',
         ctaText: 'En savoir plus',
     },
-        {
+    {
         title: 'Publicité digitale',
         description:
             'Campagnes Google Ads, réseaux sociaux, publicité programmatique et stratégies d\'acquisition conçues pour atteindre vos objectifs de croissance.',
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+        image: '/images/services/publicite-digitale.png',
         link: '/publicite-digitale',
         ctaText: 'En savoir plus',
     },
@@ -25,8 +25,7 @@ const servicesData = [
         title: 'Service UI/UX',
         description:
             'Conception d\'interfaces simples, intuitives et agréables à utiliser, pensées pour faciliter chaque parcours sur tous les écrans.',
-        image: null,
-        icon: LayoutTemplate,
+        image: '/images/services/service-uiux.png',
         link: '/service-ui-ux',
         ctaText: 'En savoir plus',
     },
@@ -34,8 +33,7 @@ const servicesData = [
         title: 'Stratégie de marque',
         description:
             'Définissez votre positionnement, affirmez votre différence et construisez une image cohérente sur l\'ensemble de vos points de contact.',
-        image: null,
-        icon: Target,
+        image: '/images/services/strategie-de-marque.png',
         link: '/strategie-de-marque',
         ctaText: 'En savoir plus',
     },
@@ -43,7 +41,7 @@ const servicesData = [
         title: 'SEO, AEO & GEO',
         description:
             'Optimisation de votre visibilité sur Google, les moteurs de recherche alimentés par l\'IA et les nouveaux outils de recherche conversationnelle.',
-        image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+        image: '/images/services/seo-aeo-geo.png',
         link: '/seo-aeo-geo',
         ctaText: 'En savoir plus',
     },
@@ -51,7 +49,7 @@ const servicesData = [
         title: 'Stratégie digitale',
         description:
             'Élaboration d\'une feuille de route claire : choix des canaux, répartition du budget et plan d\'action aligné sur vos objectifs commerciaux.',
-        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+        image: '/images/services/strategie-digitale.png',
         link: '/strategie-digitale',
         ctaText: 'En savoir plus',
     },
@@ -88,39 +86,22 @@ export default function Services() {
                             >
                                 {/* Image circulaire */}
                                 <div className="w-24 h-24 rounded-full overflow-hidden mb-6 flex-shrink-0 bg-[#F1F5F9]">
-                                    {service.image ? (
-                                        <img
-                                            src={service.image}
-                                            alt={service.title}
-                                            className="w-full h-full object-cover"
-                                            onError={(e) => {
-                                                const target = e.target as HTMLImageElement;
-                                                target.style.display = 'none';
-                                                const parent = target.parentElement;
-                                                if (parent) {
-                                                    parent.style.background = 'linear-gradient(135deg, #EAB30820, #CA8A0420)';
-                                                    parent.style.display = 'flex';
-                                                    parent.style.alignItems = 'center';
-                                                    parent.style.justifyContent = 'center';
-                                                    parent.innerHTML = `
-                          <span class="text-3xl font-bold text-[#EAB308] opacity-40">
-                            ${service.title.charAt(0)}
-                          </span>
-                        `;
-                                                }
-                                            }}
-                                        />
-                                    ) : (
-                                        <div
-                                            className="flex h-full w-full items-center justify-center"
-                                            style={{ background: 'linear-gradient(135deg, #00B4D8, #0096C7)' }}
-                                        >
-                                            {(() => {
-                                                const FallbackIcon = service.icon ?? Target
-                                                return <FallbackIcon className="size-9 text-white" strokeWidth={1.75} />
-                                            })()}
-                                        </div>
-                                    )}
+                                    <img
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover"
+                                        onError={(e) => {
+                                            const target = e.target as HTMLImageElement;
+                                            target.style.display = 'none';
+                                            const parent = target.parentElement;
+                                            if (parent) {
+                                                parent.style.background = 'linear-gradient(135deg, #00B4D8, #0096C7)';
+                                                parent.style.display = 'flex';
+                                                parent.style.alignItems = 'center';
+                                                parent.style.justifyContent = 'center';
+                                            }
+                                        }}
+                                    />
                                 </div>
 
                                 {/* Titre - Style semi-bold avec couleur élégante */}
@@ -133,11 +114,11 @@ export default function Services() {
                                     {service.description}
                                 </p>
 
-                                {/* Bouton CTA - Redirige vers /contact */}
+                                {/* Bouton CTA */}
                                 <Link
                                     to={service.link}
-                                    className="inline-flex items-center gap-2 bg-[#00B4D8] hover:bg-[#0096C7] text-white font-medium text-sm px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg group"
-                                >
+                                    className="inline-flex items-center gap-2 bg-[#0EA5C9] hover:bg-[#0891B2] text-white font-medium text-sm px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg group"
+                                    >
                                     {service.ctaText}
                                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform"/>
                                 </Link>
@@ -156,8 +137,8 @@ export default function Services() {
                         Des services pensés pour
                         <br/>
                         <span className="text-[#FDE68A] text-2xl sm:text-3xl md:text-4xl font-semibold">
-        accélérer votre croissance
-      </span>
+                            accélérer votre croissance
+                        </span>
                     </h2>
 
                     {/* 2 colonnes de texte */}

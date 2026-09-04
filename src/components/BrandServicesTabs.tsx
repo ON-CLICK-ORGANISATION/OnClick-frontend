@@ -71,8 +71,9 @@ export default function BrandServicesTabs() {
             </motion.div>
           </AnimatePresence>
 
-          <div className="relative grid min-h-[580px] items-center px-8 py-12 sm:px-12 sm:py-16 lg:px-16 lg:py-20">
-            <div className="max-w-2xl" style={{ transform: 'translateY(-2cm)' }}>
+          <div className="relative grid min-h-[420px] items-center px-6 py-12 sm:min-h-[480px] sm:px-12 sm:py-16 lg:min-h-[580px] lg:px-16 lg:py-20">
+            {/* Le décalage vertical n'est appliqué qu'à partir de lg : sur mobile/tablette, le contenu reste centré normalement */}
+            <div className="max-w-2xl lg:-translate-y-[2cm]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={active.id + '-icon'}

@@ -27,6 +27,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
@@ -56,3 +61,4 @@ h1, h2, h3, h4 {
   font-weight: 700;
   display: inline-flex;
 }
+

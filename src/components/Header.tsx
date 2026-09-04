@@ -44,17 +44,18 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
-            {/* Bouton agrandi : px-4.5 py-2 -> px-6 py-2.5, text-[12.5px] -> text-[13px] */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Sur mobile étroit (<640px), le bouton texte disparaît pour ne pas écraser le menu burger : il est repris dans le menu déroulant. */}
             <NavLink
               to="/demarrer-un-projet"
-              className="rounded-full bg-butter px-6 py-2.5 text-[13px] font-semibold text-butter-foreground transition-opacity hover:opacity-85"
+              className="hidden shrink-0 rounded-full bg-butter px-6 py-2.5 text-[13px] font-semibold text-butter-foreground transition-opacity hover:opacity-85 sm:inline-flex"
             >
               Démarrer un projet
             </NavLink>
             <button
               aria-label="Menu"
-              className="md:hidden"
+              aria-expanded={open}
+              className="flex size-9 shrink-0 items-center justify-center md:hidden"
               onClick={() => setOpen((o) => !o)}
             >
               <svg viewBox="0 0 24 24" className="size-5.5" fill="none">
@@ -81,6 +82,14 @@ export default function Header() {
                 {link.label}
               </NavLink>
             ))}
+            {/* Bouton CTA repris ici pour les écrans < 640px, où il est masqué dans la barre du haut */}
+            <NavLink
+              to="/demarrer-un-projet"
+              onClick={() => setOpen(false)}
+              className="inline-flex justify-center rounded-full bg-butter px-6 py-2.5 text-[13px] font-semibold text-butter-foreground transition-opacity hover:opacity-85 sm:hidden"
+            >
+              Démarrer un projet
+            </NavLink>
           </nav>
         )}
       </div>
