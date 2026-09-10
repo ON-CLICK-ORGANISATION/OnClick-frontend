@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react'
+import { Mail, Phone, MapPin, ArrowUpRight, Smartphone } from 'lucide-react'
 
 const footerLinks = {
   pages: [
@@ -121,6 +121,18 @@ export default function Footer() {
               Nous contacter
               <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
+
+            {/* TODO: remplacer "#" par le vrai lien (App Store / Google Play / page dédiée) */}
+            <a
+              href="#"
+              className="mt-3 flex items-center gap-1.5 text-sm font-medium group transition-colors duration-200 w-fit"
+              style={{ color: '#00D4F5' }}
+              onMouseEnter={e => e.currentTarget.style.color = '#FFFFFF'}
+              onMouseLeave={e => e.currentTarget.style.color = '#00D4F5'}
+            >
+              <Smartphone size={13} className="mr-1" />
+              Télécharger l'application mobile
+            </a>
           </div>
         </div>
 
