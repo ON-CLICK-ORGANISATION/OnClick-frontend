@@ -84,9 +84,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 3 projets en dessous - écart réduit */}
-          <div className="relative -mt-40 sm:-mt-44 md:-mt-48 lg:-mt-52">
-            <div className="grid gap-10 sm:gap-12 grid-cols-1 sm:grid-cols-3 sm:gap-x-24 sm:gap-y-6 max-w-6xl mx-auto">
+          {/* 3 projets en dessous - espacement réduit pour éviter le chevauchement mobile/tablette */}
+          <div className="relative -mt-20 sm:-mt-28 md:-mt-36 lg:-mt-52">
+            <div className="grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-3 sm:gap-x-24 sm:gap-y-6 max-w-6xl mx-auto">
               {featuredProjects.map((project, i) => (
                 <a
                   key={project.name}

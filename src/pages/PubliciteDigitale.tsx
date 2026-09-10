@@ -27,10 +27,10 @@ export default function PubliciteDigitale() {
 
             <div className="relative grid items-center gap-8 px-6 py-20 sm:px-10 sm:py-28 md:py-36 lg:grid-cols-2 lg:gap-8">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary" style={{ transform: 'translateY(-1.8cm)' }}>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">
                   Agence de publicité digitale
                 </p>
-                <h1 className="mt-4 font-display text-[clamp(2rem,4.5vw,3rem)] leading-[1.1]" style={{ transform: 'translateY(-1.4cm)' }}>
+                <h1 className="mt-4 font-display text-[clamp(2rem,4.5vw,3rem)] leading-[1.1]">
                   Des campagnes qui
                   <br />
                   génèrent des résultats
@@ -38,7 +38,6 @@ export default function PubliciteDigitale() {
                 <Link
                   to="/demarrer-un-projet"
                   className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
-                  style={{ transform: 'translateY(-1cm)' }}
                 >
                   Démarrer un projet
                 </Link>
@@ -46,8 +45,7 @@ export default function PubliciteDigitale() {
 
               <div className="relative hidden lg:block h-full">
                 <div 
-                  className="absolute top-[2%] right-[5%] w-[60%] bg-transparent rounded-xl p-5 border border-white/0" 
-                  style={{ transform: 'translateY(-3cm) translateX(0.9cm)' }}
+                  className="absolute top-[8%] right-[5%] w-[60%] rounded-xl border border-white/0 bg-transparent p-5" 
                 >
                   <p className="text-[12px] leading-relaxed text-white/95">
                     Nous créons et gérons vos campagnes publicitaires sur Google, les réseaux sociaux et les plateformes digitales adaptées à votre activité.
@@ -55,8 +53,7 @@ export default function PubliciteDigitale() {
                 </div>
                 
                 <div 
-                  className="absolute top-[42%] right-[5%] w-[60%] bg-transparent rounded-xl p-5 border border-white/0" 
-                  style={{ transform: 'translateY(+2.8cm) translateX(0.9cm)' }}
+                  className="absolute bottom-[12%] right-[5%] w-[60%] rounded-xl border border-white/0 bg-transparent p-5" 
                 >
                   <p className="text-[12px] leading-relaxed text-white/95">
                     <strong> 

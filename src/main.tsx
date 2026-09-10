@@ -11,3 +11,12 @@ createRoot(document.getElementById('root')!).render(
     </BrowserRouter>
   </StrictMode>,
 )
+
+// PWA : enregistre le service worker (uniquement en production, pour ne pas gêner le dev avec le cache)
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {
+      // installation impossible (navigateur non compatible) : le site continue de fonctionner normalement
+    })
+  })
+}
