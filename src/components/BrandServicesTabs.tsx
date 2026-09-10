@@ -72,8 +72,7 @@ export default function BrandServicesTabs() {
           </AnimatePresence>
 
           <div className="relative grid min-h-[420px] items-center px-6 py-12 sm:min-h-[480px] sm:px-12 sm:py-16 lg:min-h-[580px] lg:px-16 lg:py-20">
-            {/* Le décalage vertical n'est appliqué qu'à partir de lg : sur mobile/tablette, le contenu reste centré normalement */}
-            <div className="max-w-2xl lg:-translate-y-[2cm]">
+            <div className="max-w-2xl">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={active.id + '-icon'}
@@ -115,8 +114,8 @@ export default function BrandServicesTabs() {
           </div>
 
           <div className="relative px-3 py-5 sm:px-5 sm:py-6">
-            <div className="w-fit mx-auto rounded-full border border-white/25 bg-black/20 backdrop-blur-md px-2 py-1.5 sm:px-3 sm:py-2">
-              <div className="flex gap-0.5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="mx-auto w-full max-w-[min(100%,36rem)] rounded-full border border-white/25 bg-black/20 px-2 py-1.5 backdrop-blur-md sm:px-3 sm:py-2 md:w-fit md:max-w-none">
+              <div className="flex gap-0.5 overflow-x-auto md:overflow-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none]">
                 {brandTabs.map((tab, index) => (
                   <button
                     key={tab.id}

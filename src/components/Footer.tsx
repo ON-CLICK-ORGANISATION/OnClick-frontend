@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react'
+import InstallAppLink from './InstallAppLink'
 
 const footerLinks = {
   pages: [
@@ -121,6 +122,8 @@ export default function Footer() {
               Nous contacter
               <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
+
+            <InstallAppLink className="mt-3 flex items-center gap-1.5 text-sm font-medium transition-colors duration-200" />
           </div>
         </div>
 

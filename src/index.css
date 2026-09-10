@@ -32,11 +32,26 @@ html, body {
   overflow-x: hidden;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  min-height: 100vh;
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4 {
@@ -60,5 +75,11 @@ h1, h2, h3, h4 {
   font-size: 0.8125rem;
   font-weight: 700;
   display: inline-flex;
+}
+
+@media (max-width: 640px) {
+  .container-page {
+    padding-inline: 1rem;
+  }
 }
 
