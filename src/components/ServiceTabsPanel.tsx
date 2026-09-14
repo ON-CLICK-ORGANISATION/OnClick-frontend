@@ -62,6 +62,8 @@ export default function ServiceTabsPanel({ tabs, icons, imagePrefix = 'aeoseogeo
               <img
                 src={activeImage}
                 alt=""
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
                 style={{
                   objectPosition: `calc(50% + ${activePos.x}cm) calc(50% + ${activePos.y}cm)`,
@@ -106,7 +108,7 @@ export default function ServiceTabsPanel({ tabs, icons, imagePrefix = 'aeoseogeo
                   </p>
                   {/* Bouton "Démarrer un projet" */}
                   <Link
-                    to="/demarrer-un-projet"
+                    to="/contact/"
                     className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
                   >
                     Démarrer un projet

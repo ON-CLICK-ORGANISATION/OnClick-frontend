@@ -1,7 +1,7 @@
 {
-  "name": "Only Clik — Agence digitale",
-  "short_name": "Only Clik",
-  "description": "L'agence digitale qui aide les professionnels à exister en ligne et à développer leur activité.",
+  "name": "OnlyClik — Agence d'acquisition digitale",
+  "short_name": "OnlyClik",
+  "description": "L'agence d'acquisition digitale qui aide les professionnels à générer plus de prospects et de rendez-vous.",
   "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",

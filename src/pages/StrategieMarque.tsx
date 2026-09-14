@@ -17,6 +17,7 @@ export default function StrategieMarque() {
             <div className="absolute inset-0 overflow-hidden rounded-[2rem] sm:rounded-[2.5rem]">
               <img
                 src="/images/projects/strategie-marque-bg.png"
+                fetchPriority="high"
                 alt=""
                 className="h-full w-full object-cover"
               />
@@ -38,7 +39,7 @@ export default function StrategieMarque() {
                   stratégie
                 </h1>
                 <Link
-                  to="/demarrer-un-projet"
+                  to="/contact/"
                   className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
                 >
                   Démarrer un projet
@@ -62,7 +63,7 @@ export default function StrategieMarque() {
                 >
                   <p className="text-[12px] leading-relaxed text-white/95">
                     <strong>
-                      Chez Only Clik, nous construisons votre identité de marque à partir d'une réflexion stratégique et d'une bonne compréhension de votre marché, de vos clients et de vos objectifs. 
+                      Chez OnlyClik, nous construisons votre identité de marque à partir d'une réflexion stratégique et d'une bonne compréhension de votre marché, de vos clients et de vos objectifs. 
                     Nous définissons votre positionnement, votre identité visuelle et les codes qui permettront à votre entreprise d'être immédiatement reconnaissable.
                     </strong>
                   </p>
@@ -84,7 +85,7 @@ export default function StrategieMarque() {
                   Une marque ne se résume pas à un logo. C'est une promesse faite à vos clients, qui doit se retrouver dans chaque message, chaque visuel et chaque interaction.
                 </p>
                 <p className="text-sm sm:text-base leading-relaxed text-white/85">
-                  Chez Only Clik, nous construisons votre identité de marque à partir d'une réflexion stratégique et d'une bonne compréhension de votre marché, de vos clients et de vos objectifs. Nous définissons votre positionnement, votre identité visuelle et les codes qui permettront à votre entreprise d'être immédiatement reconnaissable.
+                  Chez OnlyClik, nous construisons votre identité de marque à partir d'une réflexion stratégique et d'une bonne compréhension de votre marché, de vos clients et de vos objectifs. Nous définissons votre positionnement, votre identité visuelle et les codes qui permettront à votre entreprise d'être immédiatement reconnaissable.
                 </p>
                 <p className="text-sm sm:text-base leading-relaxed text-white/85">
                   Notre objectif : créer des marques cohérentes, mémorables et durables, capables de rester pertinentes bien au-delà de leur lancement.
@@ -100,7 +101,7 @@ export default function StrategieMarque() {
         <div className="container-page mx-auto max-w-2xl text-center">
           <h2 className="font-display text-[clamp(1.8rem,4vw,2.5rem)] leading-tight">Nos services en Branding</h2>
           <p className="mt-5 text-sm sm:text-base leading-relaxed text-foreground/80">
-            Découvrez nos services de stratégie de marque, d'identité et de création. Chez Only Clik, nous travaillons sur tous les aspects de votre marque.
+            Découvrez nos services de stratégie de marque, d'identité et de création. Chez OnlyClik, nous travaillons sur tous les aspects de votre marque.
           </p>
         </div>
       </section>
@@ -120,37 +121,37 @@ export default function StrategieMarque() {
             </h3>
             <div className="flex flex-nowrap gap-1.5 overflow-x-auto pb-2">
               <Link
-                to="/creation-site-web"
+                to="/creation-site-web/"
                 className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
               >
                 Création de site web
               </Link>
               <Link
-                to="/publicite-digitale"
+                to="/publicite-digitale/"
                 className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
               >
                 Publicité digitale
               </Link>
               <Link
-                to="/service-ui-ux"
+                to="/service-ui-ux/"
                 className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
               >
                 Service UI/UX
               </Link>
               <Link
-                to="/seo-aeo-geo"
+                to="/seo-aeo-geo/"
                 className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
               >
                 SEO, AEO & GEO
               </Link>
               <Link
-                to="/strategie-digitale"
+                to="/strategie-digitale/"
                 className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
               >
                 Stratégie digitale
               </Link>
               <Link
-                to="/services"
+                to="/services/"
                 className="rounded-full bg-white px-3 py-2 text-[10px] sm:text-xs font-semibold text-[#1E293B] transition-opacity hover:opacity-85 whitespace-nowrap"
               >
                 Toutes nos prestations

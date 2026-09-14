@@ -80,6 +80,8 @@ export default function TestimonialCarousel() {
                 <img
                   src={currentTestimonial.image}
                   alt={currentTestimonial.name}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;

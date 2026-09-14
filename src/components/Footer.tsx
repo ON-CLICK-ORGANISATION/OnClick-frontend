@@ -5,14 +5,21 @@ import InstallAppLink from './InstallAppLink'
 const footerLinks = {
   pages: [
     { label: 'Accueil', path: '/' },
-    { label: 'Services', path: '/services' },
-    { label: 'Stratégie de marque', path: '/strategie-de-marque' },
-    { label: 'Création de site web', path: '/creation-site-web' },
-    { label: 'Service UI/UX', path: '/service-ui-ux' },
-    { label: 'SEO, AEO & GEO', path: '/seo-aeo-geo' },
-    { label: 'Stratégie digitale', path: '/strategie-digitale' },
-    { label: 'Réalisations', path: '/realisations' },
-    { label: 'Démarrer un projet', path: '/demarrer-un-projet' },
+    { label: 'Services', path: '/services/' },
+    { label: 'Stratégie de marque', path: '/strategie-de-marque/' },
+    { label: 'Création de site web', path: '/creation-site-web/' },
+    { label: 'Service UI/UX', path: '/service-ui-ux/' },
+    { label: 'SEO, AEO & GEO', path: '/seo-aeo-geo/' },
+    { label: 'Stratégie digitale', path: '/strategie-digitale/' },
+    { label: 'Réalisations', path: '/realisations/' },
+    { label: 'Démarrer un projet', path: '/contact/' },
+  ],
+  acquisition: [
+    { label: 'Notre approche', path: '/notre-approche/' },
+    { label: 'Acquisition clients', path: '/acquisition-clients/' },
+    { label: 'Marketing digital', path: '/marketing-digital/' },
+    { label: 'Rendez-vous qualifiés', path: '/rendez-vous-qualifies/' },
+    { label: 'À propos', path: '/a-propos/' },
   ],
   legal: [
     'Mentions légales',
@@ -46,14 +53,16 @@ export default function Footer() {
       />
 
       <div className="relative container-page pt-12 sm:pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 mb-10 sm:mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-10 sm:mb-12">
 
           {/* Brand block */}
           <div>
             <Link to="/" className="flex items-center gap-2.5 mb-5 w-fit group">
               <img
                   src="/images/logo-mark.png"
-                  alt="Only Clik"
+                  alt="OnlyClik"
+                  loading="lazy"
+                  decoding="async"
                   className="h-14 w-15 object-contain"
               />
               <span className="font-display text-xl font-bold tracking-[0.22em]">
@@ -62,7 +71,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm leading-relaxed mb-6 text-white/55 max-w-xs">
-              L'agence digitale qui aide les professionnels à exister en ligne et à développer leur activité.
+              L'agence d'acquisition digitale qui aide les professionnels à attirer plus de prospects et à développer leur activité.
             </p>
           </div>
 
@@ -73,6 +82,29 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {footerLinks.pages.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="text-sm flex items-center gap-2 group transition-colors duration-200 text-white/55 hover:text-[#00D4F5]"
+                  >
+                    <span
+                      className="h-px transition-all duration-300 group-hover:w-5"
+                      style={{ width: '12px', background: 'rgba(0, 212, 245, 0.7)' }}
+                    />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Acquisition digitale (pages du brief SEO) */}
+          <div>
+            <h3 className="text-2xs font-bold uppercase tracking-widest mb-5 text-white/70">
+              Acquisition digitale
+            </h3>
+            <ul className="space-y-3">
+              {footerLinks.acquisition.map((link) => (
                 <li key={link.path}>
                   <Link
                     to={link.path}
@@ -113,7 +145,7 @@ export default function Footer() {
             </ul>
 
             <Link
-              to="/demarrer-un-projet"
+              to="/contact/"
               className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium group transition-colors duration-200"
               style={{ color: '#00D4F5' }}
               onMouseEnter={e => e.currentTarget.style.color = '#FFFFFF'}

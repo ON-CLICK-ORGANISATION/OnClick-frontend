@@ -43,7 +43,7 @@ export default function MethodSection() {
         </div>
 
         <div className="mt-10 text-center">
-          <Link to="/services" className="link-arrow group justify-center">
+          <Link to="/services/" className="link-arrow group justify-center">
             Découvrir tous nos services <ArrowLink />
           </Link>
         </div>

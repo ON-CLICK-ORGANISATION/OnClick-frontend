@@ -1,4 +1,17 @@
 {
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/demarrer-un-projet",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/demarrer-un-projet/",
+      "destination": "/contact/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

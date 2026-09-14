@@ -61,6 +61,8 @@ export default function BrandServicesTabs() {
               <img
                 src={activeImage}
                 alt=""
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
                 //  Position calculée automatiquement depuis le tableau
                 style={{
@@ -103,7 +105,7 @@ export default function BrandServicesTabs() {
                     {active.text}
                   </p>
                   <Link
-                    to="/demarrer-un-projet"
+                    to="/contact/"
                     className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
                   >
                     Démarrer un projet
