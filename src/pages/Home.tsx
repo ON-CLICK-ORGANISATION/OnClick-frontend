@@ -5,6 +5,7 @@ import TestimonialCarousel from '../components/TestimonialCarousel'
 import ContactForm from '../components/ContactForm'
 import { LaptopMockup, PhoneMockup } from '../components/DeviceMockups'
 import ServicesSection from "../components/ServiceSection.tsx";
+import RelatedLinks from '../components/RelatedLinks'
 import { heroProject, featuredProjects } from '../data/content'
 
 export default function Home() {
@@ -14,15 +15,15 @@ export default function Home() {
       <section className="container-page grid items-center gap-8 py-8 md:grid-cols-2 md:py-12">
         <div>
           <h1 className="font-display text-[clamp(2.5rem,6vw,4.25rem)] leading-[1.05]">
-           <span className="text-[#FDE68A]">Only Clik,</span>
+           <span className="text-[#FDE68A]">OnlyClik,</span>{' '}
             un partenaire proche de vous.
           </h1>
           <p className="mt-6 max-w-md text-base sm:text-lg leading-relaxed text-foreground/80">
-            Only Clik, l'agence digitale qui aide les professionnels à exister en ligne, attirer plus de clients et
-            développer leur activité.
+            OnlyClik, l'agence d'acquisition digitale qui aide les professionnels à générer plus de prospects, attirer
+            de nouveaux clients et obtenir des rendez-vous qualifiés.
           </p>
           <Link
-            to="/demarrer-un-projet"
+            to="/contact/"
             className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
           >
             Discutons-en
@@ -107,6 +108,8 @@ export default function Home() {
                       <img
                         src={project.image}
                         alt={project.name}
+                        loading="lazy"
+                        decoding="async"
                         className="size-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     )}
@@ -129,6 +132,24 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Liens vers les pages « acquisition digitale » (maillage interne) */}
+      <RelatedLinks
+        className="pb-10 sm:pb-14"
+        title={
+          <>
+            Acquisition <span className="italic opacity-90">digitale</span>
+          </>
+        }
+        links={[
+          { to: '/notre-approche/', label: 'Notre approche' },
+          { to: '/acquisition-clients/', label: 'Acquisition clients' },
+          { to: '/marketing-digital/', label: 'Marketing digital' },
+          { to: '/rendez-vous-qualifies/', label: 'Rendez-vous qualifiés' },
+          { to: '/realisations/', label: 'Nos réalisations' },
+          { to: '/a-propos/', label: 'À propos' },
+        ]}
+      />
 
       {/*<MethodSection />*/}
       <ServicesSection />

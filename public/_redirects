@@ -1,0 +1,3 @@
+# Cloudflare Pages — redirections permanentes vers les URL du brief SEO
+/demarrer-un-projet    /contact/  301
+/demarrer-un-projet/   /contact/  301

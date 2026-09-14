@@ -109,6 +109,7 @@ export default function ContactForm() {
                 <input
                   type="text"
                   name="firstName"
+                  aria-label="Prénom"
                   value={formData.firstName}
                   onChange={handleChange}
                   required
@@ -120,6 +121,7 @@ export default function ContactForm() {
                 <input
                   type="text"
                   name="lastName"
+                  aria-label="Nom"
                   value={formData.lastName}
                   onChange={handleChange}
                   required
@@ -135,6 +137,7 @@ export default function ContactForm() {
                 <input
                   type="email"
                   name="email"
+                  aria-label="Email professionnel"
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -146,6 +149,7 @@ export default function ContactForm() {
                 <input
                   type="text"
                   name="company"
+                  aria-label="Entreprise"
                   value={formData.company}
                   onChange={handleChange}
                   placeholder="Entreprise"
@@ -158,6 +162,7 @@ export default function ContactForm() {
             <div>
               <textarea
                 name="message"
+                aria-label="Décrivez votre projet"
                 value={formData.message}
                 onChange={handleChange}
                 required

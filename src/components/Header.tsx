@@ -3,8 +3,8 @@ import { House, BriefcaseBusiness, FolderKanban } from 'lucide-react'
 
 const navLinks = [
   { to: '/', label: 'Accueil', icon: House },
-  { to: '/services', label: 'Services', icon: BriefcaseBusiness },
-  { to: '/realisations', label: 'Réalisations', icon: FolderKanban },
+  { to: '/services/', label: 'Services', icon: BriefcaseBusiness },
+  { to: '/realisations/', label: 'Réalisations', icon: FolderKanban },
 ]
 
 export default function Header() {
@@ -12,10 +12,10 @@ export default function Header() {
     <header className="sticky top-3 z-50 sm:top-4">
       <div className="mx-auto max-w-[1440px] px-2 sm:px-4">
         <div className="flex h-16 items-center justify-between rounded-full border border-border bg-background/90 px-5 shadow-sm backdrop-blur sm:px-6">
-          <NavLink to="/" className="flex items-center gap-2">
+          <NavLink to="/" className="flex items-center gap-2" aria-label="OnlyClik – Accueil">
             <img
               src="/images/logo-mark.png"
-              alt="Only Clik"
+              alt="OnlyClik"
               className="block h-8 w-8 shrink-0 object-contain md:h-12 md:w-12"
             />
             <span className="font-display text-base leading-4 tracking-[0.22em]">
@@ -23,7 +23,7 @@ export default function Header() {
             </span>
           </NavLink>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-8 md:flex" aria-label="Navigation principale">
             {navLinks.map((link) => {
               const Icon = link.icon
               return (
@@ -45,7 +45,7 @@ export default function Header() {
           </nav>
 
           <NavLink
-            to="/demarrer-un-projet"
+            to="/contact/"
             className="hidden shrink-0 rounded-full bg-butter px-6 py-2.5 text-[13px] font-semibold text-butter-foreground transition-opacity hover:opacity-85 sm:inline-flex"
           >
             Démarrer un projet
@@ -53,7 +53,7 @@ export default function Header() {
         </div>
       </div>
 
-      <nav className="fixed inset-x-0 bottom-3 z-50 px-3 md:hidden">
+      <nav className="fixed inset-x-0 bottom-3 z-50 px-3 md:hidden" aria-label="Navigation mobile">
         <div className="mx-auto flex max-w-md items-center justify-around rounded-full border border-border/80 bg-background/90 p-2 shadow-[0_18px_38px_rgba(15,23,42,0.14)] backdrop-blur-xl">
           {navLinks.map((link) => {
             const Icon = link.icon

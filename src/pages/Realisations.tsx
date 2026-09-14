@@ -12,7 +12,7 @@ export default function Realisations() {
         <p className="mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-foreground/80">
           Chaque projet est pensé pour atteindre un objectif concret : attirer plus de clients, développer votre
           visibilité et accélérer votre croissance. Découvrez quelques-unes des entreprises que nous avons
-          accompagnées et les résultats obtenus grâce à une stratégie digitale performante.
+          accompagnées et les résultats obtenus grâce à nos stratégies d'acquisition digitale.
         </p>
       </section>
 
@@ -35,6 +35,8 @@ export default function Realisations() {
                   <img
                     src={project.image}
                     alt={project.name}
+                    loading="lazy"
+                    decoding="async"
                     className={project.fit === 'contain' ? 'w-full h-full object-contain p-6' : 'w-full h-full object-cover'}
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;

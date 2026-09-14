@@ -10,7 +10,7 @@ const servicesData = [
         description:
             'Conception de sites performants, sécurisés et évolutifs, pensés pour offrir une expérience optimale et convertir vos visiteurs en clients.',
         image: '/images/services/creation-site-web.png',
-        link: '/creation-site-web',
+        link: '/creation-site-web/',
         ctaText: 'En savoir plus',
     },
     {
@@ -18,7 +18,7 @@ const servicesData = [
         description:
             'Campagnes Google Ads, réseaux sociaux, publicité programmatique et stratégies d\'acquisition conçues pour atteindre vos objectifs de croissance.',
         image: '/images/services/publicite-digitale.png',
-        link: '/publicite-digitale',
+        link: '/publicite-digitale/',
         ctaText: 'En savoir plus',
     },
     {
@@ -26,7 +26,7 @@ const servicesData = [
         description:
             'Conception d\'interfaces simples, intuitives et agréables à utiliser, pensées pour faciliter chaque parcours sur tous les écrans.',
         image: '/images/services/service-uiux.png',
-        link: '/service-ui-ux',
+        link: '/service-ui-ux/',
         ctaText: 'En savoir plus',
     },
     {
@@ -34,7 +34,7 @@ const servicesData = [
         description:
             'Définissez votre positionnement, affirmez votre différence et construisez une image cohérente sur l\'ensemble de vos points de contact.',
         image: '/images/services/strategie-de-marque.png',
-        link: '/strategie-de-marque',
+        link: '/strategie-de-marque/',
         ctaText: 'En savoir plus',
     },
     {
@@ -42,7 +42,7 @@ const servicesData = [
         description:
             'Optimisation de votre visibilité sur Google, les moteurs de recherche alimentés par l\'IA et les nouveaux outils de recherche conversationnelle.',
         image: '/images/services/seo-aeo-geo.png',
-        link: '/seo-aeo-geo',
+        link: '/seo-aeo-geo/',
         ctaText: 'En savoir plus',
     },
     {
@@ -50,7 +50,7 @@ const servicesData = [
         description:
             'Élaboration d\'une feuille de route claire : choix des canaux, répartition du budget et plan d\'action aligné sur vos objectifs commerciaux.',
         image: '/images/services/strategie-digitale.png',
-        link: '/strategie-digitale',
+        link: '/strategie-digitale/',
         ctaText: 'En savoir plus',
     },
 ]
@@ -89,6 +89,8 @@ export default function Services() {
                                     <img
                                         src={service.image}
                                         alt={service.title}
+                                        loading="lazy"
+                                        decoding="async"
                                         className="w-full h-full object-cover"
                                         onError={(e) => {
                                             const target = e.target as HTMLImageElement;
@@ -149,7 +151,7 @@ export default function Services() {
                             difficile de savoir où investir pour obtenir de vrais résultats.
                         </p>
                         <p className="text-[#64748B] text-base leading-relaxed">
-                            Only Clik vous accompagne avec une stratégie claire et des solutions digitales
+                            OnlyClik vous accompagne avec une stratégie claire et des solutions digitales
                             conçues pour attirer plus de prospects, renforcer votre visibilité et accélérer
                             votre croissance. De la réflexion à la mise en œuvre, nous vous apportons
                             l'expertise et les outils nécessaires pour faire de votre présence en ligne
@@ -160,7 +162,7 @@ export default function Services() {
                     {/* Bouton CTA centré */}
                     <div className="flex justify-center">
                         <Link
-                            to="/demarrer-un-projet"
+                            to="/contact/"
                             className="inline-flex items-center gap-2 bg-[#FFE957] text-[#0F172A] font-semibold text-sm py-3.5 px-8 rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 group"
                         >
                             Démarrer un projet

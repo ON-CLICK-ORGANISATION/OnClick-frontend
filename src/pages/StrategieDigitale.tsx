@@ -19,6 +19,7 @@ export default function StrategieDigitale() {
             <div className="absolute inset-0 overflow-hidden rounded-[2rem] sm:rounded-[2.5rem]">
               <img
                 src="/images/projects/strategie-digitale-bg.png"
+                fetchPriority="high"
                 alt=""
                 className="h-full w-full object-cover"
                 style={{ objectPosition: 'calc(50% +0cm) 50%' }}
@@ -39,7 +40,7 @@ export default function StrategieDigitale() {
                   sur la stratégie
                 </h1>
                 <Link
-                  to="/demarrer-un-projet"
+                  to="/contact/"
                   className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
                 >
                   Démarrer un projet
@@ -112,37 +113,37 @@ export default function StrategieDigitale() {
             </h3>
             <div className="flex flex-nowrap gap-1.5 overflow-x-auto pb-2">
               <Link
-                to="/creation-site-web"
+                to="/creation-site-web/"
                 className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
               >
                 Création de site web
               </Link>
               <Link
-                to="/publicite-digitale"
+                to="/publicite-digitale/"
                 className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
               >
                 Publicité digitale
               </Link>
               <Link
-                to="/strategie-de-marque"
+                to="/strategie-de-marque/"
                 className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
               >
                 Stratégie de marque
               </Link>
               <Link
-                to="/service-ui-ux"
+                to="/service-ui-ux/"
                 className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
               >
                 Service UI/UX
               </Link>
               <Link
-                to="/seo-aeo-geo"
+                to="/seo-aeo-geo/"
                 className="rounded-full border border-white/25 px-3 py-2 text-[10px] sm:text-xs font-semibold text-white transition-colors hover:bg-white/10 whitespace-nowrap"
               >
                 SEO, AEO & GEO
               </Link>
               <Link
-                to="/services"
+                to="/services/"
                 className="rounded-full bg-white px-3 py-2 text-[10px] sm:text-xs font-semibold text-[#1E293B] transition-opacity hover:opacity-85 whitespace-nowrap"
               >
                 Toutes nos prestations

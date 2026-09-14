@@ -9,11 +9,12 @@ export default function StartProject() {
       <section className="container-page grid items-center gap-10 py-16 md:grid-cols-2">
         <div>
           <h1 className="font-display text-[clamp(2.3rem,5.5vw,3.75rem)] leading-[1.05]">
-            Construisons ensemble votre réussite.
+            Contactez OnlyClik
           </h1>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-foreground/80">
-            Décrivez votre projet en quelques lignes : nous revenons vers vous sous 24 heures avec un premier avis
-            honnête et des recommandations actionnables.
+            Vous souhaitez développer votre activité et générer davantage de prospects ou de rendez-vous ? Décrivez
+            votre projet en quelques lignes : nous revenons vers vous sous 24 heures avec un premier avis honnête et des
+            recommandations actionnables.
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
