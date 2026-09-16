@@ -75,7 +75,9 @@ export default function ServiceTabsPanel({ tabs, icons, imagePrefix = 'aeoseogeo
           </AnimatePresence>
 
           {/* Contenu principal */}
-          <div className="relative grid min-h-[420px] items-center px-6 py-12 sm:min-h-[480px] sm:px-12 sm:py-16 lg:min-h-[580px] lg:px-16 lg:py-20">
+          <div className="relative grid min-h-[420px] items-center px-6 py-12 sm:min-h-[480px] sm:px-12 sm:py-16 lg:min-h-[580px] lg:px-16 lg:py-20"
+            style={{ transform: 'translateY(-1.0cm) translateX(0.2cm)' }}
+          >
             <div className="max-w-2xl">
               <AnimatePresence mode="wait">
                 <motion.div

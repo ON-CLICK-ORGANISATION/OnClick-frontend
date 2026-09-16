@@ -49,10 +49,14 @@ export default function ServiceUIUX() {
             <div className="relative grid items-center gap-8 px-6 py-20 sm:px-10 sm:py-28 md:py-36 lg:grid-cols-2 lg:gap-8">
               <div>
                 {/* Titre bleu - modifie translateY pour le monter/descendre */}
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary"
+                  style={{ transform: 'translateY(-1.4cm) translateX(0.2cm)' }}
+                >
                   Agence UI/UX Design
                 </p>
-                <h1 className="mt-4 font-display text-[clamp(2rem,4.5vw,3rem)] leading-[1.1]">
+                <h1 className="mt-4 font-display text-[clamp(2rem,4.5vw,3rem)] leading-[1.1]"
+                  style={{ transform: 'translateY(-1.2cm) translateX(0.2cm)' }}
+                >
                   Des interfaces simples, intuitives et
                   <br />
                   agréables à utiliser
@@ -60,6 +64,7 @@ export default function ServiceUIUX() {
                 <Link
                   to="/contact/"
                   className="mt-9 inline-flex rounded-full bg-butter px-7 py-3 text-sm font-semibold text-butter-foreground transition-opacity hover:opacity-85"
+                  style={{ transform: 'translateY(-1cm) translateX(0.2cm)' }}
                 >
                   Démarrer un projet
                 </Link>
@@ -70,6 +75,7 @@ export default function ServiceUIUX() {
                 {/* Bloc 1 - haut */}
                 <div 
                   className="absolute top-[8%] right-[5%] w-[60%] rounded-xl border border-white/10 bg-black/30 p-5 backdrop-blur-md" 
+                  style={{ transform: 'translateY(-3.1cm) translateX(0.9cm)' }}
                 >
                   <p className="text-[12px] leading-relaxed text-white/95">
                     Nous concevons des interfaces simples, intuitives et agréables à utiliser.
@@ -79,6 +85,7 @@ export default function ServiceUIUX() {
                 {/* Bloc 2 - milieu */}
                 <div 
                   className="absolute bottom-[12%] right-[5%] w-[60%] rounded-xl border border-white/10 bg-black/30 p-5 backdrop-blur-md" 
+                  style={{ transform: 'translateY(+3.3cm) translateX(0.9cm)' }}
                 >
                   <p className="text-[12px] leading-relaxed text-white/95">
                     <strong> 
