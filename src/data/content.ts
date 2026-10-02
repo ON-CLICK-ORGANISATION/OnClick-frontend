@@ -72,13 +72,6 @@ export const featuredProjects: Project[] = [
 // Full projects list (Réalisations page)
 export const projects: Project[] = [
   {
-    name: 'Horizon Nouveau',
-    url: 'https://www.horizon-nouveau.fr/',
-    description: "Une stratégie SEO efficace qui a permis à ce coach d'atteindre la première place sur Google.",
-    gradient: 'linear-gradient(140deg, oklch(0.55 0.08 60), oklch(0.32 0.05 50))',
-    image: '/images/realisation/horizon-nouveau.jpg',
-  },
-  {
     name: 'Hôtel la Colongette',
     url: 'https://hotel-la-colongette.com/',
     description: 'Augmentation du taux de réservation de +130% avec le nouveau site',
