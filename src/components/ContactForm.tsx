@@ -38,10 +38,15 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       })
 
-      const result = await response.json().catch(() => ({}))
+      // On n'accepte le succès que si le serveur confirme explicitement en JSON :
+      // un hébergeur qui renvoie index.html sur une route inconnue répond 200 sans rien envoyer.
+      const isJson = (response.headers.get('content-type') ?? '').includes('application/json')
+      const result: { ok?: boolean; error?: string } | null = isJson
+        ? await response.json().catch(() => null)
+        : null
 
-      if (!response.ok) {
-        setError(result.error || "L'envoi a échoué. Merci de réessayer.")
+      if (!response.ok || !result?.ok) {
+        setError(result?.error || "L'envoi a échoué. Merci de réessayer.")
         return
       }
 

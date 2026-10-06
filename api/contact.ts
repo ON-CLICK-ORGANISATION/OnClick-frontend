@@ -3,6 +3,8 @@ import nodemailer from 'nodemailer'
 
 const LIMITS = { name: 100, email: 254, company: 150, message: 5000 }
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
 const HTML_ESCAPES: Record<string, string> = {
   '&': '&amp;',
   '<': '&lt;',
@@ -49,7 +51,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!rgpd) {
     return res.status(400).json({ error: "Merci d'accepter l'utilisation de vos données." })
   }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (!EMAIL_RE.test(email)) {
     return res.status(400).json({ error: 'Adresse email invalide.' })
   }
   if (
@@ -68,6 +70,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(500).json({ error: "Le service d'envoi n'est pas configuré." })
   }
 
+  // Un CONTACT_TO mal formé ferait échouer la livraison : on retombe sur le compte authentifié.
+  const recipient = CONTACT_TO && EMAIL_RE.test(CONTACT_TO) ? CONTACT_TO : SMTP_USER
+  if (CONTACT_TO && recipient !== CONTACT_TO) {
+    console.warn(`CONTACT_TO invalide ("${CONTACT_TO}") : envoi vers ${SMTP_USER} à la place.`)
+  }
+
   const port = Number(SMTP_PORT) || 465
   const fullName = singleLine(`${firstName} ${lastName}`)
   const subject = singleLine(
@@ -79,13 +87,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       host: SMTP_HOST,
       port,
       secure: port === 465, // 465 = SSL implicite, 587 = STARTTLS
-      auth: { user: SMTP_USER, pass: SMTP_PASS },
+      // Google affiche le mot de passe d'application par groupes de 4 : on retire les espaces.
+      auth: { user: SMTP_USER, pass: SMTP_PASS.replace(/\s+/g, '') },
     })
 
     await transporter.sendMail({
       // Gmail réécrit l'expéditeur avec le compte authentifié : on le met directement.
       from: `"Site OnClick" <${SMTP_USER}>`,
-      to: CONTACT_TO || SMTP_USER,
+      to: recipient,
       replyTo: { name: fullName, address: singleLine(email) },
       subject,
       text: [
