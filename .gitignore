@@ -13,6 +13,10 @@ dist-ssr
 *.local
 .wrangler
 .dev.vars
+.vercel
+
+# Secrets SMTP : ne jamais committer
+.env
 
 # Editor directories and files
 .vscode/*

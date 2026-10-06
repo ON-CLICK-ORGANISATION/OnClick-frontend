@@ -2,17 +2,21 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Send, CheckCircle2 } from 'lucide-react'
 
+const EMPTY_FORM = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  company: '',
+  message: '',
+  rgpd: false,
+  website: '', // piège à robots, laissé vide par les humains
+}
+
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    message: '',
-    rgpd: false,
-  })
+  const [formData, setFormData] = useState(EMPTY_FORM)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target
@@ -22,13 +26,32 @@ export default function ContactForm() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
+    setError('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json().catch(() => ({}))
+
+      if (!response.ok) {
+        setError(result.error || "L'envoi a échoué. Merci de réessayer.")
+        return
+      }
+
+      setFormData(EMPTY_FORM)
       setSubmitted(true)
-    }, 1500)
+    } catch {
+      setError('Connexion impossible. Vérifiez votre réseau et réessayez.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   if (submitted) {
@@ -103,6 +126,18 @@ export default function ContactForm() {
 
           {/* Colonne droite - Formulaire */}
           <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Anti-spam : invisible et hors du parcours clavier, seuls les robots le remplissent */}
+            <div className="absolute left-[-9999px] w-px h-px overflow-hidden" aria-hidden="true">
+              <input
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                value={formData.website}
+                onChange={handleChange}
+              />
+            </div>
+
             {/* Row 1: Prénom & Nom */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
@@ -187,6 +222,13 @@ export default function ContactForm() {
                 J'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande.
               </label>
             </div>
+
+            {/* Message d'erreur */}
+            {error && (
+              <p role="alert" className="text-sm text-red-600 bg-red-50 border border-red-100 rounded-xl px-4 py-3">
+                {error}
+              </p>
+            )}
 
             {/* Bouton Envoyer */}
             <button
