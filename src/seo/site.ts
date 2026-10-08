@@ -25,9 +25,9 @@ export const ORGANIZATION = {
     'OnlyClik accompagne les professionnels dans leur développement grâce au marketing digital, à l’acquisition et à la génération de prospects.',
   email: 'contact@onlyclik.com',
   telephone: '+33 6 15 83 75 61',
-  telephoneDisplay: '06 15 83 75 61',
+  telephoneDisplay: '0615837561',
   address: {
-    streetAddress: '8, la Lande',
+    streetAddress: '310, la Lande',
     postalCode: '37460',
     addressLocality: 'Genillé',
     addressCountry: 'FR',

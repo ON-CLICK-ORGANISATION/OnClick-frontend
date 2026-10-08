@@ -129,8 +129,8 @@ export default function Footer() {
             <ul className="space-y-3.5">
               {[
                 { icon: Mail, text: 'contact@onlyclik.com' },
-                { icon: Phone, text: '06 15 83 75 61' },
-                { icon: MapPin, text: '8, la Lande 37460 Genillé' },
+                { icon: Phone, text: '0615837561' },
+                { icon: MapPin, text: '310, la Lande 37460 Genillé' },
               ].map(({ icon: Icon, text }, i) => (
                 <li key={i} className="flex items-center gap-3 text-sm text-white/55">
                   <div
