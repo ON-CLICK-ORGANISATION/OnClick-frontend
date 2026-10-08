@@ -59,7 +59,7 @@ export default function AcquisitionClients() {
 
       <ProjectHighlights
         title="Des résultats concrets pour nos clients"
-        names={['Vision Laser', 'Faune Project', 'Horizon Nouveau']}
+        names={['Vision Laser', 'Faune Project', 'Hôtel Royal Palace']}
       />
 
       <RelatedLinks

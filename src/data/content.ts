@@ -72,11 +72,19 @@ export const featuredProjects: Project[] = [
 // Full projects list (Réalisations page)
 export const projects: Project[] = [
   {
-    name: 'Horizon Nouveau',
-    url: 'https://www.horizon-nouveau.fr/',
-    description: "Une stratégie SEO efficace qui a permis à ce coach d'atteindre la première place sur Google.",
-    gradient: 'linear-gradient(140deg, oklch(0.55 0.08 60), oklch(0.32 0.05 50))',
-    image: '/images/realisation/horizon-nouveau.jpg',
+    name: 'Amalthéa Pilates',
+    url: 'https://amalthea-studio.com/',
+    description: 'Studio de Pilates en ligne qui a augmenté son taux de réservation de +87%.',
+    gradient: 'linear-gradient(140deg, oklch(0.6 0.1 90), oklch(0.35 0.06 80))',
+    image: '/images/projects/stud.png',
+    fit: 'contain',
+  },
+  {
+    name: 'Faune Project',
+    url: 'https://fauneproject.com/',
+    description: "Une refonte qui a permis une augmentation du trafic organique de +74%",
+    gradient: 'linear-gradient(140deg, oklch(0.4 0.03 260), oklch(0.22 0.02 260))',
+    image: '/images/realisation/faune.png',
   },
   {
     name: 'Hôtel la Colongette',
@@ -98,21 +106,6 @@ export const projects: Project[] = [
     description: 'Biographe qui est passée de 1 à 6 biographies par an',
     gradient: 'linear-gradient(140deg, oklch(0.52 0.06 140), oklch(0.3 0.04 150))',
     image: '/images/realisation/mirroir.png',
-    fit: 'contain',
-  },
-  {
-    name: 'Faune Project',
-    url: 'https://fauneproject.com/',
-    description: "Une refonte qui a permis une augmentation du trafic organique de +74%",
-    gradient: 'linear-gradient(140deg, oklch(0.4 0.03 260), oklch(0.22 0.02 260))',
-    image: '/images/realisation/faune.png',
-  },
-  {
-    name: 'Amalthéa Pilates',
-    url: 'https://amalthea-studio.com/',
-    description: 'Studio de Pilates en ligne qui a augmenté son taux de réservation de +87%.',
-    gradient: 'linear-gradient(140deg, oklch(0.6 0.1 90), oklch(0.35 0.06 80))',
-    image: '/images/projects/stud.png',
     fit: 'contain',
   },
   {
